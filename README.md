@@ -1,5 +1,10 @@
 # Explainable Deep Learning Framework for Oral Lesion Classification Using LIME and Grad-CAM
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-00f3ff?style=for-the-badge&logo=github)](https://adity-a-it.github.io/oral-XAI/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-oral--XAI-2ea44f?style=for-the-badge&logo=github)](https://github.com/adity-a-IT/oral-XAI)
+
+🌐 **Live Web Application:** [https://adity-a-it.github.io/oral-XAI/](https://adity-a-it.github.io/oral-XAI/)
+
 This project is a research-oriented, reproducible prototype for classifying oral lesion images into Healthy, OPMD, and OSCC, with explainability via Grad-CAM and LIME.
 
 The project follows a staged development workflow and begins with dataset inspection and validation before any training pipeline is built.
