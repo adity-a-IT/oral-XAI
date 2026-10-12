@@ -1,0 +1,4 @@
+Model,Backbone Pretraining,Input Resolution,Total Parameters,Trainable Parameters,Preprocessing Pipeline,Optimization Strategy
+Custom CNN,Trained from scratch,224x224x3,304932,304484,"Rescaling to [0.0, 1.0]","Adam (lr=1e-3), Balanced Weights"
+MobileNetV2,ImageNet Transfer Learning,224x224x3,2263108,1057604,"Standard Scaling to [-1.0, 1.0]",Head (1e-3) + Fine-Tuning (1e-5)
+EfficientNetB0 (Selected),ImageNet Transfer Learning,224x224x3,4054695,1134900,"Raw [0.0, 255.0] Float32",Head (1e-3) + Fine-Tuning (1e-5)

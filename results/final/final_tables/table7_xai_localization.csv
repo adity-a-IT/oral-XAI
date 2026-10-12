@@ -1,0 +1,7 @@
+Model,Class,Support,Grad-CAM IoU,Grad-CAM Dice,Grad-CAM Pointing (%),Grad-CAM++ IoU,Grad-CAM++ Dice,Grad-CAM++ Pointing (%),LIME IoU,LIME Dice,LIME Pointing (%)
+EfficientNetB0,Variation,27,0.1293,0.2073,11.1%,0.0835,0.1395,11.1%,0.173,0.2835,14.8%
+EfficientNetB0,OPMD,19,0.2104,0.3183,26.3%,0.0861,0.1424,10.5%,0.1756,0.2823,15.8%
+EfficientNetB0,Oral Cancer*,3,0.275,0.4285,66.7%,0.1011,0.1682,33.3%,0.2087,0.3419,33.3%
+MobileNetV2,Variation,27,0.1787,0.2874,29.6%,0.103,0.1732,22.2%,0.1222,0.2089,18.5%
+MobileNetV2,OPMD,19,0.2412,0.3585,26.3%,0.1308,0.2002,31.6%,0.1855,0.292,21.1%
+MobileNetV2,Oral Cancer*,3,0.2738,0.424,66.7%,0.0507,0.0881,0.0%,0.1923,0.3182,0.0%

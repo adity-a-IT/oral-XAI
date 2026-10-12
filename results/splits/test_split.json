@@ -1,0 +1,2970 @@
+[
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\04. Oral Cancer\\01. Unannotated\\02. Ventral tongue\\Ca 10.JPEG",
+    "relative_path": "04. Oral Cancer\\01. Unannotated\\02. Ventral tongue\\Ca 10.JPEG",
+    "patient_id": "CA10",
+    "class_name": "OSCC",
+    "label": 2,
+    "source_folder": "04. Oral Cancer"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\04. Oral Cancer\\01. Unannotated\\04. Right buccal mucosa\\6099.jpg",
+    "relative_path": "04. Oral Cancer\\01. Unannotated\\04. Right buccal mucosa\\6099.jpg",
+    "patient_id": "CASE_6099",
+    "class_name": "OSCC",
+    "label": 2,
+    "source_folder": "04. Oral Cancer"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\04. Oral Cancer\\01. Unannotated\\06. Lower lip\\7252.jpeg",
+    "relative_path": "04. Oral Cancer\\01. Unannotated\\06. Lower lip\\7252.jpeg",
+    "patient_id": "CASE_7252",
+    "class_name": "OSCC",
+    "label": 2,
+    "source_folder": "04. Oral Cancer"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\8 - DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\8 - DT.jpg",
+    "patient_id": "NUM_8",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\8 -VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\8 -VT.jpg",
+    "patient_id": "NUM_8",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\8 - UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\8 - UL.jpg",
+    "patient_id": "NUM_8",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\8 - LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\8 - LL.jpg",
+    "patient_id": "NUM_8",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\8 -UA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\8 -UA.jpg",
+    "patient_id": "NUM_8",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\8 - LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\8 - LA.jpg",
+    "patient_id": "NUM_8",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\8 - LB.jpg",
+    "relative_path": "03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\8 - LB.jpg",
+    "patient_id": "NUM_8",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00008_R_DT.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00008_R_DT.JPG",
+    "patient_id": "SMITA00008",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00008_W_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00008_W_DT.jpg",
+    "patient_id": "SMITA00008",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00008_R_VT.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00008_R_VT.JPG",
+    "patient_id": "SMITA00008",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00008_W_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00008_W_VT.jpg",
+    "patient_id": "SMITA00008",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00008_R_LB.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00008_R_LB.JPG",
+    "patient_id": "SMITA00008",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00008_R_RB.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00008_R_RB.JPG",
+    "patient_id": "SMITA00008",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00008_R_UA.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00008_R_UA.JPG",
+    "patient_id": "SMITA00008",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00008_R_LA.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00008_R_LA.JPG",
+    "patient_id": "SMITA00008",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\06. Lower lip\\SMITA00008_W_LL.jpg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\06. Lower lip\\SMITA00008_W_LL.jpg",
+    "patient_id": "SMITA00008",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00009_R_DT.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00009_R_DT.JPG",
+    "patient_id": "SMITA00009",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00009_W_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00009_W_DT.jpg",
+    "patient_id": "SMITA00009",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00009_W_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00009_W_VT.jpg",
+    "patient_id": "SMITA00009",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00009_R_LB.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00009_R_LB.JPG",
+    "patient_id": "SMITA00009",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00009_R_RB.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00009_R_RB.JPG",
+    "patient_id": "SMITA00009",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00009_R_UL.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00009_R_UL.JPG",
+    "patient_id": "SMITA00009",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00009_R_LL.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00009_R_LL.JPG",
+    "patient_id": "SMITA00009",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00009_R_UA.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00009_R_UA.JPG",
+    "patient_id": "SMITA00009",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00009_R_LA.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00009_R_LA.JPG",
+    "patient_id": "SMITA00009",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\SMITA00009_W_LB.jpg",
+    "relative_path": "03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\SMITA00009_W_LB.jpg",
+    "patient_id": "SMITA00009",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00010_R_DT.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00010_R_DT.JPG",
+    "patient_id": "SMITA00010",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00010_W_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00010_W_DT.jpg",
+    "patient_id": "SMITA00010",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00010_R_VT.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00010_R_VT.JPG",
+    "patient_id": "SMITA00010",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00010_W_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00010_W_VT.jpg",
+    "patient_id": "SMITA00010",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00010_R_LB.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00010_R_LB.JPG",
+    "patient_id": "SMITA00010",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00010_R_RB.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00010_R_RB.JPG",
+    "patient_id": "SMITA00010",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00010_R_UL.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00010_R_UL.JPG",
+    "patient_id": "SMITA00010",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00010_W_UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00010_W_UL.jpg",
+    "patient_id": "SMITA00010",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00010_R_LL.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00010_R_LL.JPG",
+    "patient_id": "SMITA00010",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00010_W_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00010_W_LL.jpg",
+    "patient_id": "SMITA00010",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00010_R_UA.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00010_R_UA.JPG",
+    "patient_id": "SMITA00010",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00010_R_LA.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00010_R_LA.JPG",
+    "patient_id": "SMITA00010",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00010_W_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00010_W_LA.jpg",
+    "patient_id": "SMITA00010",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00010_W_RB.jpg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00010_W_RB.jpg",
+    "patient_id": "SMITA00010",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\07. Upper arch\\SMITA00010_W_UA.jpg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\07. Upper arch\\SMITA00010_W_UA.jpg",
+    "patient_id": "SMITA00010",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\SMITA00010_W_LB.jpg",
+    "relative_path": "03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\SMITA00010_W_LB.jpg",
+    "patient_id": "SMITA00010",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00021_R_DT.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00021_R_DT.JPG",
+    "patient_id": "SMITA00021",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00021_W_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00021_W_DT.jpeg",
+    "patient_id": "SMITA00021",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00021_R_VT.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00021_R_VT.JPG",
+    "patient_id": "SMITA00021",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00021_W_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00021_W_VT.jpeg",
+    "patient_id": "SMITA00021",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00021_R_LB.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00021_R_LB.JPG",
+    "patient_id": "SMITA00021",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00021_R_RB.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00021_R_RB.JPG",
+    "patient_id": "SMITA00021",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00021_R_UL.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00021_R_UL.JPG",
+    "patient_id": "SMITA00021",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00021_R_LL.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00021_R_LL.JPG",
+    "patient_id": "SMITA00021",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00021_W_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00021_W_LL.jpeg",
+    "patient_id": "SMITA00021",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00021_R_UA.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00021_R_UA.JPG",
+    "patient_id": "SMITA00021",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00021_W_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00021_W_UA.jpeg",
+    "patient_id": "SMITA00021",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00021_R_LA.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00021_R_LA.JPG",
+    "patient_id": "SMITA00021",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00021_W_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00021_W_LA.jpeg",
+    "patient_id": "SMITA00021",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\SMITA00021_W_LB.jpeg",
+    "relative_path": "03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\SMITA00021_W_LB.jpeg",
+    "patient_id": "SMITA00021",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\04. Right buccal mucosa\\SMITA00021_W_RB.jpeg",
+    "relative_path": "03. OPMD\\01. Unannotated\\04. Right buccal mucosa\\SMITA00021_W_RB.jpeg",
+    "patient_id": "SMITA00021",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00023_R_DT.JPG",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00023_R_DT.JPG",
+    "patient_id": "SMITA00023",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\02. Ventral tongue\\SMITA00023_R_VT1.JPG",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\02. Ventral tongue\\SMITA00023_R_VT1.JPG",
+    "patient_id": "SMITA00023",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\02. Ventral tongue\\SMITA00023_R_VT2.JPG",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\02. Ventral tongue\\SMITA00023_R_VT2.JPG",
+    "patient_id": "SMITA00023",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\02. Ventral tongue\\SMITA00023_R_VT3.JPG",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\02. Ventral tongue\\SMITA00023_R_VT3.JPG",
+    "patient_id": "SMITA00023",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA000252_R_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA000252_R_DT.jpeg",
+    "patient_id": "SMITA000252",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA000252_R_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA000252_R_VT.jpeg",
+    "patient_id": "SMITA000252",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA000252_R_RB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA000252_R_RB.jpeg",
+    "patient_id": "SMITA000252",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA000252_R_UL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA000252_R_UL.jpeg",
+    "patient_id": "SMITA000252",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA000252_R_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA000252_R_LL.jpeg",
+    "patient_id": "SMITA000252",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA000252_R_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA000252_R_UA.jpeg",
+    "patient_id": "SMITA000252",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA000252_R_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA000252_R_LA.jpeg",
+    "patient_id": "SMITA000252",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\SMITA000252_R_LB.jpeg",
+    "relative_path": "03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\SMITA000252_R_LB.jpeg",
+    "patient_id": "SMITA000252",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00034_R_DT.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00034_R_DT.JPG",
+    "patient_id": "SMITA00034",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00034_R_VT.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00034_R_VT.JPG",
+    "patient_id": "SMITA00034",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00034_R_UL.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00034_R_UL.JPG",
+    "patient_id": "SMITA00034",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00034_R_LL.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00034_R_LL.JPG",
+    "patient_id": "SMITA00034",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00034_R_UA.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00034_R_UA.JPG",
+    "patient_id": "SMITA00034",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00034_R_LA.JPG",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00034_R_LA.JPG",
+    "patient_id": "SMITA00034",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\SMITA00034_R_LB.JPG",
+    "relative_path": "03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\SMITA00034_R_LB.JPG",
+    "patient_id": "SMITA00034",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\04. Right buccal mucosa\\SMITA00034_R_RB1.JPG",
+    "relative_path": "03. OPMD\\01. Unannotated\\04. Right buccal mucosa\\SMITA00034_R_RB1.JPG",
+    "patient_id": "SMITA00034",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\04. Right buccal mucosa\\SMITA00034_R_RB2.JPG",
+    "relative_path": "03. OPMD\\01. Unannotated\\04. Right buccal mucosa\\SMITA00034_R_RB2.JPG",
+    "patient_id": "SMITA00034",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\04. Right buccal mucosa\\SMITA00034_R_RB3.JPG",
+    "relative_path": "03. OPMD\\01. Unannotated\\04. Right buccal mucosa\\SMITA00034_R_RB3.JPG",
+    "patient_id": "SMITA00034",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00053_R_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00053_R_DT.jpeg",
+    "patient_id": "SMITA00053",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00053_R_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00053_R_VT.jpeg",
+    "patient_id": "SMITA00053",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00053_R_LB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00053_R_LB.jpeg",
+    "patient_id": "SMITA00053",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00053_R_RB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00053_R_RB.jpeg",
+    "patient_id": "SMITA00053",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00053_R_UL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00053_R_UL.jpeg",
+    "patient_id": "SMITA00053",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00053_R_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00053_R_LL.jpeg",
+    "patient_id": "SMITA00053",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00053_R_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00053_R_UA.jpeg",
+    "patient_id": "SMITA00053",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00053_R_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00053_R_LA.jpeg",
+    "patient_id": "SMITA00053",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00058_R_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00058_R_DT.jpeg",
+    "patient_id": "SMITA00058",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00058_R_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00058_R_VT.jpeg",
+    "patient_id": "SMITA00058",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00058_R_LB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00058_R_LB.jpeg",
+    "patient_id": "SMITA00058",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00058_R_RB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00058_R_RB.jpeg",
+    "patient_id": "SMITA00058",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00058_R_UL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00058_R_UL.jpeg",
+    "patient_id": "SMITA00058",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00058_R_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00058_R_LL.jpeg",
+    "patient_id": "SMITA00058",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00058_R_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00058_R_LA.jpeg",
+    "patient_id": "SMITA00058",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\07. Upper arch\\SMITA00058_R_UA.jpeg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\07. Upper arch\\SMITA00058_R_UA.jpeg",
+    "patient_id": "SMITA00058",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00060_R_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00060_R_DT.jpeg",
+    "patient_id": "SMITA00060",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00060_R_LB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00060_R_LB.jpeg",
+    "patient_id": "SMITA00060",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00060_R_UL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00060_R_UL.jpeg",
+    "patient_id": "SMITA00060",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00060_R_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00060_R_LL.jpeg",
+    "patient_id": "SMITA00060",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00060_R_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00060_R_UA.jpeg",
+    "patient_id": "SMITA00060",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00060_R_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00060_R_LA.jpeg",
+    "patient_id": "SMITA00060",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00060_R_RB1.jpeg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00060_R_RB1.jpeg",
+    "patient_id": "SMITA00060",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00060_R_RB2.jpeg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00060_R_RB2.jpeg",
+    "patient_id": "SMITA00060",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00074_R_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00074_R_DT.jpeg",
+    "patient_id": "SMITA00074",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00074_R_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00074_R_VT.jpeg",
+    "patient_id": "SMITA00074",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00074_R_LB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00074_R_LB.jpeg",
+    "patient_id": "SMITA00074",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00074_R_RB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00074_R_RB.jpeg",
+    "patient_id": "SMITA00074",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00074_R_UL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00074_R_UL.jpeg",
+    "patient_id": "SMITA00074",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00074_R_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00074_R_LL.jpeg",
+    "patient_id": "SMITA00074",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00074_R_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00074_R_UA.jpeg",
+    "patient_id": "SMITA00074",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00074_R_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00074_R_LA.jpeg",
+    "patient_id": "SMITA00074",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00087_R_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00087_R_DT.jpg",
+    "patient_id": "SMITA00087",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00087_R_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00087_R_VT.jpg",
+    "patient_id": "SMITA00087",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00087_R_UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00087_R_UL.jpg",
+    "patient_id": "SMITA00087",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00087_R_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00087_R_LL.jpg",
+    "patient_id": "SMITA00087",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00087_R_UA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00087_R_UA.jpg",
+    "patient_id": "SMITA00087",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00087_R_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00087_R_LA.jpg",
+    "patient_id": "SMITA00087",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00104_R_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00104_R_DT.jpeg",
+    "patient_id": "SMITA00104",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00104_R_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00104_R_VT.jpeg",
+    "patient_id": "SMITA00104",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00104_R_LB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00104_R_LB.jpeg",
+    "patient_id": "SMITA00104",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00104_R_RB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00104_R_RB.jpeg",
+    "patient_id": "SMITA00104",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00104_R_UL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00104_R_UL.jpeg",
+    "patient_id": "SMITA00104",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00104_R_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00104_R_LL.jpeg",
+    "patient_id": "SMITA00104",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00104_R_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00104_R_UA.jpeg",
+    "patient_id": "SMITA00104",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00104_R_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00104_R_LA.jpeg",
+    "patient_id": "SMITA00104",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00106_R_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00106_R_DT.jpeg",
+    "patient_id": "SMITA00106",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00106_R_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00106_R_VT.jpeg",
+    "patient_id": "SMITA00106",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00106_R_LB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00106_R_LB.jpeg",
+    "patient_id": "SMITA00106",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00106_R_RB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00106_R_RB.jpeg",
+    "patient_id": "SMITA00106",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00106_R_UL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00106_R_UL.jpeg",
+    "patient_id": "SMITA00106",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00106_R_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00106_R_LL.jpeg",
+    "patient_id": "SMITA00106",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00106_R_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00106_R_UA.jpeg",
+    "patient_id": "SMITA00106",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00106_R_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00106_R_LA.jpeg",
+    "patient_id": "SMITA00106",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00127_R_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00127_R_DT.jpg",
+    "patient_id": "SMITA00127",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00127_R_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00127_R_VT.jpg",
+    "patient_id": "SMITA00127",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00127_R_LB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00127_R_LB.jpg",
+    "patient_id": "SMITA00127",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00127_R_RB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00127_R_RB.jpg",
+    "patient_id": "SMITA00127",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00127-R_UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00127-R_UL.jpg",
+    "patient_id": "SMITA00127",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00127-R_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00127-R_LL.jpg",
+    "patient_id": "SMITA00127",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00127_R_UA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00127_R_UA.jpg",
+    "patient_id": "SMITA00127",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00127_R_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00127_R_LA.jpg",
+    "patient_id": "SMITA00127",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00129_R_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00129_R_DT.jpeg",
+    "patient_id": "SMITA00129",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00141_R_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00141_R_DT.jpeg",
+    "patient_id": "SMITA00141",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00141_R_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00141_R_VT.jpeg",
+    "patient_id": "SMITA00141",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00141_R_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00141_R_LL.jpeg",
+    "patient_id": "SMITA00141",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00141_R_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00141_R_UA.jpeg",
+    "patient_id": "SMITA00141",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00141_R_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00141_R_LA.jpeg",
+    "patient_id": "SMITA00141",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00141_R_LB.jpeg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00141_R_LB.jpeg",
+    "patient_id": "SMITA00141",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00141_R_RB.jpeg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00141_R_RB.jpeg",
+    "patient_id": "SMITA00141",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00142_R_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00142_R_DT.jpg",
+    "patient_id": "SMITA00142",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00142_R_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00142_R_VT.jpg",
+    "patient_id": "SMITA00142",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00142_R_LB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00142_R_LB.jpg",
+    "patient_id": "SMITA00142",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00142_R_RB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00142_R_RB.jpg",
+    "patient_id": "SMITA00142",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00142_R_UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00142_R_UL.jpg",
+    "patient_id": "SMITA00142",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00142_R_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00142_R_LL.jpg",
+    "patient_id": "SMITA00142",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00142_R_UA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00142_R_UA.jpg",
+    "patient_id": "SMITA00142",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00142_R_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00142_R_LA.jpg",
+    "patient_id": "SMITA00142",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00158_R_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00158_R_DT.jpeg",
+    "patient_id": "SMITA00158",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00158_R_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00158_R_VT.jpeg",
+    "patient_id": "SMITA00158",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00158_R_LB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00158_R_LB.jpeg",
+    "patient_id": "SMITA00158",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00158_R_RB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00158_R_RB.jpeg",
+    "patient_id": "SMITA00158",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00158_R_UL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00158_R_UL.jpeg",
+    "patient_id": "SMITA00158",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00158_R_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00158_R_LL.jpeg",
+    "patient_id": "SMITA00158",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00158_R_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00158_R_UA.jpeg",
+    "patient_id": "SMITA00158",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00158_R_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00158_R_LA.jpeg",
+    "patient_id": "SMITA00158",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00168_R_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00168_R_DT.jpg",
+    "patient_id": "SMITA00168",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00168_R_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00168_R_VT.jpg",
+    "patient_id": "SMITA00168",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00168_R_LB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00168_R_LB.jpg",
+    "patient_id": "SMITA00168",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00168_R_RB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00168_R_RB.jpg",
+    "patient_id": "SMITA00168",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00168_R_UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00168_R_UL.jpg",
+    "patient_id": "SMITA00168",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00168_R_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00168_R_LL.jpg",
+    "patient_id": "SMITA00168",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00168_R_UA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00168_R_UA.jpg",
+    "patient_id": "SMITA00168",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00168_R_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00168_R_LA.jpg",
+    "patient_id": "SMITA00168",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00170_R_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00170_R_DT.jpg",
+    "patient_id": "SMITA00170",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00170_R_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00170_R_VT.jpg",
+    "patient_id": "SMITA00170",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00170_R_LB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00170_R_LB.jpg",
+    "patient_id": "SMITA00170",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00170_R_RB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00170_R_RB.jpg",
+    "patient_id": "SMITA00170",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00170_R_UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00170_R_UL.jpg",
+    "patient_id": "SMITA00170",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00170_R_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00170_R_LL.jpg",
+    "patient_id": "SMITA00170",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00170_R_UA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00170_R_UA.jpg",
+    "patient_id": "SMITA00170",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00170_R_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00170_R_LA.jpg",
+    "patient_id": "SMITA00170",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00171_R_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00171_R_DT.jpeg",
+    "patient_id": "SMITA00171",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00171_R_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00171_R_VT.jpeg",
+    "patient_id": "SMITA00171",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00171_R_LB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00171_R_LB.jpeg",
+    "patient_id": "SMITA00171",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00171_R_RB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00171_R_RB.jpeg",
+    "patient_id": "SMITA00171",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00171_R_UL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00171_R_UL.jpeg",
+    "patient_id": "SMITA00171",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00171_R_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00171_R_LL.jpeg",
+    "patient_id": "SMITA00171",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00171_R_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00171_R_UA.jpeg",
+    "patient_id": "SMITA00171",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00171_R_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00171_R_LA.jpeg",
+    "patient_id": "SMITA00171",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00192_R_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00192_R_DT.jpg",
+    "patient_id": "SMITA00192",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00192_R_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00192_R_VT.jpg",
+    "patient_id": "SMITA00192",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00192_R_UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00192_R_UL.jpg",
+    "patient_id": "SMITA00192",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00192_R_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00192_R_LL.jpg",
+    "patient_id": "SMITA00192",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00192_R_UA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00192_R_UA.jpg",
+    "patient_id": "SMITA00192",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00192_R_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00192_R_LA.jpg",
+    "patient_id": "SMITA00192",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00192_R_LB.jpg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00192_R_LB.jpg",
+    "patient_id": "SMITA00192",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00192_R_RB.jpg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00192_R_RB.jpg",
+    "patient_id": "SMITA00192",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00197-R-DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00197-R-DT.jpg",
+    "patient_id": "SMITA00197",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00197_R_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00197_R_VT.jpg",
+    "patient_id": "SMITA00197",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00197_R_UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00197_R_UL.jpg",
+    "patient_id": "SMITA00197",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00197_R_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00197_R_LL.jpg",
+    "patient_id": "SMITA00197",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00197_R_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00197_R_LA.jpg",
+    "patient_id": "SMITA00197",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00197_R_LB.jpg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00197_R_LB.jpg",
+    "patient_id": "SMITA00197",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00197_R_RB.jpg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00197_R_RB.jpg",
+    "patient_id": "SMITA00197",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\07. Upper arch\\SMITA00197_R_UA.jpg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\07. Upper arch\\SMITA00197_R_UA.jpg",
+    "patient_id": "SMITA00197",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00199_R_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00199_R_DT.jpeg",
+    "patient_id": "SMITA00199",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00199_R_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00199_R_VT.jpeg",
+    "patient_id": "SMITA00199",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00199_R_RB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00199_R_RB.jpeg",
+    "patient_id": "SMITA00199",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00199_R_UL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00199_R_UL.jpeg",
+    "patient_id": "SMITA00199",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00199_R_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00199_R_LL.jpeg",
+    "patient_id": "SMITA00199",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00199_R_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00199_R_UA.jpeg",
+    "patient_id": "SMITA00199",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00199_R_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00199_R_LA.jpeg",
+    "patient_id": "SMITA00199",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00199_R_LB.jpeg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00199_R_LB.jpeg",
+    "patient_id": "SMITA00199",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00206_R_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00206_R_DT.jpg",
+    "patient_id": "SMITA00206",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00206_R_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00206_R_VT.jpg",
+    "patient_id": "SMITA00206",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00206_R_LB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00206_R_LB.jpg",
+    "patient_id": "SMITA00206",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00206_R_RB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00206_R_RB.jpg",
+    "patient_id": "SMITA00206",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00206_R_UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00206_R_UL.jpg",
+    "patient_id": "SMITA00206",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00206_R_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00206_R_LL.jpg",
+    "patient_id": "SMITA00206",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00206_R_UA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00206_R_UA.jpg",
+    "patient_id": "SMITA00206",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00206_R_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00206_R_LA.jpg",
+    "patient_id": "SMITA00206",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00207_R_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00207_R_DT.jpg",
+    "patient_id": "SMITA00207",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00207_R_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00207_R_VT.jpg",
+    "patient_id": "SMITA00207",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00207_R_LB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00207_R_LB.jpg",
+    "patient_id": "SMITA00207",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00207_R_RB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00207_R_RB.jpg",
+    "patient_id": "SMITA00207",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00207_R-UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00207_R-UL.jpg",
+    "patient_id": "SMITA00207",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00207_R_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00207_R_LL.jpg",
+    "patient_id": "SMITA00207",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00207_R_UA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00207_R_UA.jpg",
+    "patient_id": "SMITA00207",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00207_R_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00207_R_LA.jpg",
+    "patient_id": "SMITA00207",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00213_R_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00213_R_VT.jpg",
+    "patient_id": "SMITA00213",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00213_R_UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00213_R_UL.jpg",
+    "patient_id": "SMITA00213",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00213_R_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00213_R_LL.jpg",
+    "patient_id": "SMITA00213",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00213_R_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00213_R_LA.jpg",
+    "patient_id": "SMITA00213",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00213_R_DT.jpg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00213_R_DT.jpg",
+    "patient_id": "SMITA00213",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00213_R_LB.jpg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00213_R_LB.jpg",
+    "patient_id": "SMITA00213",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00213_R_RB.jpg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00213_R_RB.jpg",
+    "patient_id": "SMITA00213",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\07. Upper arch\\SMITA00213_R_UA.jpg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\07. Upper arch\\SMITA00213_R_UA.jpg",
+    "patient_id": "SMITA00213",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00214_W_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00214_W_DT.jpeg",
+    "patient_id": "SMITA00214",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00214_W_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00214_W_VT.jpeg",
+    "patient_id": "SMITA00214",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00214_W_UL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00214_W_UL.jpeg",
+    "patient_id": "SMITA00214",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00214_W_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00214_W_LL.jpeg",
+    "patient_id": "SMITA00214",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00214_W_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00214_W_UA.jpeg",
+    "patient_id": "SMITA00214",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00214_W_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00214_W_LA.jpeg",
+    "patient_id": "SMITA00214",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\SMITA00214_W_LB.jpeg",
+    "relative_path": "03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\SMITA00214_W_LB.jpeg",
+    "patient_id": "SMITA00214",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\04. Right buccal mucosa\\SMITA00214_W_RB1.jpeg",
+    "relative_path": "03. OPMD\\01. Unannotated\\04. Right buccal mucosa\\SMITA00214_W_RB1.jpeg",
+    "patient_id": "SMITA00214",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\04. Right buccal mucosa\\SMITA00214_W_RB2.jpeg",
+    "relative_path": "03. OPMD\\01. Unannotated\\04. Right buccal mucosa\\SMITA00214_W_RB2.jpeg",
+    "patient_id": "SMITA00214",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00217_W_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00217_W_DT.jpeg",
+    "patient_id": "SMITA00217",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00217_W_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00217_W_VT.jpeg",
+    "patient_id": "SMITA00217",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00217_W_LB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00217_W_LB.jpeg",
+    "patient_id": "SMITA00217",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00217_W_RB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00217_W_RB.jpeg",
+    "patient_id": "SMITA00217",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00217_W_UL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00217_W_UL.jpeg",
+    "patient_id": "SMITA00217",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00217_W_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00217_W_UA.jpeg",
+    "patient_id": "SMITA00217",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00217_W_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00217_W_LA.jpeg",
+    "patient_id": "SMITA00217",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\06. Lower lip\\SMITA00217_W_LL1.jpeg",
+    "relative_path": "03. OPMD\\01. Unannotated\\06. Lower lip\\SMITA00217_W_LL1.jpeg",
+    "patient_id": "SMITA00217",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\06. Lower lip\\SMITA00217_W_LL2.jpeg",
+    "relative_path": "03. OPMD\\01. Unannotated\\06. Lower lip\\SMITA00217_W_LL2.jpeg",
+    "patient_id": "SMITA00217",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00225_W_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00225_W_DT.jpeg",
+    "patient_id": "SMITA00225",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00225_W_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00225_W_VT.jpeg",
+    "patient_id": "SMITA00225",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00225_W_UL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00225_W_UL.jpeg",
+    "patient_id": "SMITA00225",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00225_W_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00225_W_LL.jpeg",
+    "patient_id": "SMITA00225",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00225_W_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00225_W_UA.jpeg",
+    "patient_id": "SMITA00225",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00225_W_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00225_W_LA.jpeg",
+    "patient_id": "SMITA00225",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\SMITA00225_W_LB.jpeg",
+    "relative_path": "03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\SMITA00225_W_LB.jpeg",
+    "patient_id": "SMITA00225",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\04. Right buccal mucosa\\SMITA00225_W_RB.jpeg",
+    "relative_path": "03. OPMD\\01. Unannotated\\04. Right buccal mucosa\\SMITA00225_W_RB.jpeg",
+    "patient_id": "SMITA00225",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00246_R_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00246_R_DT.jpg",
+    "patient_id": "SMITA00246",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00246_R_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00246_R_VT.jpg",
+    "patient_id": "SMITA00246",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00246_R_LB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00246_R_LB.jpg",
+    "patient_id": "SMITA00246",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00246_R_RB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00246_R_RB.jpg",
+    "patient_id": "SMITA00246",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00246_R_UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00246_R_UL.jpg",
+    "patient_id": "SMITA00246",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00246_R_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00246_R_LL.jpg",
+    "patient_id": "SMITA00246",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00246_R_UA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00246_R_UA.jpg",
+    "patient_id": "SMITA00246",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00246_R_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00246_R_LA.jpg",
+    "patient_id": "SMITA00246",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00248_R_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00248_R_DT.jpg",
+    "patient_id": "SMITA00248",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00248_R_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00248_R_VT.jpg",
+    "patient_id": "SMITA00248",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00248_R_LB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00248_R_LB.jpg",
+    "patient_id": "SMITA00248",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00248_R_RB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00248_R_RB.jpg",
+    "patient_id": "SMITA00248",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00248_R_UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00248_R_UL.jpg",
+    "patient_id": "SMITA00248",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00248_R_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00248_R_LL.jpg",
+    "patient_id": "SMITA00248",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00248_R_UA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00248_R_UA.jpg",
+    "patient_id": "SMITA00248",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00248_R_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00248_R_LA.jpg",
+    "patient_id": "SMITA00248",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00250_R_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00250_R_DT.jpg",
+    "patient_id": "SMITA00250",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00250_R_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00250_R_VT.jpg",
+    "patient_id": "SMITA00250",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00250_R_LB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00250_R_LB.jpg",
+    "patient_id": "SMITA00250",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00250_R_RB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00250_R_RB.jpg",
+    "patient_id": "SMITA00250",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00250_R_UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00250_R_UL.jpg",
+    "patient_id": "SMITA00250",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00250_R_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00250_R_LL.jpg",
+    "patient_id": "SMITA00250",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00250_R_UA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00250_R_UA.jpg",
+    "patient_id": "SMITA00250",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00250_R_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00250_R_LA.jpg",
+    "patient_id": "SMITA00250",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00253_R_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00253_R_DT.jpg",
+    "patient_id": "SMITA00253",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00253_R_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00253_R_VT.jpg",
+    "patient_id": "SMITA00253",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00253_R_RB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00253_R_RB.jpg",
+    "patient_id": "SMITA00253",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00253_R_UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00253_R_UL.jpg",
+    "patient_id": "SMITA00253",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00253_R_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00253_R_LL.jpg",
+    "patient_id": "SMITA00253",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00253_R_UA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00253_R_UA.jpg",
+    "patient_id": "SMITA00253",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00253_R_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00253_R_LA.jpg",
+    "patient_id": "SMITA00253",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00253_R_LB.jpg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00253_R_LB.jpg",
+    "patient_id": "SMITA00253",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00260_R_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00260_R_DT.jpeg",
+    "patient_id": "SMITA00260",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00260_R_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00260_R_VT.jpeg",
+    "patient_id": "SMITA00260",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00260_R_LB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00260_R_LB.jpeg",
+    "patient_id": "SMITA00260",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00260_R_RB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00260_R_RB.jpeg",
+    "patient_id": "SMITA00260",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00260_R_UL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00260_R_UL.jpeg",
+    "patient_id": "SMITA00260",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00260_R_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00260_R_LL.jpeg",
+    "patient_id": "SMITA00260",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00260_R_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00260_R_UA.jpeg",
+    "patient_id": "SMITA00260",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00260_R_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00260_R_LA.jpeg",
+    "patient_id": "SMITA00260",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00263_R_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00263_R_DT.jpeg",
+    "patient_id": "SMITA00263",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00263_R_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00263_R_VT.jpeg",
+    "patient_id": "SMITA00263",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00263_R_LB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00263_R_LB.jpeg",
+    "patient_id": "SMITA00263",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00263_R_RB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00263_R_RB.jpeg",
+    "patient_id": "SMITA00263",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00263_R_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00263_R_LL.jpeg",
+    "patient_id": "SMITA00263",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00263_R_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00263_R_UA.jpeg",
+    "patient_id": "SMITA00263",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00263_R_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00263_R_LA.jpeg",
+    "patient_id": "SMITA00263",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00266_R_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00266_R_DT.jpeg",
+    "patient_id": "SMITA00266",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00266_R_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00266_R_VT.jpeg",
+    "patient_id": "SMITA00266",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00266_R_LB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00266_R_LB.jpeg",
+    "patient_id": "SMITA00266",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00266_R_RB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00266_R_RB.jpeg",
+    "patient_id": "SMITA00266",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00266_R_UL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00266_R_UL.jpeg",
+    "patient_id": "SMITA00266",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00266_R_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00266_R_LL.jpeg",
+    "patient_id": "SMITA00266",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00266_R_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00266_R_UA.jpeg",
+    "patient_id": "SMITA00266",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00266_R_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00266_R_LA.jpeg",
+    "patient_id": "SMITA00266",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00269_W_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00269_W_DT.jpg",
+    "patient_id": "SMITA00269",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00269_W_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00269_W_VT.jpg",
+    "patient_id": "SMITA00269",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00269_W_RB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00269_W_RB.jpg",
+    "patient_id": "SMITA00269",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00269_W_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00269_W_LL.jpg",
+    "patient_id": "SMITA00269",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00269_W_LB.jpg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00269_W_LB.jpg",
+    "patient_id": "SMITA00269",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00274_W_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00274_W_DT.jpg",
+    "patient_id": "SMITA00274",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00274_W_UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00274_W_UL.jpg",
+    "patient_id": "SMITA00274",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00274_W_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00274_W_LL.jpg",
+    "patient_id": "SMITA00274",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00274_W_UA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00274_W_UA.jpg",
+    "patient_id": "SMITA00274",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00274_W_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00274_W_LA.jpg",
+    "patient_id": "SMITA00274",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\SMITA00274_W_LB.jpg",
+    "relative_path": "03. OPMD\\01. Unannotated\\03. Left buccal mucosa\\SMITA00274_W_LB.jpg",
+    "patient_id": "SMITA00274",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\03. OPMD\\01. Unannotated\\04. Right buccal mucosa\\SMITA00274_W_RB.jpg",
+    "relative_path": "03. OPMD\\01. Unannotated\\04. Right buccal mucosa\\SMITA00274_W_RB.jpg",
+    "patient_id": "SMITA00274",
+    "class_name": "OPMD",
+    "label": 1,
+    "source_folder": "03. OPMD"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00275_W_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00275_W_DT.jpg",
+    "patient_id": "SMITA00275",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00275_W_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00275_W_VT.jpg",
+    "patient_id": "SMITA00275",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00275_W_RB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00275_W_RB.jpg",
+    "patient_id": "SMITA00275",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00275_W_UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00275_W_UL.jpg",
+    "patient_id": "SMITA00275",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00275_W_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00275_W_LL.jpg",
+    "patient_id": "SMITA00275",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00275_W_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00275_W_LA.jpg",
+    "patient_id": "SMITA00275",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00275_W_LB.jpg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00275_W_LB.jpg",
+    "patient_id": "SMITA00275",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00286_R_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00286_R_DT.jpeg",
+    "patient_id": "SMITA00286",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00286_R_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00286_R_VT.jpeg",
+    "patient_id": "SMITA00286",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00286_R_LB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00286_R_LB.jpeg",
+    "patient_id": "SMITA00286",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00286_R_RB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00286_R_RB.jpeg",
+    "patient_id": "SMITA00286",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00286_R_UL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00286_R_UL.jpeg",
+    "patient_id": "SMITA00286",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00286_R_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00286_R_LL.jpeg",
+    "patient_id": "SMITA00286",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00286_R_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00286_R_UA.jpeg",
+    "patient_id": "SMITA00286",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00286_R_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00286_R_LA.jpeg",
+    "patient_id": "SMITA00286",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00313_R_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00313_R_DT.jpg",
+    "patient_id": "SMITA00313",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00313_R_VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00313_R_VT.jpg",
+    "patient_id": "SMITA00313",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00313_R_LB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00313_R_LB.jpg",
+    "patient_id": "SMITA00313",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00313_R_RB.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00313_R_RB.jpg",
+    "patient_id": "SMITA00313",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00313_R_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00313_R_LL.jpg",
+    "patient_id": "SMITA00313",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00313_R_UA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00313_R_UA.jpg",
+    "patient_id": "SMITA00313",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00313_R_LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00313_R_LA.jpg",
+    "patient_id": "SMITA00313",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00314_R_DT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00314_R_DT.jpg",
+    "patient_id": "SMITA00314",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00314_R__VT.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00314_R__VT.jpg",
+    "patient_id": "SMITA00314",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00314_R__UL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00314_R__UL.jpg",
+    "patient_id": "SMITA00314",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00314_R_LL.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00314_R_LL.jpg",
+    "patient_id": "SMITA00314",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00314_R__UA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00314_R__UA.jpg",
+    "patient_id": "SMITA00314",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00314_R__LA.jpg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00314_R__LA.jpg",
+    "patient_id": "SMITA00314",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00314_R__LB.jpg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00314_R__LB.jpg",
+    "patient_id": "SMITA00314",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\02. Variation from normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00314_R__RB.jpg",
+    "relative_path": "02. Variation from normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00314_R__RB.jpg",
+    "patient_id": "SMITA00314",
+    "class_name": "Healthy_Variation",
+    "label": 0,
+    "source_folder": "02. Variation from normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00345_R_DT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00345_R_DT.jpeg",
+    "patient_id": "SMITA00345",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00345_R_VT.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\02. Ventral tongue\\SMITA00345_R_VT.jpeg",
+    "patient_id": "SMITA00345",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00345_R_LB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\03. Left buccal mucosa\\SMITA00345_R_LB.jpeg",
+    "patient_id": "SMITA00345",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00345_R_RB.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\04. Right buccal mucosa\\SMITA00345_R_RB.jpeg",
+    "patient_id": "SMITA00345",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00345_R_UL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\05. Upper lip\\SMITA00345_R_UL.jpeg",
+    "patient_id": "SMITA00345",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00345_R_LL.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\06. Lower lip\\SMITA00345_R_LL.jpeg",
+    "patient_id": "SMITA00345",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00345_R_UA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\07. Upper arch\\SMITA00345_R_UA.jpeg",
+    "patient_id": "SMITA00345",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  },
+  {
+    "image_path": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM\\01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00345_R_LA.jpeg",
+    "relative_path": "01. Normal\\01. Unannotated\\08. Lower arch\\SMITA00345_R_LA.jpeg",
+    "patient_id": "SMITA00345",
+    "class_name": "Healthy",
+    "label": 0,
+    "source_folder": "01. Normal"
+  }
+]

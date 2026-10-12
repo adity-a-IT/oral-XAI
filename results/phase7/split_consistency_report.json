@@ -1,0 +1,76 @@
+{
+  "audit_date": "2026-09-30",
+  "audit_target": "Dataset Split Consistency Verification between Locked Splits, Phase 5/6, and Phase 7",
+  "locked_splits_files": {
+    "train_split": "results/splits/train_split.json",
+    "val_split": "results/splits/val_split.json",
+    "test_split": "results/splits/test_split.json"
+  },
+  "counts_in_results_splits": {
+    "train_images": 1726,
+    "train_patients": 232,
+    "validation_images": 372,
+    "validation_patients": 48,
+    "test_images": 371,
+    "test_patients": 49,
+    "total_images": 2469,
+    "total_unique_patients": 329
+  },
+  "counts_in_obsolete_unstratified_audit": {
+    "document": "results/splits/split_quality_report.md",
+    "train_images": 1731,
+    "validation_images": 374,
+    "test_images": 364,
+    "total_images": 2469,
+    "algorithm": "patient_level_split (unstratified random patient shuffle, seed 42)"
+  },
+  "counts_in_stratified_locked_audit": {
+    "document": "results/splits/stratified_split_quality_report.md",
+    "train_images": 1726,
+    "validation_images": 372,
+    "test_images": 371,
+    "total_images": 2469,
+    "algorithm": "patient_level_stratified_split (Deterministic Greedy Multi-Label Patient-Grouped Stratification, seed 42)"
+  },
+  "phase_5_training_split": {
+    "train_images_used": 1726,
+    "val_images_used": 372,
+    "test_images_evaluated": 371,
+    "checkpoint_model_path": "results/phase5/efficientnetb0/best_model.keras"
+  },
+  "phase_6_evaluation_split": {
+    "test_images_evaluated": 371,
+    "test_patients": 49,
+    "classes": {
+      "Normal": 322,
+      "Variation from normal": 27,
+      "OPMD": 19,
+      "Oral Cancer": 3
+    }
+  },
+  "phase_7_loaded_split": {
+    "val_images_loaded": 372,
+    "val_patients": 48,
+    "test_images_loaded": 371,
+    "test_patients": 49,
+    "annotation_eligible_images": 49,
+    "annotation_ineligible_normal_images": 322,
+    "patient_overlap_with_locked_test_split": "100% (49 of 49 patients match exactly)",
+    "image_overlap_with_locked_test_split": "100% (371 of 371 image paths match exactly)"
+  },
+  "discrepancy_explanation": {
+    "reason_category": "regenerated split (Phase 3 stratification upgrade)",
+    "detailed_cause": "The 1,731 / 374 / 364 partition cited was from the early Phase 2/3 initial unstratified random patient shuffle (recorded in split_quality_report.md). That initial split was flagged in split_quality_report.json for severe class imbalance (only 2 Oral Cancer images in validation). Phase 3 replaced it with a class-stratified patient-grouped algorithm (recorded in stratified_split_quality_report.md and research_notes.md), resulting in 1,726 / 372 / 371. The 1,726 / 372 / 371 split was committed directly into results/splits/train_split.json, val_split.json, and test_split.json. Baseline training in Phase 5 and evaluation in Phase 6 used this 371-image test set. Phase 7 correctly and consistently loaded these exact files.",
+    "leakage_warning_if_364_were_used": "35 of the 50 patients in the obsolete 364-image unstratified test set are present in the 1,726 training set used to train the Phase 5 neural weights. Evaluating the trained models on the 364-image set would introduce 70% patient leakage into test evaluation."
+  },
+  "summary": {
+    "split_consistency": "PASS WITH CONCERNS",
+    "official_test_images_in_files": 371,
+    "obsolete_unstratified_reference_test_images": 364,
+    "phase_7_full_test_images": 371,
+    "annotation_eligible_images": 49,
+    "excluded_images_for_localization": 322,
+    "exclusion_reason": "Normal oral mucosal images do not contain pathological lesions or expert polygon annotations.",
+    "patient_overlap": "Zero train/test leakage (0%). 100% agreement between Phase 7 and results/splits/test_split.json (49/49 patients)."
+  }
+}

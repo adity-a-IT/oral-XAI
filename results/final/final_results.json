@@ -1,0 +1,235 @@
+{
+  "project_title": "Explainable Deep Learning Framework for Oral Lesion Classification",
+  "consolidation_phase": "Phase 9 — Final Research Validation & Experiment Consolidation",
+  "audit_date": "2026-09-30T15:30:00Z",
+  "reproducibility_status": "FULLY VERIFIED & CONSOLIDATED",
+  "dataset_summary": {
+    "dataset_name": "SMART-OM Oral Mucosal Photographic Dataset",
+    "total_photographic_images": 2469,
+    "total_unique_patients": 329,
+    "class_distribution_total": {
+      "Normal": 2145,
+      "Variation from normal": 179,
+      "OPMD": 125,
+      "Oral Cancer": 20
+    },
+    "class_percentages_total": {
+      "Normal": "86.88%",
+      "Variation from normal": "7.25%",
+      "OPMD": "5.06%",
+      "Oral Cancer": "0.81%"
+    },
+    "locked_split_partitions": {
+      "train": {
+        "images": 1726,
+        "patients": 232,
+        "classes": {
+          "Normal": 1500,
+          "Variation from normal": 125,
+          "OPMD": 87,
+          "Oral Cancer": 14
+        }
+      },
+      "validation": {
+        "images": 372,
+        "patients": 48,
+        "classes": {
+          "Normal": 323,
+          "Variation from normal": 27,
+          "OPMD": 19,
+          "Oral Cancer": 3
+        }
+      },
+      "test": {
+        "images": 371,
+        "patients": 49,
+        "classes": {
+          "Normal": 322,
+          "Variation from normal": 27,
+          "OPMD": 19,
+          "Oral Cancer": 3
+        }
+      }
+    },
+    "split_sum_verification": {
+      "total_images": 2469,
+      "sum_check": "1726 + 372 + 371 = 2469 (EXACT MATCH)",
+      "total_patients": 329,
+      "patient_sum_check": "232 + 48 + 49 = 329 (EXACT MATCH)",
+      "patient_overlap_leakage": "0.0% (Zero Patient Overlap Confirmed)"
+    },
+    "historical_split_audit_note": {
+      "current_locked_test_size": 371,
+      "obsolete_unstratified_test_size": 364,
+      "explanation": "The 1,731 / 374 / 364 partition was an early unstratified random patient shuffle from Phase 2. Phase 3 introduced greedy class-stratified patient-grouped partitioning (1,726 / 372 / 371) to ensure balanced representation of minority classes (OPMD and OSCC) without patient leakage. The 371-image test set is locked across Phases 5, 6, 7, 8, and 9."
+    }
+  },
+  "model_comparison": {
+    "selection_policy": "Strict Selection on Validation Macro F1 (prevents majority-class accuracy bias and test-set data snooping)",
+    "selected_model": "EfficientNetB0",
+    "architectures": {
+      "Custom_CNN": {
+        "total_parameters": 304932,
+        "trainable_parameters": 304484,
+        "val_accuracy": 0.8683,
+        "val_macro_f1": 0.2324,
+        "test_accuracy": 0.8679,
+        "test_macro_f1": 0.2323,
+        "test_weighted_f1": 0.8066,
+        "test_cohens_kappa": 0.0,
+        "per_class_test": {
+          "Normal": {"precision": 0.8679, "recall": 1.0, "f1": 0.9293, "support": 322},
+          "Variation from normal": {"precision": 0.0, "recall": 0.0, "f1": 0.0, "support": 27},
+          "OPMD": {"precision": 0.0, "recall": 0.0, "f1": 0.0, "support": 19},
+          "Oral Cancer": {"precision": 0.0, "recall": 0.0, "f1": 0.0, "support": 3}
+        }
+      },
+      "MobileNetV2": {
+        "total_parameters": 2263108,
+        "trainable_parameters": 1057604,
+        "val_accuracy": 0.7097,
+        "val_macro_f1": 0.4624,
+        "test_accuracy": 0.7790,
+        "test_macro_f1": 0.5541,
+        "test_weighted_f1": 0.8199,
+        "test_cohens_kappa": 0.3809,
+        "per_class_test": {
+          "Normal": {"precision": 0.9738, "recall": 0.8075, "f1": 0.8829, "support": 322},
+          "Variation from normal": {"precision": 0.2152, "recall": 0.6296, "f1": 0.3208, "support": 27},
+          "OPMD": {"precision": 0.5000, "recall": 0.5263, "f1": 0.5128, "support": 19},
+          "Oral Cancer": {"precision": 0.4000, "recall": 0.6667, "f1": 0.5000, "support": 3}
+        }
+      },
+      "EfficientNetB0": {
+        "total_parameters": 4054695,
+        "trainable_parameters": 1134900,
+        "val_accuracy": 0.7124,
+        "val_macro_f1": 0.4709,
+        "test_accuracy": 0.7278,
+        "test_macro_f1": 0.5346,
+        "test_weighted_f1": 0.7805,
+        "test_cohens_kappa": 0.3324,
+        "per_class_test": {
+          "Normal": {"precision": 0.9795, "recall": 0.7422, "f1": 0.8445, "support": 322},
+          "Variation from normal": {"precision": 0.1867, "recall": 0.5185, "f1": 0.2745, "support": 27},
+          "OPMD": {"precision": 0.3125, "recall": 0.7895, "f1": 0.4478, "support": 19},
+          "Oral Cancer": {"precision": 0.5000, "recall": 0.6667, "f1": 0.5714, "support": 3}
+        }
+      }
+    }
+  },
+  "error_and_calibration_analysis": {
+    "dominant_error_pattern": "Normal <-> Variation from normal mutual boundary confusion",
+    "normal_to_variation_errors_pct_of_all_errors": "56.4% (EfficientNetB0), 65.9% (MobileNetV2)",
+    "boundary_confusion_total_pct": "71.4% of all test misclassifications originate from the Normal/Variation interface",
+    "weakest_class": "Variation from normal (Precision: 18.67%, F1: 0.2745 on EfficientNetB0)",
+    "strongest_class": "Normal (Precision: 97.95%, Recall: 74.22%, F1: 0.8445 on EfficientNetB0)",
+    "opmd_clinical_sensitivity": "78.95% recall (15 of 19 cases detected by EfficientNetB0)",
+    "oral_cancer_clinical_sensitivity": "66.67% recall (2 of 3 cases detected by EfficientNetB0; low statistical power N=3)",
+    "calibration_metrics": {
+      "EfficientNetB0": {
+        "expected_calibration_error": 0.0435,
+        "brier_score": 0.3730
+      },
+      "MobileNetV2": {
+        "expected_calibration_error": 0.0386,
+        "brier_score": 0.3068
+      }
+    }
+  },
+  "xai_localization_evaluation": {
+    "total_test_cohort": 371,
+    "annotation_eligible_abnormal_subset": 49,
+    "annotation_ineligible_normal_subset": 322,
+    "subset_breakdown": {
+      "Variation from normal": 27,
+      "OPMD": 19,
+      "Oral Cancer": 3,
+      "Normal": 0
+    },
+    "frozen_binarization_threshold": 0.25,
+    "efficientnetb0_localization": {
+      "Variation from normal": {
+        "gradcam_iou": 0.1293, "gradcam_dice": 0.2073, "gradcam_pointing_game": 0.1111,
+        "gradcampp_iou": 0.0835, "gradcampp_dice": 0.1395, "gradcampp_pointing_game": 0.1111,
+        "lime_iou": 0.1730, "lime_dice": 0.2835, "lime_pointing_game": 0.1481
+      },
+      "OPMD": {
+        "gradcam_iou": 0.2104, "gradcam_dice": 0.3183, "gradcam_pointing_game": 0.2632,
+        "gradcampp_iou": 0.0861, "gradcampp_dice": 0.1424, "gradcampp_pointing_game": 0.1053,
+        "lime_iou": 0.1756, "lime_dice": 0.2823, "lime_pointing_game": 0.1579
+      },
+      "Oral Cancer": {
+        "gradcam_iou": 0.2750, "gradcam_dice": 0.4285, "gradcam_pointing_game": 0.6667,
+        "gradcampp_iou": 0.1011, "gradcampp_dice": 0.1682, "gradcampp_pointing_game": 0.3333,
+        "lime_iou": 0.2087, "lime_dice": 0.3419, "lime_pointing_game": 0.3333
+      }
+    },
+    "mobilenetv2_localization": {
+      "Variation from normal": {
+        "gradcam_iou": 0.1787, "gradcam_dice": 0.2874, "gradcam_pointing_game": 0.2963,
+        "gradcampp_iou": 0.1030, "gradcampp_dice": 0.1732, "gradcampp_pointing_game": 0.2222,
+        "lime_iou": 0.1222, "lime_dice": 0.2089, "lime_pointing_game": 0.1852
+      },
+      "OPMD": {
+        "gradcam_iou": 0.2412, "gradcam_dice": 0.3585, "gradcam_pointing_game": 0.2632,
+        "gradcampp_iou": 0.1308, "gradcampp_dice": 0.2002, "gradcampp_pointing_game": 0.3158,
+        "lime_iou": 0.1855, "lime_dice": 0.2920, "lime_pointing_game": 0.2105
+      },
+      "Oral Cancer": {
+        "gradcam_iou": 0.2738, "gradcam_dice": 0.4240, "gradcam_pointing_game": 0.6667,
+        "gradcampp_iou": 0.0507, "gradcampp_dice": 0.0881, "gradcampp_pointing_game": 0.0000,
+        "lime_iou": 0.1923, "lime_dice": 0.3182, "lime_pointing_game": 0.0000
+      }
+    },
+    "contingency_2x2_matrix": {
+      "cohort_size": 49,
+      "EfficientNetB0": {
+        "Cell_A_Correct_Focused": {"count": 6, "percentage": "12.2%"},
+        "Cell_B_Correct_NotFocused": {"count": 25, "percentage": "51.0%"},
+        "Cell_C_Incorrect_Focused": {"count": 7, "percentage": "14.3%"},
+        "Cell_D_Incorrect_NotFocused": {"count": 11, "percentage": "22.4%"}
+      },
+      "MobileNetV2": {
+        "Cell_A_Correct_Focused": {"count": 15, "percentage": "30.6%"},
+        "Cell_B_Correct_NotFocused": {"count": 14, "percentage": "28.6%"},
+        "Cell_C_Incorrect_Focused": {"count": 5, "percentage": "10.2%"},
+        "Cell_D_Incorrect_NotFocused": {"count": 15, "percentage": "30.6%"}
+      }
+    },
+    "xai_pairwise_consistency": {
+      "gradcam_vs_gradcampp": {
+        "pearson_correlation": 0.8841,
+        "binary_iou_tau_025": 0.7412,
+        "interpretation": "High numerical agreement between 1st-order and 3rd-order formulations; Grad-CAM++ generates narrower focus peaks."
+      },
+      "gradcampp_vs_lime": {
+        "pearson_correlation": 0.6128,
+        "binary_iou_tau_025": 0.4285,
+        "interpretation": "Moderate alignment; LIME is constrained by superpixel polygon boundaries while Grad-CAM++ follows smooth convolutional activation contours."
+      }
+    }
+  },
+  "deployment_verification": {
+    "engine": "Oral-XAI Standalone Flask Diagnostic Workstation",
+    "primary_checkpoint": "results/phase5/efficientnetb0/best_model.keras",
+    "verified_4_class_mapping": ["Normal", "Variation from normal", "OPMD", "Oral Cancer"],
+    "verified_preprocessing": "Bilinear resize to 224x224 RGB, float32 in [0.0, 255.0]",
+    "tests_passed": "10/10 automated tests in tests/test_phase8_integration.py",
+    "phase7_regression_passed": "5/5 reference images match exact Phase 7 predictions and confidence scores",
+    "placeholders_remaining": 0,
+    "medical_disclaimer_integrated": true
+  },
+  "statistical_cautions": [
+    "Oral Cancer class contains only 20 total images in dataset and 3 images in the held-out test set.",
+    "Each OSCC test sample represents a discrete 33.3% sensitivity jump; results cannot be claimed as statistically robust.",
+    "Normal images (N=322 in test) do not contain lesion annotations and cannot be evaluated for lesion localization."
+  ],
+  "reproducibility_checklist": {
+    "all_models_locked": true,
+    "splits_locked": true,
+    "zero_leakage_verified": true,
+    "reproducible_figures_script": "src/generate_final_figures.py",
+    "reproducible_test_suite": "tests/test_phase8_integration.py"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "dataset_summary": {
+    "name": "SMART-OM Oral Lesion Dataset",
+    "total_raw_images": 2469,
+    "total_unique_patients": 329,
+    "classes": {
+      "Normal": {
+        "folder": "01. Normal",
+        "images": 2145,
+        "percentage": 86.88
+      },
+      "Variation from normal": {
+        "folder": "02. Variation from normal",
+        "images": 179,
+        "percentage": 7.25
+      },
+      "OPMD": {
+        "folder": "03. OPMD",
+        "images": 125,
+        "percentage": 5.06
+      },
+      "Oral Cancer": {
+        "folder": "04. Oral Cancer",
+        "images": 20,
+        "percentage": 0.81
+      }
+    }
+  },
+  "split_summary": {
+    "train": {
+      "images": 1731,
+      "patients": 230,
+      "image_ratio": 70.11,
+      "patient_ratio": 69.91
+    },
+    "validation": {
+      "images": 374,
+      "patients": 49,
+      "image_ratio": 15.15,
+      "patient_ratio": 14.89
+    },
+    "test": {
+      "images": 364,
+      "patients": 50,
+      "image_ratio": 14.74,
+      "patient_ratio": 15.2
+    }
+  },
+  "class_distribution": {
+    "Normal": {
+      "train_images": 1503,
+      "train_patients": 216,
+      "train_pct": 86.83,
+      "val_images": 322,
+      "val_patients": 46,
+      "val_pct": 86.1,
+      "test_images": 320,
+      "test_patients": 44,
+      "test_pct": 87.91,
+      "total_images": 2145
+    },
+    "Variation from normal": {
+      "train_images": 134,
+      "train_patients": 83,
+      "train_pct": 7.74,
+      "val_images": 19,
+      "val_patients": 12,
+      "val_pct": 5.08,
+      "test_images": 26,
+      "test_patients": 16,
+      "test_pct": 7.14,
+      "total_images": 179
+    },
+    "OPMD": {
+      "train_images": 81,
+      "train_patients": 42,
+      "train_pct": 4.68,
+      "val_images": 31,
+      "val_patients": 14,
+      "val_pct": 8.29,
+      "test_images": 13,
+      "test_patients": 8,
+      "test_pct": 3.57,
+      "total_images": 125
+    },
+    "Oral Cancer": {
+      "train_images": 13,
+      "train_patients": 11,
+      "train_pct": 0.75,
+      "val_images": 2,
+      "val_patients": 2,
+      "val_pct": 0.53,
+      "test_images": 5,
+      "test_patients": 5,
+      "test_pct": 1.37,
+      "total_images": 20
+    },
+    "TOTAL": {
+      "train_images": 1731,
+      "train_patients": 230,
+      "train_pct": 100.0,
+      "val_images": 374,
+      "val_patients": 49,
+      "val_pct": 100.0,
+      "test_images": 364,
+      "test_patients": 50,
+      "test_pct": 100.0,
+      "total_images": 2469
+    }
+  },
+  "patient_leakage_verification": {
+    "train_val_overlap": 0,
+    "train_test_overlap": 0,
+    "val_test_overlap": 0,
+    "expected_overlap": 0,
+    "status": "ZERO_LEAKAGE_CONFIRMED"
+  },
+  "split_algorithm_audit": {
+    "source_file": "src/prepare_dataset.py",
+    "function": "patient_level_split",
+    "is_patient_level": true,
+    "is_class_aware_stratified": false,
+    "is_deterministic": true,
+    "random_seed_used": 42,
+    "leakage_prevention_guaranteed": true
+  },
+  "problems_discovered": [
+    "Extreme class imbalance: Normal constitutes 86.88% of data, whereas Oral Cancer is only 0.81% (20 images total).",
+    "High validation instability risk for Oral Cancer: validation set contains only 2 images from 2 patients. A single classification error flips validation recall between 50% and 100%.",
+    "Limited statistical power in test set for Oral Cancer: test set contains only 5 images from 5 patients. One false negative lowers sensitivity by 20 percentage points.",
+    "Split algorithm is patient-level but NOT class-aware: splitting is an unstratified patient shuffle. The presence of all four classes in val and test was fortunate for seed 42 rather than mathematically guaranteed."
+  ],
+  "split_status": "PASS WITH CONCERNS",
+  "conclusion": {
+    "status": "PASS WITH CONCERNS",
+    "reason": "The split strictly succeeds at preventing patient-level data leakage (0 patient overlap across all sets) and fortuitously achieves representation of all 4 classes in train, validation, and test. However, the extreme scarcity of Oral Cancer (only 2 validation images, 5 test images) coupled with an unstratified patient split creates significant risk of validation metric volatility and wide test confidence intervals.",
+    "next_recommended_step": "Before training, upgrade patient_level_split() to a patient-level stratified grouping (StratifiedGroupKFold or greedy patient-stratification) to guarantee balanced cross-split representation of rare classes, and evaluate whether 4-class or 3-class framing (Normal/Healthy vs OPMD vs OSCC) with class-weighted loss should be adopted."
+  }
+}

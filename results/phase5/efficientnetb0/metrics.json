@@ -1,0 +1,208 @@
+{
+  "model_metadata": {
+    "model_name": "EfficientNetB0",
+    "architecture": "EfficientNetB0 Backbone (ImageNet) + GAP + Dropout(0.3) + Dense(4, softmax)",
+    "total_parameters": 4054695,
+    "trainable_parameters": 1134900,
+    "input_shape": [
+      224,
+      224,
+      3
+    ],
+    "output_classes": 4,
+    "preprocessing": "raw float32 [0, 255] with internal EfficientNet rescaling",
+    "optimizer": "Adam (1e-3 head, 1e-5 fine-tuning)",
+    "stage1_epochs": 12,
+    "stage2_epochs": 2
+  },
+  "validation_metrics": {
+    "accuracy": 0.7123655913978495,
+    "macro_precision": 0.4476856157482756,
+    "macro_recall": 0.5543802316248136,
+    "macro_f1": 0.4708581349206349,
+    "weighted_f1": 0.7662983764294248,
+    "cohens_kappa": 0.25998363947348857,
+    "roc_auc_ovr_macro": 0.8450304315338872,
+    "per_class": {
+      "Normal": {
+        "class_index": 0,
+        "precision": 0.9446640316205533,
+        "recall": 0.739938080495356,
+        "f1": 0.8298611111111112,
+        "support": 323,
+        "statistical_power_note": "STANDARD"
+      },
+      "Variation from normal": {
+        "class_index": 1,
+        "precision": 0.12941176470588237,
+        "recall": 0.4074074074074074,
+        "f1": 0.19642857142857142,
+        "support": 27,
+        "statistical_power_note": "STANDARD"
+      },
+      "OPMD": {
+        "class_index": 2,
+        "precision": 0.4666666666666667,
+        "recall": 0.7368421052631579,
+        "f1": 0.5714285714285714,
+        "support": 19,
+        "statistical_power_note": "STANDARD"
+      },
+      "Oral Cancer": {
+        "class_index": 3,
+        "precision": 0.25,
+        "recall": 0.3333333333333333,
+        "f1": 0.2857142857142857,
+        "support": 3,
+        "statistical_power_note": "LOW_STATISTICAL_POWER_ESTIMATE"
+      }
+    },
+    "confusion_matrix": [
+      [
+        239,
+        70,
+        11,
+        3
+      ],
+      [
+        11,
+        11,
+        5,
+        0
+      ],
+      [
+        2,
+        3,
+        14,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1
+      ]
+    ],
+    "normalized_confusion_matrix": [
+      [
+        0.739938080495356,
+        0.21671826625386997,
+        0.034055727554179564,
+        0.009287925696594427
+      ],
+      [
+        0.4074074074074074,
+        0.4074074074074074,
+        0.18518518518518517,
+        0.0
+      ],
+      [
+        0.10526315789473684,
+        0.15789473684210525,
+        0.7368421052631579,
+        0.0
+      ],
+      [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.0,
+        0.3333333333333333
+      ]
+    ]
+  },
+  "final_test_metrics": {
+    "accuracy": 0.7277628032345014,
+    "macro_precision": 0.49466871584699457,
+    "macro_recall": 0.679223723560108,
+    "macro_f1": 0.5345556343944677,
+    "weighted_f1": 0.7805118837370689,
+    "cohens_kappa": 0.3323533604162213,
+    "roc_auc_ovr_macro": 0.8894289743566332,
+    "per_class": {
+      "Normal": {
+        "class_index": 0,
+        "precision": 0.9795081967213115,
+        "recall": 0.7422360248447205,
+        "f1": 0.8445229681978799,
+        "support": 322,
+        "statistical_power_note": "STANDARD"
+      },
+      "Variation from normal": {
+        "class_index": 1,
+        "precision": 0.18666666666666668,
+        "recall": 0.5185185185185185,
+        "f1": 0.27450980392156865,
+        "support": 27,
+        "statistical_power_note": "STANDARD"
+      },
+      "OPMD": {
+        "class_index": 2,
+        "precision": 0.3125,
+        "recall": 0.7894736842105263,
+        "f1": 0.44776119402985076,
+        "support": 19,
+        "statistical_power_note": "STANDARD"
+      },
+      "Oral Cancer": {
+        "class_index": 3,
+        "precision": 0.5,
+        "recall": 0.6666666666666666,
+        "f1": 0.5714285714285714,
+        "support": 3,
+        "statistical_power_note": "LOW_STATISTICAL_POWER_ESTIMATE"
+      }
+    },
+    "confusion_matrix": [
+      [
+        239,
+        57,
+        24,
+        2
+      ],
+      [
+        4,
+        14,
+        9,
+        0
+      ],
+      [
+        0,
+        4,
+        15,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        2
+      ]
+    ],
+    "normalized_confusion_matrix": [
+      [
+        0.7422360248447205,
+        0.17701863354037267,
+        0.07453416149068323,
+        0.006211180124223602
+      ],
+      [
+        0.14814814814814814,
+        0.5185185185185185,
+        0.3333333333333333,
+        0.0
+      ],
+      [
+        0.0,
+        0.21052631578947367,
+        0.7894736842105263,
+        0.0
+      ],
+      [
+        0.3333333333333333,
+        0.0,
+        0.0,
+        0.6666666666666666
+      ]
+    ]
+  }
+}

@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg-main: #030712;
+    --bg-card: rgba(9, 18, 38, 0.58);
+    --bg-card-hover: rgba(14, 27, 54, 0.75);
+    --bg-glass: rgba(13, 25, 48, 0.42);
+
+    --border-glow: rgba(0, 243, 255, 0.35);
+    --border-subtle: rgba(0, 243, 255, 0.15);
+
+    --cyan: #00f3ff;
+    --emerald: #00ff9d;
+    --purple: #a855f7;
+    --magenta: #ff2a85;
+    --amber: #ffb703;
+    --danger: #ff3b5c;
+
+    --text-primary: #f0f6fc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    --glow-cyan-sm: 0 0 10px rgba(0, 243, 255, 0.3);
+    --glow-cyan-lg: 0 0 25px rgba(0, 243, 255, 0.5);
+    --glow-emerald: 0 0 20px rgba(0, 255, 157, 0.4);
+    --glow-purple: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+/* Base Body & App Overrides */
+header[data-testid="stHeader"],
+[data-testid="stHeader"] {
+    background: transparent !important;
+}
+
+html,
+body,
+[data-testid="stAppViewContainer"] {
+    background-color: var(--bg-main) !important;
+    background-image:
+        radial-gradient(circle at 15% 15%, rgba(0, 243, 255, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 20%, rgba(168, 85, 247, 0.07) 0%, transparent 35%),
+        radial-gradient(circle at 50% 80%, rgba(0, 255, 157, 0.05) 0%, transparent 45%),
+        linear-gradient(180deg, #030712 0%, #060e20 50%, #030712 100%) !important;
+    color: var(--text-primary) !important;
+    font-family: 'Inter', sans-serif !important;
+    overflow-x: hidden;
+}
+
+/* ═══════════════════════════════════════════════════
+   GPT-6 ASTRA ANIMATED BACKGROUND SYSTEM
+   ═══════════════════════════════════════════════════ */
+
+/* Component iframe full-screen background overlay */
+div[data-testid="stCustomComponentV1"],
+div[data-testid="stCustomComponentV1"]>iframe,
+iframe[title="st_components_v1.components.html"],
+iframe[title*="components.html"] {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    border: none !important;
+    background: transparent !important;
+    overflow: hidden !important;
+}
+
+/* Zero-out container in layout flow so it occupies ZERO extra space */
+div[data-testid="stVerticalBlock"]>div:has(div[data-testid="stCustomComponentV1"]),
+div[data-testid="stElementContainer"]:has(div[data-testid="stCustomComponentV1"]),
+div[data-testid="stElementContainer"]:has(iframe[title*="components.html"]),
+div.element-container:has(div[data-testid="stCustomComponentV1"]),
+div.element-container:has(iframe[title*="components.html"]) {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    line-height: 0 !important;
+    overflow: visible !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+}
+
+/* Ensure containers are transparent for background canvas visibility */
+section.stMain,
+div[data-testid="stMain"],
+div[data-testid="stMainBlockContainer"],
+.block-container {
+    background: transparent !important;
+}
+
+/* Astra Ambient Glow Blobs — organic breathing light */
+.astra-glow {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0;
+    animation: astraFadeIn 3s ease forwards;
+    mix-blend-mode: screen;
+}
+
+@keyframes astraFadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.astra-glow-1 {
+    width: 600px;
+    height: 600px;
+    left: 20%;
+    top: 10%;
+    background: radial-gradient(circle, hsla(210, 100%, 60%, 0.12), transparent 70%);
+    animation: astraDrift1 25s ease-in-out infinite alternate, astraFadeIn 3s ease forwards;
+}
+
+.astra-glow-2 {
+    width: 500px;
+    height: 500px;
+    right: 15%;
+    top: 25%;
+    background: radial-gradient(circle, hsla(270, 90%, 55%, 0.1), transparent 70%);
+    animation: astraDrift2 30s ease-in-out infinite alternate, astraFadeIn 3s ease 0.5s forwards;
+}
+
+.astra-glow-3 {
+    width: 450px;
+    height: 450px;
+    left: 40%;
+    bottom: 10%;
+    background: radial-gradient(circle, hsla(190, 95%, 55%, 0.1), transparent 70%);
+    animation: astraDrift3 22s ease-in-out infinite alternate, astraFadeIn 3s ease 1s forwards;
+}
+
+.astra-glow-4 {
+    width: 350px;
+    height: 350px;
+    right: 30%;
+    bottom: 25%;
+    background: radial-gradient(circle, hsla(240, 85%, 60%, 0.08), transparent 70%);
+    animation: astraDrift4 28s ease-in-out infinite alternate, astraFadeIn 3s ease 1.5s forwards;
+}
+
+@keyframes astraDrift1 {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.6;
+    }
+
+    25% {
+        transform: translate(30px, 50px) scale(1.1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translate(-20px, 30px) scale(0.95);
+        opacity: 0.5;
+    }
+
+    75% {
+        transform: translate(50px, -20px) scale(1.15);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translate(-30px, 40px) scale(1.05);
+        opacity: 0.65;
+    }
+}
+
+@keyframes astraDrift2 {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.5;
+    }
+
+    33% {
+        transform: translate(-40px, 30px) scale(1.12);
+        opacity: 0.7;
+    }
+
+    66% {
+        transform: translate(20px, -40px) scale(0.9);
+        opacity: 0.55;
+    }
+
+    100% {
+        transform: translate(-25px, 50px) scale(1.08);
+        opacity: 0.6;
+    }
+}
+
+@keyframes astraDrift3 {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translate(45px, -25px) scale(1.18);
+        opacity: 0.75;
+    }
+
+    100% {
+        transform: translate(-35px, 15px) scale(0.92);
+        opacity: 0.55;
+    }
+}
+
+@keyframes astraDrift4 {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.45;
+    }
+
+    50% {
+        transform: translate(-30px, -35px) scale(1.1);
+        opacity: 0.65;
+    }
+
+    100% {
+        transform: translate(40px, 25px) scale(1.05);
+        opacity: 0.5;
+    }
+}
+
+/* Corner HUD Decorations */
+.hud-corner {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.4;
+}
+
+.hud-corner-tl {
+    top: 12px;
+    left: 12px;
+    border-top: 2px solid var(--cyan);
+    border-left: 2px solid var(--cyan);
+    animation: cornerPulse 3s ease-in-out infinite alternate;
+}
+
+.hud-corner-tr {
+    top: 12px;
+    right: 12px;
+    border-top: 2px solid var(--purple);
+    border-right: 2px solid var(--purple);
+    animation: cornerPulse 3s ease-in-out 0.5s infinite alternate;
+}
+
+.hud-corner-bl {
+    bottom: 12px;
+    left: 12px;
+    border-bottom: 2px solid var(--emerald);
+    border-left: 2px solid var(--emerald);
+    animation: cornerPulse 3s ease-in-out 1s infinite alternate;
+}
+
+.hud-corner-br {
+    bottom: 12px;
+    right: 12px;
+    border-bottom: 2px solid var(--magenta);
+    border-right: 2px solid var(--magenta);
+    animation: cornerPulse 3s ease-in-out 1.5s infinite alternate;
+}
+
+@keyframes cornerPulse {
+    0% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+}
+
+/* Ensure main content is above background */
+.stApp>* {
+    position: relative;
+    z-index: 2;
+}
+
+/* Header & Typography */
+h1,
+h2,
+h3,
+.orbitron-font {
+    font-family: 'Orbitron', sans-serif !important;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.rajdhani-font {
+    font-family: 'Rajdhani', sans-serif !important;
+}
+
+/* Top Cyber Banner */
+.cyber-header {
+    position: relative;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, rgba(13, 25, 48, 0.65), rgba(6, 14, 28, 0.78));
+    border: 1px solid var(--border-glow);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), var(--glow-cyan-sm);
+    backdrop-filter: blur(12px);
+    overflow: hidden;
+}
+
+.cyber-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 243, 255, 0.15));
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%);
+    pointer-events: none;
+}
+
+.header-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    background: linear-gradient(90deg, #ffffff 0%, var(--cyan) 50%, var(--emerald) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    text-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
+}
+
+.header-subtitle {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.15em;
+    margin-top: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/* Pulse Badge */
+.pulse-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: rgba(0, 255, 157, 0.1);
+    border: 1px solid rgba(0, 255, 157, 0.4);
+    color: var(--emerald);
+    box-shadow: 0 0 12px rgba(0, 255, 157, 0.2);
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--emerald);
+    box-shadow: 0 0 10px var(--emerald);
+    animation: pulseGlow 1.5s infinite alternate;
+}
+
+@keyframes pulseGlow {
+    0% {
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Glassmorphism Cyber Card */
+.cyber-card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border-glow);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cyber-card:hover {
+    border-color: rgba(0, 243, 255, 0.6);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), var(--glow-cyan-sm);
+    transform: translateY(-2px);
+}
+
+/* HUD Corner Accents */
+.hud-box {
+    position: relative;
+    padding: 1.2rem;
+    border: 1px solid var(--border-subtle);
+    background: rgba(6, 14, 28, 0.6);
+    border-radius: 8px;
+}
+
+.hud-box::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid var(--cyan);
+    border-left: 2px solid var(--cyan);
+}
+
+.hud-box::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 12px;
+    height: 12px;
+    border-bottom: 2px solid var(--cyan);
+    border-right: 2px solid var(--cyan);
+}
+
+/* Image Scan Viewport */
+.scan-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-glow);
+    box-shadow: var(--glow-cyan-sm);
+}
+
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--cyan), var(--emerald), transparent);
+    box-shadow: 0 0 15px var(--cyan);
+    z-index: 10;
+    animation: scanAnimation 3s ease-in-out infinite alternate;
+}
+
+@keyframes scanAnimation {
+    0% {
+        top: 0%;
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 96%;
+        opacity: 0.8;
+    }
+}
+
+/* Metric Display Cards */
+.cyber-metric-card {
+    background: linear-gradient(145deg, rgba(12, 24, 46, 0.7), rgba(5, 12, 24, 0.9));
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cyber-metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--cyan), var(--purple));
+}
+
+.metric-label {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.metric-value {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--cyan);
+    text-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+    margin-top: 0.2rem;
+}
+
+/* Severity Indicators */
+.risk-low {
+    color: var(--emerald) !important;
+    border-color: rgba(0, 255, 157, 0.4) !important;
+    background: rgba(0, 255, 157, 0.08) !important;
+}
+
+.risk-moderate {
+    color: var(--amber) !important;
+    border-color: rgba(255, 183, 3, 0.4) !important;
+    background: rgba(255, 183, 3, 0.08) !important;
+}
+
+.risk-high {
+    color: var(--danger) !important;
+    border-color: rgba(255, 59, 92, 0.4) !important;
+    background: rgba(255, 59, 92, 0.08) !important;
+}
+
+/* Custom Streamlit Control Styles */
+[data-testid="stSidebar"] {
+    background: rgba(4, 10, 22, 0.85) !important;
+    border-right: 1px solid var(--border-subtle) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+.stButton>button {
+    background: linear-gradient(135deg, rgba(0, 243, 255, 0.15), rgba(168, 85, 247, 0.15)) !important;
+    border: 1px solid var(--border-glow) !important;
+    color: var(--text-primary) !important;
+    font-family: 'Rajdhani', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    border-radius: 8px !important;
+    padding: 0.5rem 1.2rem !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+.stButton>button:hover {
+    background: linear-gradient(135deg, rgba(0, 243, 255, 0.35), rgba(168, 85, 247, 0.35)) !important;
+    border-color: var(--cyan) !important;
+    box-shadow: var(--glow-cyan-sm) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* File Uploader Cyber Style */
+[data-testid="stFileUploader"] {
+    border: 1px dashed var(--border-glow) !important;
+    border-radius: 12px !important;
+    background: rgba(6, 15, 32, 0.5) !important;
+    padding: 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+[data-testid="stFileUploader"]:hover {
+    border-color: var(--cyan) !important;
+    background: rgba(0, 243, 255, 0.04) !important;
+    box-shadow: var(--glow-cyan-sm) !important;
+}
+
+/* Progress bar styling */
+.stProgress>div>div>div {
+    background: linear-gradient(90deg, var(--cyan), var(--emerald)) !important;
+    box-shadow: 0 0 12px var(--cyan) !important;
+}
+
+/* Selectbox & Sliders */
+div[data-baseweb="select"]>div {
+    background-color: rgba(6, 14, 28, 0.8) !important;
+    border-color: var(--border-subtle) !important;
+    color: var(--text-primary) !important;
+    border-radius: 8px !important;
+}
+
+.stSlider [data-baseweb="slider"] {
+    color: var(--cyan) !important;
+}
+
+/* Tabs Styling */
+button[data-baseweb="tab"] {
+    font-family: 'Rajdhani', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.05rem !important;
+    letter-spacing: 0.05em !important;
+    color: var(--text-secondary) !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+button[aria-selected="true"] {
+    color: var(--cyan) !important;
+    border-bottom: 2px solid var(--cyan) !important;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.4) !important;
+}

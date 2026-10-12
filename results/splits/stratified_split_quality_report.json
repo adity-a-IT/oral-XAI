@@ -1,0 +1,188 @@
+{
+  "dataset_summary": {
+    "name": "SMART-OM Oral Lesion Dataset",
+    "total_raw_images": 2469,
+    "total_unique_patients": 329,
+    "classes": {
+      "Normal": {
+        "folder": "01. Normal",
+        "images": 2145,
+        "percentage": 86.88
+      },
+      "Variation from normal": {
+        "folder": "02. Variation from normal",
+        "images": 179,
+        "percentage": 7.25
+      },
+      "OPMD": {
+        "folder": "03. OPMD",
+        "images": 125,
+        "percentage": 5.06
+      },
+      "Oral Cancer": {
+        "folder": "04. Oral Cancer",
+        "images": 20,
+        "percentage": 0.81
+      }
+    }
+  },
+  "stratification_strategy": {
+    "algorithm": "Deterministic Greedy Multi-Label Patient-Grouped Stratification",
+    "unit_of_grouping": "patient_id",
+    "seed": 42,
+    "target_ratios": {
+      "train": 0.7,
+      "val": 0.15,
+      "test": 0.15
+    },
+    "leakage_prevention": "Strict 100% disjoint patient partition"
+  },
+  "split_summary": {
+    "train": {
+      "images": 1726,
+      "patients": 232,
+      "image_pct": 69.91,
+      "patient_pct": 70.52
+    },
+    "validation": {
+      "images": 372,
+      "patients": 48,
+      "image_pct": 15.07,
+      "patient_pct": 14.59
+    },
+    "test": {
+      "images": 371,
+      "patients": 49,
+      "image_pct": 15.03,
+      "patient_pct": 14.89
+    }
+  },
+  "class_distribution": {
+    "Normal": {
+      "train_images": 1500,
+      "train_patients": 216,
+      "train_pct": 86.91,
+      "train_dev": 0.03,
+      "val_images": 323,
+      "val_patients": 45,
+      "val_pct": 86.83,
+      "val_dev": -0.05,
+      "test_images": 322,
+      "test_patients": 45,
+      "test_pct": 86.79,
+      "test_dev": -0.08,
+      "total_images": 2145
+    },
+    "Variation from normal": {
+      "train_images": 125,
+      "train_patients": 81,
+      "train_pct": 7.24,
+      "train_dev": -0.01,
+      "val_images": 27,
+      "val_patients": 16,
+      "val_pct": 7.26,
+      "val_dev": 0.01,
+      "test_images": 27,
+      "test_patients": 14,
+      "test_pct": 7.28,
+      "test_dev": 0.03,
+      "total_images": 179
+    },
+    "OPMD": {
+      "train_images": 87,
+      "train_patients": 45,
+      "train_pct": 5.04,
+      "train_dev": -0.02,
+      "val_images": 19,
+      "val_patients": 9,
+      "val_pct": 5.11,
+      "val_dev": 0.04,
+      "test_images": 19,
+      "test_patients": 10,
+      "test_pct": 5.12,
+      "test_dev": 0.06,
+      "total_images": 125
+    },
+    "Oral Cancer": {
+      "train_images": 14,
+      "train_patients": 13,
+      "train_pct": 0.81,
+      "train_dev": 0.0,
+      "val_images": 3,
+      "val_patients": 2,
+      "val_pct": 0.81,
+      "val_dev": -0.0,
+      "test_images": 3,
+      "test_patients": 3,
+      "test_pct": 0.81,
+      "test_dev": -0.0,
+      "total_images": 20
+    },
+    "TOTAL": {
+      "train_images": 1726,
+      "train_patients": 232,
+      "train_pct": 100.0,
+      "val_images": 372,
+      "val_patients": 48,
+      "val_pct": 100.0,
+      "test_images": 371,
+      "test_patients": 49,
+      "test_pct": 100.0,
+      "total_images": 2469
+    }
+  },
+  "oral_cancer_detailed_audit": {
+    "total_oral_cancer_patients": 18,
+    "total_oral_cancer_images": 20,
+    "train": {
+      "images": 14,
+      "patients": 13,
+      "patient_ids": [
+        "CA1",
+        "CA2",
+        "CA3",
+        "CA5",
+        "CA6",
+        "CA7",
+        "CA8",
+        "CA9",
+        "CASE_6026",
+        "CASE_6095",
+        "CASE_6098",
+        "CASE_6765",
+        "CASE_7059"
+      ]
+    },
+    "validation": {
+      "images": 3,
+      "patients": 2,
+      "patient_ids": [
+        "CA4",
+        "CASE_6766"
+      ]
+    },
+    "test": {
+      "images": 3,
+      "patients": 3,
+      "patient_ids": [
+        "CA10",
+        "CASE_6099",
+        "CASE_7252"
+      ]
+    },
+    "stability_assessment": "Mathematically exact 70/15/15 ratio achieved (14/3/3 images). However, 3 images in validation and 3 images in test cannot provide robust statistical power for independent 4-class evaluation (+/-33.3% shift per sample)."
+  },
+  "leakage_verification": {
+    "train_val_overlap": 0,
+    "train_test_overlap": 0,
+    "val_test_overlap": 0,
+    "status": "ZERO_LEAKAGE_CONFIRMED"
+  },
+  "reproducibility_verification": {
+    "seed": 42,
+    "two_run_identical_match": true,
+    "status": "DETERMINISTIC_REPRODUCIBILITY_CONFIRMED"
+  },
+  "split_status": "PASS WITH CONCERNS",
+  "recommendation": "The patient-stratified split achieves ideal proportional balance across all classes (<0.08% deviation) while enforcing 100% patient isolation. For model training, adopt class-weighting / focal loss, and consider 3-class framing (Healthy vs OPMD vs OSCC) or reporting aggregate metrics alongside the per-class metrics."
+}

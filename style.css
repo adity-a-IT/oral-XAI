@@ -1,0 +1,1462 @@
+/* ==========================================================================
+   ORAL-XAI :: Modern Cyber-Medical Design System (Alethia.earth Inspired)
+   ========================================================================== */
+
+:root {
+    --bg-dark: #070a12;
+    --bg-card: rgba(14, 20, 34, 0.72);
+    --bg-panel: rgba(12, 17, 30, 0.85);
+    
+    --cyan: #00f3ff;
+    --emerald: #00ff9d;
+    --blue: #3b82f6;
+    --violet: #8b5cf6;
+    --rose: #f43f5e;
+    --amber: #f59e0b;
+    
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    
+    --border-glass: rgba(255, 255, 255, 0.08);
+    --border-cyan: rgba(0, 243, 255, 0.3);
+    
+    --glow-cyan: 0 0 30px rgba(0, 243, 255, 0.25);
+    --radius-pill: 9999px;
+    --radius-card: 18px;
+    
+    --font-sans: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'Geist Mono', monospace;
+    --font-tech: 'Orbitron', sans-serif;
+    --font-hud: 'Rajdhani', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Ambient Radiant Gradients (Alethia Earth Atmospheric Lighting) */
+.ambient-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.glow-sphere {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.16;
+    animation: pulseSphere 16s ease-in-out infinite alternate;
+}
+
+.glow-1 {
+    width: 750px;
+    height: 750px;
+    background: radial-gradient(circle, #00f3ff, #1d4ed8, transparent 70%);
+    top: -200px;
+    left: 20%;
+}
+
+.glow-2 {
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, #8b5cf6, #ec4899, transparent 70%);
+    bottom: -150px;
+    right: 15%;
+    animation-delay: -6s;
+}
+
+.glow-3 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #00ff9d, #047857, transparent 70%);
+    top: 45%;
+    left: -120px;
+    animation-delay: -10s;
+}
+
+@keyframes pulseSphere {
+    0% { transform: scale(1) translate(0, 0); opacity: 0.12; }
+    50% { transform: scale(1.15) translate(40px, -30px); opacity: 0.22; }
+    100% { transform: scale(0.95) translate(-30px, 40px); opacity: 0.14; }
+}
+
+/* Cyber Spatial Grid Pattern */
+.cyber-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: 
+        linear-gradient(rgba(0, 243, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 243, 255, 0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 1;
+    mask-image: radial-gradient(circle at 50% 40%, black 40%, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at 50% 40%, black 40%, transparent 80%);
+}
+
+/* ==========================================================================
+   Navigation Bar (Alethia Glass Pill)
+   ========================================================================== */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    padding: 1.2rem 2.5rem;
+    pointer-events: none;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 24px;
+    background: rgba(10, 15, 28, 0.75);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-pill);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: auto;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.brand-symbol {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--cyan), var(--blue));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #070a12;
+    box-shadow: 0 0 16px rgba(0, 243, 255, 0.4);
+}
+
+.brand-name {
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.brand-tag {
+    font-size: 0.72rem;
+    font-family: var(--font-mono);
+    color: var(--cyan);
+    background: rgba(0, 243, 255, 0.1);
+    padding: 2px 7px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 243, 255, 0.25);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #ffffff;
+}
+
+.btn-nav {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #070a12;
+    background: #ffffff;
+    padding: 8px 18px;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-nav:hover {
+    background: var(--cyan);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Hero Section (Alethia Typography + 3D Stage)
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 4rem 2rem;
+    z-index: 10;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto 2.5rem auto;
+    position: relative;
+    z-index: 20;
+}
+
+.hero-pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-pill);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.pulse-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--emerald);
+    box-shadow: 0 0 10px var(--emerald);
+    animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    margin-bottom: 1.2rem;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #ffffff 20%, var(--cyan) 65%, var(--emerald) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 45px rgba(0, 243, 255, 0.25);
+}
+
+.hero-subtitle {
+    font-size: 1.18rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 680px;
+    margin: 0 auto 2rem auto;
+    font-weight: 400;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.btn-pill-primary {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #070a12;
+    background: #ffffff;
+    padding: 12px 26px;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+}
+
+.btn-pill-primary:hover {
+    background: var(--cyan);
+    box-shadow: 0 0 35px rgba(0, 243, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+.btn-pill-secondary {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #e2e8f0;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glass);
+    padding: 12px 24px;
+    border-radius: var(--radius-pill);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: all 0.25s ease;
+}
+
+.btn-pill-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--cyan);
+    color: var(--cyan);
+}
+
+/* ==========================================================================
+   3D SOLID MEDICAL PHOTO SPHERE (Center Spinning Globe)
+   ========================================================================== */
+.sphere-viewport {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    height: 600px;
+    perspective: 1400px;
+    perspective-origin: 50% 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    margin-top: 1rem;
+    overflow: visible;
+}
+
+.sphere-scene {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    cursor: grab;
+    user-select: none;
+}
+
+.sphere-scene:active {
+    cursor: grabbing;
+}
+
+/* Central Glowing Holographic Core (Inside the Sphere) */
+.sphere-core {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.core-radial-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 243, 255, 0.28) 0%, rgba(139, 92, 246, 0.18) 45%, rgba(0, 255, 157, 0.08) 70%, transparent 85%);
+    filter: blur(20px);
+    animation: corePulse 4s ease-in-out infinite alternate;
+}
+
+.core-hologram-mesh {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px dashed rgba(0, 243, 255, 0.35);
+    background: radial-gradient(circle, rgba(0, 243, 255, 0.04) 0%, transparent 70%);
+    box-shadow: inset 0 0 40px rgba(0, 243, 255, 0.2), 0 0 40px rgba(0, 243, 255, 0.15);
+}
+
+.core-pulse-node {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 0 30px var(--cyan), 0 0 60px var(--cyan);
+    animation: nodeBlink 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes corePulse {
+    0% { transform: scale(0.92); opacity: 0.6; }
+    100% { transform: scale(1.08); opacity: 0.95; }
+}
+
+@keyframes nodeBlink {
+    0% { transform: scale(0.8); opacity: 0.7; }
+    100% { transform: scale(1.2); opacity: 1; }
+}
+
+/* Cyber Orbital Gimbal Rings */
+.orbital-ring {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    transform-style: preserve-3d;
+    transition: opacity 0.3s ease;
+}
+
+.ring-equator {
+    width: 580px;
+    height: 580px;
+    border: 1px dashed rgba(0, 243, 255, 0.35);
+    transform: rotateX(82deg);
+    animation: spinRingEquator 30s linear infinite;
+}
+
+.ring-lat-1 {
+    width: 550px;
+    height: 550px;
+    border: 1px solid rgba(0, 255, 157, 0.28);
+    transform: rotateY(55deg) rotateX(30deg);
+    animation: spinRingLat1 24s linear infinite reverse;
+}
+
+.ring-lat-2 {
+    width: 520px;
+    height: 520px;
+    border: 1px solid rgba(139, 92, 246, 0.28);
+    transform: rotateY(-45deg) rotateX(-25deg);
+    animation: spinRingLat2 28s linear infinite;
+}
+
+@keyframes spinRingEquator {
+    from { transform: rotateX(82deg) rotateZ(0deg); }
+    to { transform: rotateX(82deg) rotateZ(360deg); }
+}
+
+@keyframes spinRingLat1 {
+    from { transform: rotateY(55deg) rotateX(30deg) rotateZ(0deg); }
+    to { transform: rotateY(55deg) rotateX(30deg) rotateZ(360deg); }
+}
+
+@keyframes spinRingLat2 {
+    from { transform: rotateY(-45deg) rotateX(-25deg) rotateZ(0deg); }
+    to { transform: rotateY(-45deg) rotateX(-25deg) rotateZ(360deg); }
+}
+
+/* The 3D Rotating Sphere Coordinate Parent */
+.sphere-globe {
+    position: absolute;
+    width: 0;
+    height: 0;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+/* Individual Medical Image Facets on the Solid Sphere */
+.sphere-facet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 104px;
+    margin-top: -52px;
+    margin-left: -70px;
+    transform-style: preserve-3d;
+    border-radius: 12px;
+    background: rgba(10, 16, 30, 0.92);
+    border: 1px solid rgba(0, 243, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 16px rgba(0, 243, 255, 0.18);
+    overflow: hidden;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    backface-visibility: visible;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease, filter 0.25s ease;
+}
+
+.sphere-facet img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 11px;
+    transition: transform 0.4s ease;
+}
+
+.sphere-facet:hover {
+    border-color: var(--emerald);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.95), 0 0 30px rgba(0, 255, 157, 0.6);
+    z-index: 1000 !important;
+}
+
+.sphere-facet:hover img {
+    transform: scale(1.1);
+}
+
+/* Mini HUD Tag on Each Facet */
+.facet-chip {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    z-index: 5;
+    background: rgba(6, 10, 20, 0.88);
+    border: 1px solid rgba(0, 243, 255, 0.4);
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    backdrop-filter: blur(10px);
+}
+
+.facet-badge-top {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    z-index: 5;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.58rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.facet-laser {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    box-shadow: 0 0 10px var(--cyan);
+    animation: facetLaser 2.8s ease-in-out infinite alternate;
+    pointer-events: none;
+    z-index: 4;
+}
+
+@keyframes facetLaser {
+    0% { top: 0%; opacity: 0.3; }
+    100% { top: 96%; opacity: 0.8; }
+}
+
+/* Sphere HUD Controls */
+.sphere-hud-controls {
+    position: relative;
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 18px;
+    background: rgba(10, 16, 30, 0.75);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-pill);
+    backdrop-filter: blur(20px);
+    z-index: 30;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sphere-drag-hint {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-left: 6px;
+}
+
+/* Floating Metadata Chips / Pills (Alethia signature chips like -8.3 tCO2e) */
+.chip {
+    position: absolute;
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 11px;
+    border-radius: var(--radius-pill);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    white-space: nowrap;
+}
+
+.chip-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 8px var(--cyan);
+}
+
+.dot-rose { background: var(--rose); box-shadow: 0 0 8px var(--rose); }
+.dot-violet { background: var(--violet); box-shadow: 0 0 8px var(--violet); }
+
+.chip-cyan {
+    background: rgba(0, 243, 255, 0.15);
+    border: 1px solid rgba(0, 243, 255, 0.45);
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(0, 243, 255, 0.8);
+}
+
+.chip-rose {
+    background: rgba(244, 63, 94, 0.16);
+    border: 1px solid rgba(244, 63, 94, 0.45);
+    color: #ffffff;
+}
+
+.chip-emerald {
+    background: rgba(0, 255, 157, 0.15);
+    border: 1px solid rgba(0, 255, 157, 0.45);
+    color: #ffffff;
+}
+
+.chip-violet {
+    background: rgba(139, 92, 246, 0.18);
+    border: 1px solid rgba(139, 92, 246, 0.45);
+    color: #ffffff;
+}
+
+.chip-glass {
+    background: rgba(7, 12, 22, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #e2e8f0;
+}
+
+.chip-glass-glow {
+    background: rgba(7, 12, 22, 0.9);
+    border: 1px solid rgba(0, 243, 255, 0.4);
+    color: var(--cyan);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+}
+
+.chip-top { top: 12px; left: 12px; }
+.chip-bottom { bottom: 12px; right: 12px; }
+.chip-top-left { top: 14px; left: 14px; }
+.chip-top-right { top: 14px; right: 14px; }
+.chip-bottom-left { bottom: 14px; left: 14px; }
+.chip-bottom-right { bottom: 14px; right: 14px; }
+
+/* Dimensions & Coordinates for Each 3D Card */
+.card-hero-lesion {
+    width: 440px;
+    height: 310px;
+    margin-top: -155px;
+    margin-left: -220px;
+    z-index: 10;
+}
+
+.card-doctor {
+    width: 320px;
+    height: 220px;
+    margin-top: -240px;
+    margin-left: -530px;
+    z-index: 8;
+}
+
+.card-biopsy {
+    width: 330px;
+    height: 230px;
+    margin-top: -230px;
+    margin-left: 210px;
+    z-index: 7;
+}
+
+.card-xai {
+    width: 330px;
+    height: 225px;
+    margin-top: 55px;
+    margin-left: -500px;
+    z-index: 9;
+}
+
+.card-patient {
+    width: 325px;
+    height: 225px;
+    margin-top: 65px;
+    margin-left: 190px;
+    z-index: 8;
+}
+
+.card-exam {
+    width: 250px;
+    height: 170px;
+    margin-top: -290px;
+    margin-left: -125px;
+    z-index: 5;
+    opacity: 0.88;
+}
+
+/* Floating Camera Angle Controls */
+.camera-dock {
+    position: relative;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 16px;
+    background: rgba(10, 16, 30, 0.7);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-pill);
+    backdrop-filter: blur(20px);
+    z-index: 30;
+}
+
+.dock-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    padding: 5px 13px;
+    border-radius: var(--radius-pill);
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.dock-btn:hover, .dock-btn.active {
+    background: rgba(0, 243, 255, 0.12);
+    border-color: rgba(0, 243, 255, 0.35);
+    color: var(--cyan);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.25);
+}
+
+/* Live Telemetry Ticker Bar */
+.telemetry-bar {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.2rem;
+    padding: 12px 30px;
+    background: rgba(10, 15, 28, 0.65);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-pill);
+    backdrop-filter: blur(20px);
+    z-index: 30;
+}
+
+.telemetry-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.t-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.t-val {
+    font-size: 0.95rem;
+    font-family: var(--font-tech);
+    color: var(--cyan);
+    font-weight: 700;
+}
+
+.t-sep {
+    width: 1px;
+    height: 22px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================================================
+   LIVE CLINICAL DIAGNOSTIC WORKSTATION (Direct Web App)
+   ========================================================================== */
+.diagnostic-section {
+    position: relative;
+    max-width: 1300px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+    z-index: 20;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-tag {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--cyan);
+    margin-bottom: 0.6rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.8rem;
+}
+
+.section-desc {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.diagnostic-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 2rem;
+}
+
+.panel-box {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-glass);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-glass);
+}
+
+.panel-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--cyan);
+}
+
+.status-indicator {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3px 10px;
+    border-radius: var(--radius-pill);
+}
+
+.status-indicator.live {
+    color: var(--emerald);
+    background: rgba(0, 255, 157, 0.12);
+    border: 1px solid rgba(0, 255, 157, 0.3);
+}
+
+.control-row {
+    margin-bottom: 1rem;
+}
+
+.control-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-select {
+    width: 100%;
+    background: #0e1526;
+    border: 1px solid var(--border-glass);
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.form-select:focus {
+    border-color: var(--cyan);
+}
+
+.btn-file-upload {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    color: var(--text-secondary);
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-file-upload:hover {
+    background: rgba(0, 243, 255, 0.06);
+    border-color: var(--cyan);
+    color: var(--cyan);
+}
+
+/* Image Viewport Canvas & Laser Bar */
+.viewport-canvas-wrapper {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #060913;
+    border: 1px solid var(--border-cyan);
+    margin-bottom: 1.5rem;
+}
+
+.viewport-canvas-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.viewport-canvas-wrapper canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.laser-scanner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--cyan), #ffffff, var(--cyan), transparent);
+    box-shadow: 0 0 16px var(--cyan);
+    animation: laserScan 3s ease-in-out infinite alternate;
+    z-index: 5;
+    pointer-events: none;
+}
+
+@keyframes laserScan {
+    0% { top: 0%; opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { top: 98%; opacity: 0.4; }
+}
+
+.hud-overlay-tag {
+    position: absolute;
+    z-index: 6;
+    font-size: 0.72rem;
+    font-family: var(--font-mono);
+    color: var(--cyan);
+    background: rgba(6, 9, 19, 0.85);
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 243, 255, 0.3);
+}
+
+.hud-overlay-tag.top-left { top: 12px; left: 12px; }
+.hud-overlay-tag.bottom-right { bottom: 12px; right: 12px; }
+
+/* XAI Slider & Colormap Selector */
+.xai-slider-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-glass);
+    padding: 14px;
+    border-radius: 12px;
+}
+
+.slider-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.custom-range {
+    width: 50%;
+    accent-color: var(--cyan);
+    cursor: pointer;
+}
+
+.btn-group-colormap {
+    display: flex;
+    gap: 6px;
+}
+
+.btn-cmap {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-glass);
+    color: var(--text-secondary);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-cmap.active, .btn-cmap:hover {
+    background: rgba(0, 243, 255, 0.15);
+    border-color: var(--cyan);
+    color: var(--cyan);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 0.82rem;
+}
+
+/* Right Panel: Prediction & Telemetry */
+.result-card {
+    background: rgba(0, 243, 255, 0.04);
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    border-radius: 14px;
+    padding: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+}
+
+.result-sub {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+.result-class {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-top: 2px;
+}
+
+.risk-badge {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.risk-low { background: rgba(0, 255, 157, 0.15); color: var(--emerald); border: 1px solid rgba(0, 255, 157, 0.4); }
+.risk-moderate { background: rgba(245, 158, 11, 0.15); color: var(--amber); border: 1px solid rgba(245, 158, 11, 0.4); }
+.risk-high { background: rgba(244, 63, 94, 0.15); color: var(--rose); border: 1px solid rgba(244, 63, 94, 0.4); }
+
+.conf-meter-wrapper {
+    margin-top: 0.8rem;
+}
+
+.conf-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+}
+
+.conf-val {
+    font-family: var(--font-tech);
+    color: var(--cyan);
+    font-weight: 700;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--cyan), var(--emerald));
+    border-radius: 4px;
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Multiclass Probabilities */
+.prob-section {
+    margin-bottom: 1.5rem;
+}
+
+.prob-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+}
+
+.prob-item {
+    margin-bottom: 0.6rem;
+}
+
+.prob-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 3px;
+}
+
+.prob-bar-bg {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.prob-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+.fill-cyan { background: var(--cyan); }
+.fill-rose { background: var(--rose); }
+.fill-emerald { background: var(--emerald); }
+
+/* Audit Box */
+.audit-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.audit-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--cyan);
+    margin-bottom: 0.5rem;
+}
+
+.audit-text {
+    font-size: 0.84rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.btn-export-report {
+    width: 100%;
+    background: rgba(0, 243, 255, 0.1);
+    border: 1px solid var(--border-cyan);
+    color: var(--cyan);
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+}
+
+.btn-export-report:hover {
+    background: var(--cyan);
+    color: #070a12;
+    box-shadow: 0 0 25px rgba(0, 243, 255, 0.4);
+}
+
+/* ==========================================================================
+   Bento Grid Section (Alethia Bento Aesthetic)
+   ========================================================================== */
+.bento-section {
+    max-width: 1240px;
+    margin: 6rem auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 20;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.bento-card {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-glass);
+    border-radius: 20px;
+    padding: 2rem 1.6rem;
+    backdrop-filter: blur(16px);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bento-card:hover {
+    border-color: rgba(0, 243, 255, 0.35);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.bento-icon {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.bento-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    color: #ffffff;
+}
+
+.bento-card-text {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.bento-metric {
+    font-family: var(--font-tech);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--cyan);
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-glass);
+}
+
+/* ==========================================================================
+   Modal Overlay
+   ========================================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(5, 8, 16, 0.85);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-box {
+    width: 90%;
+    max-width: 680px;
+    background: #0b1120;
+    border: 1px solid var(--border-cyan);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 243, 255, 0.2);
+    transform: scale(0.92);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.active .modal-box {
+    transform: scale(1);
+}
+
+.modal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.6rem;
+    border-bottom: 1px solid var(--border-glass);
+    background: rgba(0, 243, 255, 0.04);
+}
+
+.modal-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--cyan);
+}
+
+.modal-close-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.6rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-close-btn:hover {
+    color: #ffffff;
+}
+
+.modal-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 1.5rem;
+    padding: 1.6rem;
+}
+
+.modal-photo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--border-glass);
+}
+
+.modal-meta {
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.m-field {
+    margin-bottom: 0.8rem;
+}
+
+.m-lbl {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.m-val {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.m-desc {
+    color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+    border-top: 1px solid var(--border-glass);
+    background: rgba(6, 9, 18, 0.7);
+    padding: 3rem 2rem;
+    position: relative;
+    z-index: 20;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-tagline {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.footer-note {
+    max-width: 500px;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 1100px) {
+    .hero-title { font-size: 3rem; }
+    .card-doctor { margin-left: -400px; width: 260px; height: 180px; }
+    .card-biopsy { margin-left: 140px; width: 260px; height: 180px; }
+    .card-xai { margin-left: -380px; width: 260px; height: 180px; }
+    .card-patient { margin-left: 130px; width: 260px; height: 180px; }
+    .card-hero-lesion { width: 360px; height: 250px; margin-left: -180px; }
+    .diagnostic-grid { grid-template-columns: 1fr; }
+    .bento-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .site-header { padding: 1rem; }
+    .nav-menu { display: none; }
+    .hero-title { font-size: 2.2rem; }
+    .stage-container { height: 480px; }
+    .card-doctor, .card-biopsy, .card-xai, .card-patient, .card-exam {
+        transform: scale(0.65) !important;
+    }
+    .bento-grid { grid-template-columns: 1fr; }
+    .telemetry-bar { flex-direction: column; gap: 1rem; border-radius: 20px; }
+    .t-sep { display: none; }
+}

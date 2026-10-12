@@ -1,0 +1,103 @@
+{
+  "phase": "Phase 7 \u2014 Explainable AI (XAI) & Clinical Lesion Alignment",
+  "status": "PASS WITH CONCERNS",
+  "frozen_threshold": 0.25,
+  "total_test_images_explained": 371,
+  "annotated_test_images": 49,
+  "models_evaluated": [
+    "EfficientNetB0",
+    "MobileNetV2"
+  ],
+  "summary_localization_metrics": {
+    "EfficientNetB0": {
+      "Variation from normal": {
+        "support": 27,
+        "gcam_iou": 0.12928204809414423,
+        "gcam_dice": 0.20732109546312025,
+        "gcam_pointing_game": 11.11111111111111,
+        "gcampp_iou": 0.0834930523083333,
+        "gcampp_dice": 0.1394882360073447,
+        "gcampp_pointing_game": 11.11111111111111,
+        "lime_iou": 0.1729584164763885,
+        "lime_dice": 0.2834935289194918,
+        "lime_pointing_game": 14.814814814814813
+      },
+      "OPMD": {
+        "support": 19,
+        "gcam_iou": 0.2103731231171804,
+        "gcam_dice": 0.3182802998261315,
+        "gcam_pointing_game": 26.31578947368421,
+        "gcampp_iou": 0.08610765116306326,
+        "gcampp_dice": 0.14239115154521664,
+        "gcampp_pointing_game": 10.526315789473683,
+        "lime_iou": 0.1756318949256508,
+        "lime_dice": 0.28230569464932503,
+        "lime_pointing_game": 15.789473684210526
+      },
+      "Oral Cancer": {
+        "support": 3,
+        "gcam_iou": 0.2749891577365201,
+        "gcam_dice": 0.4285236727937108,
+        "gcam_pointing_game": 66.66666666666666,
+        "gcampp_iou": 0.10110462115174253,
+        "gcampp_dice": 0.1682097107117352,
+        "gcampp_pointing_game": 33.33333333333333,
+        "lime_iou": 0.20870226833951155,
+        "lime_dice": 0.3418609874960608,
+        "lime_pointing_game": 33.33333333333333
+      }
+    },
+    "MobileNetV2": {
+      "Variation from normal": {
+        "support": 27,
+        "gcam_iou": 0.17866547229658905,
+        "gcam_dice": 0.2873911055999259,
+        "gcam_pointing_game": 29.629629629629626,
+        "gcampp_iou": 0.10304213518520848,
+        "gcampp_dice": 0.17322631239459818,
+        "gcampp_pointing_game": 22.22222222222222,
+        "lime_iou": 0.12220339807709693,
+        "lime_dice": 0.2088819453626838,
+        "lime_pointing_game": 18.51851851851852
+      },
+      "OPMD": {
+        "support": 19,
+        "gcam_iou": 0.2412168797921257,
+        "gcam_dice": 0.3584513758276999,
+        "gcam_pointing_game": 26.31578947368421,
+        "gcampp_iou": 0.1308030721440543,
+        "gcampp_dice": 0.20015966775881258,
+        "gcampp_pointing_game": 31.57894736842105,
+        "lime_iou": 0.1854667277410128,
+        "lime_dice": 0.29201724721921624,
+        "lime_pointing_game": 21.052631578947366
+      },
+      "Oral Cancer": {
+        "support": 3,
+        "gcam_iou": 0.2738304766427067,
+        "gcam_dice": 0.42396339949033307,
+        "gcam_pointing_game": 66.66666666666666,
+        "gcampp_iou": 0.050724798872947015,
+        "gcampp_dice": 0.08805055731459314,
+        "gcampp_pointing_game": 0.0,
+        "lime_iou": 0.1923492426887176,
+        "lime_dice": 0.31819476622835685,
+        "lime_pointing_game": 0.0
+      }
+    }
+  },
+  "contingency_2x2_matrix": {
+    "EfficientNetB0": {
+      "A": 6,
+      "B": 25,
+      "C": 7,
+      "D": 11
+    },
+    "MobileNetV2": {
+      "A": 15,
+      "B": 14,
+      "C": 5,
+      "D": 15
+    }
+  }
+}

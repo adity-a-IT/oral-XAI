@@ -1,0 +1,46 @@
+{
+  "root": "C:\\Users\\Bcsm Computer\\Downloads\\Oral-lesion-xai\\dataset\\oral-lesion-dataset-org\\SMART-OM",
+  "num_images": 7731,
+  "num_annotations": 1058,
+  "class_like_counts": {
+    "01. Normal": 6435,
+    "02. Variation from normal": 716,
+    "03. OPMD": 500,
+    "04. Oral Cancer": 80
+  },
+  "patient_like_counts": {},
+  "sample_image_paths": [
+    "01. Normal\\01. Unannotated\\01. Dorsal tongue\\5 - DT.jpg",
+    "01. Normal\\01. Unannotated\\01. Dorsal tongue\\6 - DT.jpg",
+    "01. Normal\\01. Unannotated\\01. Dorsal tongue\\7 - DT.jpg",
+    "01. Normal\\01. Unannotated\\01. Dorsal tongue\\8 - DT.jpg",
+    "01. Normal\\01. Unannotated\\01. Dorsal tongue\\9 - DT.jpg",
+    "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00001_W_DT.jpeg",
+    "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00004_W_DT.jpeg",
+    "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00005_W_DT.jpg",
+    "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00006_R_DT.JPG",
+    "01. Normal\\01. Unannotated\\01. Dorsal tongue\\SMITA00006_W_DT.jpg"
+  ],
+  "sample_annotation_paths": [
+    "01. Normal\\02. Region annotation\\09. Json files\\5_R_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\6_R_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\7_R_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\8_R_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\9_R_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\SMITA00001_W_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\SMITA00005_W_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\SMITA00006_R_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\SMITA00006_W_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\SMITA00007_R_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\SMITA00007_W_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\SMITA00008_R_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\SMITA00008_W_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\SMITA00009_R_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\SMITA00009_W_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\SMITA00010_R_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\SMITA00010_W_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\SMITA00011_R_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\SMITA00012_R_region.json",
+    "01. Normal\\02. Region annotation\\09. Json files\\SMITA00013_R_region.json"
+  ]
+}

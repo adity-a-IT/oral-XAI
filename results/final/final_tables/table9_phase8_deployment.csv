@@ -1,0 +1,12 @@
+Verification Item,Requirement,Status,Audit Parity
+Primary Checkpoint,results/phase5/efficientnetb0/best_model.keras,Verified Loaded,"Input: (None, 224, 224, 3), Output: (None, 4)"
+Canonical Class Mapping,"0=Normal, 1=Variation, 2=OPMD, 3=OSCC",Verified Locked,Zero permutation or remapping
+Preprocessing Parity,"Bilinear resize to 224x224 RGB, float32 [0, 255]",Verified Exact,Exact Phase 5 training parity
+Real Prediction Logic,Model forward pass producing 4-class softmax vector,Verified Real,Probabilities sum to 1.0000 +/- 1e-4
+Real Grad-CAM,1st-order gradient backprop from top_activation,Verified Real,Authentic continuous saliency heatmaps
+Real Grad-CAM++,3rd-order closed-form formulations with gradient weighting,Verified Real,Distinct multi-focal activations (MAE > 1e-5)
+Real LIME,Quickshift superpixel perturbations querying real model,Verified Real,Model-queried surrogate attributions
+Synthetic Logic Purge,Elimination of Gaussian simulations and filename rules,Verified Purged,0 occurrences of placeholder or synthetic heatmaps
+Automated Tests,10 end-to-end integration and unit tests,10 / 10 Passed,tests/test_phase8_integration.py passed
+Phase 7 Regression,Exact output match on 5 reference test images,5 / 5 Passed,Exact parity with xai_localization_metrics.csv
+Safety Disclaimers,Mandatory clinical research prototype notice,Prominently Displayed,"Present across all views, HUDs, and JSON"

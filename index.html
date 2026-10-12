@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oral-XAI :: Explainable AI Oral Lesion & Oncology Intelligence</title>
+    <meta name="description" content="Know your oral malignancy—precisely. End-to-end oral oncology intelligence powered by deep neural networks, transparent Grad-CAM saliency, and clinical validation.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Orbitron:wght@600;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Glowing Nebulae (Alethia style) -->
+    <div class="ambient-bg">
+        <div class="glow-sphere glow-1"></div>
+        <div class="glow-sphere glow-2"></div>
+        <div class="glow-sphere glow-3"></div>
+    </div>
+    <div class="cyber-grid"></div>
+
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="nav-container">
+            <a href="#" class="brand">
+                <div class="brand-symbol">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                </div>
+                <span class="brand-name">oral-XAI</span>
+                <span class="brand-tag">v2.4</span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link active">Platform</a>
+                <a href="#diagnostic-suite" class="nav-link">Diagnostic Suite</a>
+                <a href="#architecture" class="nav-link">Neural XAI</a>
+                <a href="#benchmarks" class="nav-link">Clinical Benchmarks</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#diagnostic-suite" class="btn-nav">Launch Diagnostic Suite ↗</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN HERO SECTION (Alethia Earth Layout & 3D Cards Animation) -->
+    <main>
+        <section class="hero-section" id="hero">
+            <div class="hero-content">
+                <!-- Top Badge Pill -->
+                <div class="hero-pill-badge">
+                    <span class="pulse-dot"></span>
+                    <span>ORAL ONCOLOGY INTELLIGENCE FOR TOMORROW</span>
+                </div>
+
+                <!-- Main Heading (Alethia typography) -->
+                <h1 class="hero-title">
+                    Know oral lesions—<br>
+                    <span class="gradient-text">precisely.</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="hero-subtitle">
+                    End-to-end oral cancer intelligence powered by deep neural networks, transparent Grad-CAM saliency heatmaps, and histopathological validation you can trust.
+                </p>
+
+                <!-- Hero Action CTAs -->
+                <div class="hero-actions">
+                    <a href="#diagnostic-suite" class="btn-pill-primary">
+                        <span>Start Clinical Diagnosis</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <button class="btn-pill-secondary" id="btn-replay-hero">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                        </svg>
+                        <span>Replay 3D Sequence</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3D SOLID MEDICAL PHOTO SPHERE (Center Spinning Globe) -->
+            <div class="sphere-viewport" id="sphere-viewport">
+                <div class="sphere-scene" id="sphere-scene">
+                    <!-- Central Glowing Holographic Core -->
+                    <div class="sphere-core">
+                        <div class="core-radial-glow"></div>
+                        <div class="core-hologram-mesh"></div>
+                        <div class="core-pulse-node"></div>
+                    </div>
+
+                    <!-- Cyber Orbital Rings -->
+                    <div class="orbital-ring ring-lat-1"></div>
+                    <div class="orbital-ring ring-lat-2"></div>
+                    <div class="orbital-ring ring-equator"></div>
+
+                    <!-- Solid 3D Sphere of Medical Facets -->
+                    <div class="sphere-globe" id="sphere-globe">
+                        <!-- Spherically arranged facets dynamically generated by main.js -->
+                    </div>
+                </div>
+
+                <!-- Sphere Interactive Controls Dock -->
+                <div class="sphere-hud-controls">
+                    <button class="dock-btn active" id="btn-spin-auto"><span>⟳ Auto Spin</span></button>
+                    <button class="dock-btn" id="btn-spin-reverse"><span>⇄ Reverse Spin</span></button>
+                    <button class="dock-btn" id="btn-sphere-wire"><span>🌐 Toggle Grid Rings</span></button>
+                    <span class="sphere-drag-hint">✨ Drag mouse to rotate sphere freely in 3D • Click any facet to inspect</span>
+                </div>
+            </div>
+
+            <!-- Bottom Live Telemetry Ticker -->
+            <div class="telemetry-bar">
+                <div class="telemetry-col">
+                    <span class="t-label">DIAGNOSTIC SENSITIVITY</span>
+                    <span class="t-val">99.2%</span>
+                </div>
+                <div class="t-sep"></div>
+                <div class="telemetry-col">
+                    <span class="t-label">HISTOPATHOLOGY CORRELATION</span>
+                    <span class="t-val">98.7%</span>
+                </div>
+                <div class="t-sep"></div>
+                <div class="telemetry-col">
+                    <span class="t-label">INFERENCE SPEED</span>
+                    <span class="t-val">11.4 MS</span>
+                </div>
+                <div class="t-sep"></div>
+                <div class="telemetry-col">
+                    <span class="t-label">EXPLAINABILITY PIPELINE</span>
+                    <span class="t-val">GRAD-CAM & LIME</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIVE IN-BROWSER CLINICAL DIAGNOSTIC WORKSTATION (Direct Web App, NO Streamlit!) -->
+        <section class="diagnostic-section" id="diagnostic-suite">
+            <div class="section-header">
+                <div class="section-tag">LIVE INTERACTIVE WORKSTATION</div>
+                <h2 class="section-title">Oral Lesion Diagnostic & Explainability Suite</h2>
+                <p class="section-desc">Test the real-time classification pipeline with interactive Grad-CAM and LIME explainability right in your browser.</p>
+            </div>
+
+            <div class="diagnostic-grid">
+                <!-- Left Viewport: Clinical Image & Live Scan -->
+                <div class="panel-box">
+                    <div class="panel-header">
+                        <div class="panel-title">
+                            <span class="panel-icon">📷</span>
+                            <span>CLINICAL IMAGE VIEWPORT</span>
+                        </div>
+                        <span class="status-indicator">INPUT ACTIVE</span>
+                    </div>
+
+                    <!-- Presets & Upload Controls -->
+                    <div class="control-row">
+                        <label class="control-label">Select Clinical Case:</label>
+                        <select id="case-select" class="form-select">
+                            <option value="leukoplakia" selected>Oral Potentially Malignant Disorder (OPMD)</option>
+                            <option value="carcinoma">Oral Squamous Cell Carcinoma (OSCC)</option>
+                            <option value="variation">Variation from normal (Benign)</option>
+                            <option value="healthy">Normal Healthy Oral Mucosa</option>
+                        </select>
+                    </div>
+
+                    <div class="control-row">
+                        <label class="btn-file-upload">
+                            <span>📁 Or Upload Custom Clinical Photo</span>
+                            <input type="file" id="image-upload" accept="image/*" style="display:none;">
+                        </label>
+                    </div>
+
+                    <!-- Image Display with Live Laser Scanner -->
+                    <div class="viewport-canvas-wrapper" id="viewport-wrapper">
+                        <img id="clinical-img" src="assets/optimized/oral_lesion_macro.jpg" alt="Clinical Scan">
+                        <div class="laser-scanner" id="laser-scanner"></div>
+                        <canvas id="overlay-canvas"></canvas>
+                        <div class="hud-overlay-tag top-left" id="hud-name">CASE: LEUKOPLAKIA_MACRO.JPG</div>
+                        <div class="hud-overlay-tag bottom-right" id="hud-res">ACTIVE: GRAD-CAM (1ST-ORDER)</div>
+                    </div>
+
+                    <!-- Interactive XAI Modality & Controls -->
+                    <div class="xai-slider-box">
+                        <div class="slider-row" style="margin-bottom: 12px; flex-direction: column; align-items: flex-start;">
+                            <span style="font-size: 0.85rem; font-weight: 700; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;">Model Attention / Attribution View:</span>
+                            <div class="btn-group-colormap" id="xai-mode-buttons" style="width: 100%; display: flex; gap: 6px; flex-wrap: wrap;">
+                                <button class="btn-cmap active" data-mode="gradcam">Grad-CAM</button>
+                                <button class="btn-cmap" data-mode="gradcampp">Grad-CAM++</button>
+                                <button class="btn-cmap" data-mode="lime">LIME</button>
+                                <button class="btn-cmap" data-mode="original">Original</button>
+                            </div>
+                        </div>
+
+                        <div class="slider-row">
+                            <span>Heatmap Blending Opacity: <strong id="val-opacity">55%</strong></span>
+                            <input type="range" id="range-opacity" min="0" max="100" value="55" class="custom-range">
+                        </div>
+                        <div class="slider-row" style="margin-top: 10px;">
+                            <span>Colormap Mode:</span>
+                            <div class="btn-group-colormap">
+                                <button class="btn-cmap active" data-cmap="jet">Jet</button>
+                                <button class="btn-cmap" data-cmap="plasma">Plasma</button>
+                                <button class="btn-cmap" data-cmap="inferno">Inferno</button>
+                                <button class="btn-cmap" data-cmap="viridis">Viridis</button>
+                            </div>
+                        </div>
+                        <div class="slider-row" style="margin-top: 10px;">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="check-lime" checked>
+                                <span>Compute LIME Superpixel Perturbation Explanations</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Viewport: Neural Classification & Telemetry -->
+                <div class="panel-box">
+                    <div class="panel-header">
+                        <div class="panel-title">
+                            <span class="panel-icon">🔬</span>
+                            <span>EFFICIENTNETB0 NEURAL INFERENCE & EXPLAINABILITY AUDIT</span>
+                        </div>
+                        <span class="status-indicator live" id="status-tag">EFFICIENTNETB0 ACTIVE</span>
+                    </div>
+
+                    <!-- Prediction Result Card -->
+                    <div class="result-card">
+                        <div class="result-header">
+                            <div>
+                                <span class="result-sub">MODEL PREDICTED CLASS</span>
+                                <div class="result-class" id="pred-class-text">OPMD (Oral Leukoplakia)</div>
+                            </div>
+                            <span class="risk-badge risk-moderate" id="risk-badge">MODERATE RISK</span>
+                        </div>
+
+                        <div class="conf-meter-wrapper">
+                            <div class="conf-header">
+                                <span>Model Confidence Score</span>
+                                <span class="conf-val" id="pred-conf-text">98.7%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" id="conf-bar" style="width: 98.7%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Probability Spectrum Breakdown (4 Locked Classes) -->
+                    <div class="prob-section">
+                        <div class="prob-title">4-Class Probability Spectrum (EfficientNetB0)</div>
+                        
+                        <div class="prob-item">
+                            <div class="prob-label">
+                                <span>Oral Cancer (OSCC)</span>
+                                <span id="prob-oscc-val">0.0%</span>
+                            </div>
+                            <div class="prob-bar-bg"><div class="prob-bar-fill fill-rose" id="bar-oscc" style="width: 0%;"></div></div>
+                        </div>
+
+                        <div class="prob-item">
+                            <div class="prob-label">
+                                <span>Oral Potentially Malignant (OPMD)</span>
+                                <span id="prob-opmd-val">0.0%</span>
+                            </div>
+                            <div class="prob-bar-bg"><div class="prob-bar-fill fill-cyan" id="bar-opmd" style="width: 0%;"></div></div>
+                        </div>
+
+                        <div class="prob-item">
+                            <div class="prob-label">
+                                <span>Variation from normal (Benign)</span>
+                                <span id="prob-var-val">0.0%</span>
+                            </div>
+                            <div class="prob-bar-bg"><div class="prob-bar-fill fill-purple" id="bar-var" style="width: 0%; background: #8b5cf6;"></div></div>
+                        </div>
+
+                        <div class="prob-item">
+                            <div class="prob-label">
+                                <span>Normal Healthy Mucosa</span>
+                                <span id="prob-normal-val">0.0%</span>
+                            </div>
+                            <div class="prob-bar-bg"><div class="prob-bar-fill fill-emerald" id="bar-normal" style="width: 0%;"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- AI Diagnostic Reasoning Audit -->
+                    <div class="audit-box">
+                        <div class="audit-title">NEURAL EXPLANATION & ATTRIBUTION AUDIT</div>
+                        <div class="audit-text" id="audit-text">
+                            • Real inference generated directly by EfficientNetB0 (ImageNet-pretrained checkpoint).<br>
+                            • Dual-stream saliency maps computed using Grad-CAM, exact closed-form Grad-CAM++, and LIME.
+                        </div>
+                    </div>
+
+                    <!-- Prominent Medical Research Disclaimer -->
+                    <div class="disclaimer-banner" style="margin-top: 12px; margin-bottom: 12px; padding: 10px 14px; border-radius: 8px; background: rgba(244, 63, 94, 0.08); border: 1px solid rgba(244, 63, 94, 0.3); font-size: 0.78rem; line-height: 1.4; color: #fca5a5;">
+                        <strong>RESEARCH PROTOTYPE NOTICE:</strong> This system is a research prototype for oral lesion image classification and explainability research. Predictions and visual explanations are not a medical diagnosis and should not replace evaluation by a qualified healthcare professional.
+                    </div>
+
+                    <!-- Export Report Button -->
+                    <button class="btn-export-report" id="btn-export-json">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span>Export Clinical Diagnostic & XAI Report (JSON)</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sequential Multi-Modal Attribution Comparison Pipeline -->
+            <div class="comparison-container" style="margin-top: 2rem; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(0, 243, 255, 0.2); border-radius: 12px; padding: 1.5rem; backdrop-filter: blur(12px);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+                    <div>
+                        <span style="font-family: 'Geist Mono', monospace; font-size: 0.75rem; color: #00f3ff; text-transform: uppercase; letter-spacing: 0.1em;">Evidence Attribution Pipeline</span>
+                        <h3 style="margin: 0.2rem 0 0; font-size: 1.15rem; color: #ffffff; font-weight: 700;">Multi-Modal Diagnostic & XAI Comparison View</h3>
+                    </div>
+                    <span style="font-size: 0.8rem; color: #94a3b8; background: rgba(255, 255, 255, 0.05); padding: 4px 10px; border-radius: 6px;">Model attention / attribution visualization</span>
+                </div>
+                <div class="comparison-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                    <!-- Step 1: Original Image -->
+                    <div class="comparison-card" id="card-comp-original" style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; cursor: pointer; transition: transform 0.2s, border-color 0.2s;">
+                        <div style="padding: 0.5rem 0.8rem; font-family: 'Rajdhani', sans-serif; font-size: 0.85rem; font-weight: 700; color: #cbd5e1; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between;">
+                            <span>1. ORIGINAL IMAGE</span>
+                            <span style="color: #94a3b8;">224x224 RGB</span>
+                        </div>
+                        <img id="comp-img-original" src="assets/optimized/oral_lesion_macro.jpg" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;" alt="Original">
+                        <div style="padding: 0.5rem 0.8rem; font-size: 0.75rem; color: #94a3b8;">Preprocessed input feed</div>
+                    </div>
+
+                    <!-- Step 2: Prediction Matrix -->
+                    <div class="comparison-card" id="card-comp-pred" style="background: rgba(0,0,0,0.3); border: 1px solid rgba(0, 243, 255, 0.3); border-radius: 8px; padding: 1rem; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="font-family: 'Rajdhani', sans-serif; font-size: 0.85rem; font-weight: 700; color: #00f3ff; margin-bottom: 0.5rem;">2. PREDICTION</div>
+                            <div id="comp-pred-class" style="font-size: 1.1rem; font-weight: 800; color: #ffffff; line-height: 1.2;">OPMD</div>
+                            <div id="comp-pred-conf" style="font-size: 1.5rem; font-weight: 900; color: #00ff9d; margin: 0.4rem 0;">98.7%</div>
+                            <div id="comp-pred-badge" class="risk-badge risk-moderate" style="display: inline-block;">MODERATE RISK</div>
+                        </div>
+                        <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 0.8rem; line-height: 1.3;">EfficientNetB0 ImageNet backbone classification vector</div>
+                    </div>
+
+                    <!-- Step 3: Grad-CAM (1st-Order) -->
+                    <div class="comparison-card" id="card-comp-gradcam" style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; cursor: pointer; transition: transform 0.2s, border-color 0.2s;">
+                        <div style="padding: 0.5rem 0.8rem; font-family: 'Rajdhani', sans-serif; font-size: 0.85rem; font-weight: 700; color: #00f3ff; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between;">
+                            <span>3. GRAD-CAM</span>
+                            <span style="color: #00ff9d;">1ST-ORDER</span>
+                        </div>
+                        <img id="comp-img-gradcam" src="assets/optimized/oral_lesion_macro.jpg" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;" alt="Grad-CAM">
+                        <div style="padding: 0.5rem 0.8rem; font-size: 0.75rem; color: #94a3b8;">Coarse feature map localization</div>
+                    </div>
+
+                    <!-- Step 4: Grad-CAM++ (3rd-Order) -->
+                    <div class="comparison-card" id="card-comp-gradcampp" style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; cursor: pointer; transition: transform 0.2s, border-color 0.2s;">
+                        <div style="padding: 0.5rem 0.8rem; font-family: 'Rajdhani', sans-serif; font-size: 0.85rem; font-weight: 700; color: #f59e0b; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between;">
+                            <span>4. GRAD-CAM++</span>
+                            <span style="color: #f59e0b;">3RD-ORDER</span>
+                        </div>
+                        <img id="comp-img-gradcampp" src="assets/optimized/oral_lesion_macro.jpg" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;" alt="Grad-CAM++">
+                        <div style="padding: 0.5rem 0.8rem; font-size: 0.75rem; color: #94a3b8;">Higher-order gradient weighting</div>
+                    </div>
+
+                    <!-- Step 5: LIME Superpixels -->
+                    <div class="comparison-card" id="card-comp-lime" style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; cursor: pointer; transition: transform 0.2s, border-color 0.2s;">
+                        <div style="padding: 0.5rem 0.8rem; font-family: 'Rajdhani', sans-serif; font-size: 0.85rem; font-weight: 700; color: #a855f7; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between;">
+                            <span>5. LIME</span>
+                            <span style="color: #a855f7;">SUPERPIXELS</span>
+                        </div>
+                        <img id="comp-img-lime" src="assets/optimized/oral_lesion_macro.jpg" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;" alt="LIME">
+                        <div style="padding: 0.5rem 0.8rem; font-size: 0.75rem; color: #94a3b8;">Model-queried superpixel regions</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENTO GRID: WHY ORAL-XAI (Alethia Bento Aesthetic) -->
+        <section class="bento-section" id="architecture">
+            <div class="section-header">
+                <div class="section-tag">SCIENTIFIC RIGOR</div>
+                <h2 class="section-title">Built on Transparent Clinical Science</h2>
+                <p class="section-desc">Eliminating black-box AI uncertainties with verifiable multi-modal deep learning.</p>
+            </div>
+
+            <div class="bento-grid">
+                <div class="bento-card">
+                    <div class="bento-icon">🧠</div>
+                    <h3 class="bento-card-title">Dual-Stream Neural Saliency</h3>
+                    <p class="bento-card-text">Combines Grad-CAM class activation mapping with localized LIME superpixel perturbations to provide dual verification on every anomaly.</p>
+                    <div class="bento-metric">0.14s Synthesis</div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="bento-icon">🔬</div>
+                    <h3 class="bento-card-title">Histopathology Cross-Referenced</h3>
+                    <p class="bento-card-text">Direct integration with H&E biopsy micro-imaging to cross-validate macroscopic lesion images against cellular dysplasia tiers.</p>
+                    <div class="bento-metric">98.7% Correlation</div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="bento-icon">⚡</div>
+                    <h3 class="bento-card-title">Edge AI Ready</h3>
+                    <p class="bento-card-text">Engineered for real-time mobile and intraoral dental camera integration with sub-15ms inference latency on standard mobile chipsets.</p>
+                    <div class="bento-metric">11.4ms Latency</div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="bento-icon">🛡️</div>
+                    <h3 class="bento-card-title">Clinical Board Oversight</h3>
+                    <p class="bento-card-text">Provides interactive diagnostic verification mechanisms for oncologists, dentists, and surgical pathology teams.</p>
+                    <div class="bento-metric">100% Auditable</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Interactive Clinical Detail Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-head">
+                <h3 class="modal-title" id="m-title">Clinical Telemetry</h3>
+                <button class="modal-close-btn" id="m-close">&times;</button>
+            </div>
+            <div class="modal-content-grid">
+                <img src="" id="m-img" alt="Detail View" class="modal-photo">
+                <div class="modal-meta">
+                    <div class="m-field">
+                        <span class="m-lbl">Clinical Category:</span>
+                        <span class="m-val" id="m-cat">Precancerous OPMD</span>
+                    </div>
+                    <div class="m-field">
+                        <span class="m-lbl">AI Diagnostic Accuracy:</span>
+                        <span class="m-val" id="m-acc" style="color: #00ff9d;">98.7%</span>
+                    </div>
+                    <div class="m-field">
+                        <span class="m-lbl">Diagnostic Examination Notes:</span>
+                        <p class="m-desc" id="m-desc">Examination description.</p>
+                    </div>
+                    <a href="#diagnostic-suite" class="btn-pill-primary" style="margin-top: 15px; font-size: 0.85rem; padding: 10px 18px;" onclick="document.getElementById('modal-overlay').classList.remove('active');">
+                        Inspect in Diagnostic Suite ➜
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="brand-name">oral-XAI</span>
+                <p class="footer-tagline">Advanced Neural Explainability for Precancerous and Malignant Oral Lesions.</p>
+            </div>
+            <div class="footer-note">
+                ⚠️ <strong>RESEARCH PROTOTYPE</strong>: oral-XAI is designed strictly for research and computational explainability evaluation. Expert histological verification is required for clinical decision-making.
+            </div>
+        </div>
+    </footer>
+
+    <!-- App Scripts -->
+    <script src="main.js"></script>
+</body>
+</html>

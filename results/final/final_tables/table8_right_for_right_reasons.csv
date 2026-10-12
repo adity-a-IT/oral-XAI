@@ -1,0 +1,5 @@
+Cell Identification,Algorithmic Meaning,EfficientNetB0 Count,EfficientNetB0 %,MobileNetV2 Count,MobileNetV2 %
+Cell A,Correct & Lesion-Focused (Pointing Game Hit),6 / 49,12.2%,15 / 49,30.6%
+Cell B,Correct & Non-Lesion Focused (Pointing Game Miss),25 / 49,51.0%,14 / 49,28.6%
+Cell C,Incorrect & Lesion-Focused (Pointing Game Hit),7 / 49,14.3%,5 / 49,10.2%
+Cell D,Incorrect & Non-Lesion Focused (Pointing Game Miss),11 / 49,22.4%,15 / 49,30.6%

@@ -1,0 +1,158 @@
+{
+  "phase": 8,
+  "title": "Real Neural Model + XAI Web Application Integration",
+  "timestamp": "2026-09-30T15:15:00Z",
+  "status": "COMPLETED",
+  "model_information": {
+    "primary_model_architecture": "EfficientNetB0",
+    "primary_model_checkpoint": "results/phase5/efficientnetb0/best_model.keras",
+    "alternative_baseline_checkpoint": "results/phase5/mobilenetv2/best_model.keras",
+    "input_shape": [null, 224, 224, 3],
+    "output_shape": [null, 4],
+    "total_parameters": 4054692,
+    "trainable_parameters": 4012669
+  },
+  "canonical_class_mapping": {
+    "0": "Normal",
+    "1": "Variation from normal",
+    "2": "OPMD",
+    "3": "Oral Cancer"
+  },
+  "preprocessing_configuration": {
+    "color_space": "RGB",
+    "target_resolution": [224, 224],
+    "interpolation": "BILINEAR",
+    "dtype": "float32",
+    "scaling_range": [0.0, 255.0],
+    "notes": "Native Keras EfficientNetB0 includes internal Rescaling(1./255) layer; raw float32 in [0.0, 255.0] required."
+  },
+  "api_endpoints": [
+    {
+      "path": "/health",
+      "methods": ["GET"],
+      "description": "Server health and model telemetry"
+    },
+    {
+      "path": "/predict",
+      "methods": ["POST"],
+      "description": "Real model inference returning 4-class probabilities summing to 1.0"
+    },
+    {
+      "path": "/explain/gradcam",
+      "methods": ["POST"],
+      "description": "1st-order Grad-CAM attribution heatmap and overlay"
+    },
+    {
+      "path": "/explain/gradcam++",
+      "methods": ["POST"],
+      "description": "Exact 3rd-order closed-form Grad-CAM++ heatmap and overlay"
+    },
+    {
+      "path": "/explain/lime",
+      "methods": ["POST"],
+      "description": "LIME superpixel attribution boundary overlay"
+    },
+    {
+      "path": "/analyze",
+      "methods": ["POST"],
+      "description": "Comprehensive unified workstation analysis pipeline"
+    }
+  ],
+  "verification_tests": {
+    "test_01_web_prediction_matches_direct_inference": {
+      "status": "PASS",
+      "metric": "Exact match across all 4 class probabilities (delta < 1e-6)"
+    },
+    "test_02_probability_vector_has_four_classes": {
+      "status": "PASS",
+      "metric": "Exactly 4 classes: Normal, Variation from normal, OPMD, Oral Cancer"
+    },
+    "test_03_probabilities_sum_to_one": {
+      "status": "PASS",
+      "metric": "Probability sum = 1.0 +/- 1e-4"
+    },
+    "test_04_gradcam_generated_from_real_model": {
+      "status": "PASS",
+      "metric": "Non-flat feature map activation (std > 0.001) from top_activation"
+    },
+    "test_05_gradcampp_generated_from_real_model": {
+      "status": "PASS",
+      "metric": "Non-flat 3rd-order gradient map distinct from Grad-CAM (MAE > 1e-5)"
+    },
+    "test_06_lime_queries_real_model": {
+      "status": "PASS",
+      "metric": "Model perturbed superpixel attributions generated successfully"
+    },
+    "test_07_deterministic_prediction": {
+      "status": "PASS",
+      "metric": "Identical inputs yield 100% deterministic output (delta = 0)"
+    },
+    "test_08_all_four_classes_supported": {
+      "status": "PASS",
+      "metric": "All 4 source folders processed correctly by inference pipeline"
+    },
+    "test_09_no_placeholder_or_synthetic_logic": {
+      "status": "PASS",
+      "metric": "Zero occurrences of placeholder or synthetic heatmaps in codebase"
+    },
+    "test_10_phase7_regression_check": {
+      "status": "PASS",
+      "tested_samples": [
+        {
+          "image_id": "Ca 10.JPEG",
+          "expected_class": "Oral Cancer",
+          "predicted_class": "Oral Cancer",
+          "confidence": 0.7745,
+          "result": "MATCH"
+        },
+        {
+          "image_id": "6099.jpg",
+          "expected_class": "Oral Cancer",
+          "predicted_class": "Oral Cancer",
+          "confidence": 0.3843,
+          "result": "MATCH"
+        },
+        {
+          "image_id": "7252.jpeg",
+          "expected_class": "Normal",
+          "predicted_class": "Normal",
+          "confidence": 0.8821,
+          "result": "MATCH"
+        },
+        {
+          "image_id": "8 -VT.jpg",
+          "expected_class": "Normal",
+          "predicted_class": "Normal",
+          "confidence": 0.6418,
+          "result": "MATCH"
+        },
+        {
+          "image_id": "8 - LB.jpg",
+          "expected_class": "OPMD",
+          "predicted_class": "OPMD",
+          "confidence": 0.8304,
+          "result": "MATCH"
+        }
+      ]
+    }
+  },
+  "quality_gate_checklist": {
+    "real_efficientnetb0_checkpoint_loaded": true,
+    "correct_4_class_mapping": true,
+    "correct_phase_5_preprocessing": true,
+    "real_model_prediction": true,
+    "real_probabilities_sum_to_one": true,
+    "real_gradcam": true,
+    "real_gradcampp": true,
+    "real_lime": true,
+    "no_hardcoded_predictions": true,
+    "no_synthetic_heatmaps": true,
+    "no_synthetic_lime_regions": true,
+    "frontend_displays_real_outputs": true,
+    "error_handling_implemented": true,
+    "integration_tests_pass": true,
+    "phase_7_regression_checks_pass": true,
+    "documentation_generated": true
+  },
+  "medical_disclaimer": "This system is a research prototype for oral lesion image classification and explainability research. Predictions and visual explanations are not a medical diagnosis and should not replace evaluation by a qualified healthcare professional."
+}

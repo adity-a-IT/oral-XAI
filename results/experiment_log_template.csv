@@ -1,0 +1,1 @@
+Experiment ID,Model,Preprocessing,Augmentation,Learning Rate,Batch Size,Epochs,Train Accuracy,Validation Accuracy,Test Accuracy,Precision,Recall,F1,AUC,Parameters,Notes

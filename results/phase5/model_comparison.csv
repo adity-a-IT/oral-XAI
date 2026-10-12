@@ -1,0 +1,4 @@
+Model,Params,Val Accuracy,Val Macro F1,Test Accuracy,Test Macro F1,OSCC Test Recall,OSCC Support
+Custom CNN,304932,0.8683,0.2324,0.8679,0.2323,0.0000,3
+MobileNetV2,2263108,0.7097,0.4624,0.7790,0.5541,0.6667,3
+EfficientNetB0,4054695,0.7124,0.4709,0.7278,0.5346,0.6667,3

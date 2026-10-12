@@ -1,0 +1,9 @@
+Model,Diagnostic Class,Test Support,Precision (%),Recall (%),F1-Score,Reliability Category
+EfficientNetB0,Normal,322,97.95,74.22,0.8445,Robust Statistical Power (N=322)
+EfficientNetB0,Variation from normal,27,18.67,51.85,0.2745,Moderate Statistical Power (N=27)
+EfficientNetB0,OPMD,19,31.25,78.95,0.4478,Moderate Statistical Power (N=19)
+EfficientNetB0,Oral Cancer*,3,50.0,66.67,0.5714,LOW STATISTICAL POWER (N=3)
+MobileNetV2,Normal,322,97.38,80.75,0.8829,Robust Statistical Power (N=322)
+MobileNetV2,Variation from normal,27,21.52,62.96,0.3208,Moderate Statistical Power (N=27)
+MobileNetV2,OPMD,19,50.0,52.63,0.5128,Moderate Statistical Power (N=19)
+MobileNetV2,Oral Cancer*,3,40.0,66.67,0.5,LOW STATISTICAL POWER (N=3)

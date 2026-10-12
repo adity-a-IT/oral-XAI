@@ -1,0 +1,8 @@
+Metric,EfficientNetB0,MobileNetV2,Interpretation
+Expected Calibration Error (ECE),4.35%,3.86%,Confidence-accuracy alignment within ~4%
+Brier Score (MSE),0.3730,0.3068,Multi-class probability mean squared error
+Total Test Misclassifications,101 / 371 (27.2%),82 / 371 (22.1%),Overall classification error rate
+Normal -> Variation Errors,57 / 101 (56.4%),54 / 82 (65.9%),Dominant benign boundary confusion
+Normal -> OPMD Errors,24 / 101 (23.8%),5 / 82 (6.1%),False-positive precancerous alarms
+Variation -> OPMD Errors,9 / 101 (8.9%),0 / 82 (0.0%),Benign variation called precancer
+OPMD -> Variation Errors,4 / 101 (4.0%),8 / 82 (9.8%),Precancer under-triaged as variation
