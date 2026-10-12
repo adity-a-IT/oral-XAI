@@ -847,6 +847,31 @@
         });
     }
 
+    // Interactive ROC Curve Tab Switcher
+    const rocTabButtons = document.querySelectorAll('.roc-tab-btn');
+    const rocDisplayImg = document.getElementById('roc-display-img');
+    if (rocTabButtons && rocDisplayImg) {
+        rocTabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                rocTabButtons.forEach(b => {
+                    b.classList.remove('active');
+                    b.style.background = 'rgba(255, 255, 255, 0.05)';
+                    b.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                    b.style.color = 'var(--text-secondary)';
+                });
+                btn.classList.add('active');
+                btn.style.background = 'rgba(0, 243, 255, 0.18)';
+                btn.style.borderColor = 'var(--cyan)';
+                btn.style.color = '#ffffff';
+
+                const src = btn.getAttribute('data-src');
+                if (src) {
+                    rocDisplayImg.src = src;
+                }
+            });
+        });
+    }
+
     // Initial Workstation Load
     setTimeout(() => {
         triggerAnalysis();

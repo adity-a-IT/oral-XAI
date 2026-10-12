@@ -38,6 +38,10 @@ jobs:
             mkdir -p _site/results
             cp -r results/phase7 _site/results/
           fi
+          if [ -d "results/roc_analysis" ]; then
+            mkdir -p _site/results
+            cp -r results/roc_analysis _site/results/
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -419,6 +419,186 @@
                 </div>
             </div>
         </section>
+
+        <!-- CLINICAL BENCHMARKS & ROC-AUC SECTION -->
+        <section class="benchmarks-section" id="benchmarks" style="padding: 4rem 2rem; max-width: 1300px; margin: 0 auto; position: relative; z-index: 2;">
+            <div class="section-header" style="text-align: center; margin-bottom: 2.5rem;">
+                <div class="section-tag" style="display: inline-block; font-family: var(--font-mono); font-size: 0.75rem; color: var(--cyan); letter-spacing: 0.15em; text-transform: uppercase; background: rgba(0, 243, 255, 0.1); border: 1px solid var(--border-cyan); padding: 4px 12px; border-radius: var(--radius-pill); margin-bottom: 0.8rem;">HELD-OUT TEST COHORT (N=371)</div>
+                <h2 class="section-title" style="font-size: 2.2rem; font-weight: 800; color: #ffffff; letter-spacing: -0.02em;">Multiclass ROC Curves & Clinical AUC Benchmarks</h2>
+                <p class="section-desc" style="color: var(--text-secondary); max-width: 780px; margin: 0.5rem auto 0; font-size: 0.95rem;">
+                    Empirical One-vs-Rest (OvR) receiver operating characteristic analysis across patient-isolated partitions. Featuring Hanley–McNeil 95% confidence intervals and rigorous class-support auditing.
+                </p>
+            </div>
+
+            <!-- Interactive ROC Plot Container -->
+            <div style="background: var(--bg-card); border: 1px solid var(--border-cyan); border-radius: 16px; padding: 1.5rem; backdrop-filter: blur(16px); box-shadow: var(--glow-cyan); margin-bottom: 2rem;">
+                <!-- ROC Selector Tabs -->
+                <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1.2rem; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;" id="roc-tab-group">
+                        <button class="roc-tab-btn active" data-src="assets/roc_analysis/mobilenetv2_vs_efficientnetb0_roc.png" style="background: rgba(0, 243, 255, 0.18); border: 1px solid var(--cyan); color: #ffffff; padding: 8px 16px; border-radius: 8px; font-family: var(--font-hud); font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                            MobileNetV2 vs EfficientNetB0
+                        </button>
+                        <button class="roc-tab-btn" data-src="assets/roc_analysis/all_models_comparison_roc.png" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text-secondary); padding: 8px 16px; border-radius: 8px; font-family: var(--font-hud); font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                            All Models (4-Panel Grid)
+                        </button>
+                        <button class="roc-tab-btn" data-src="assets/roc_analysis/efficientnetb0_roc.png" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text-secondary); padding: 8px 16px; border-radius: 8px; font-family: var(--font-hud); font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                            EfficientNetB0 (Best Val)
+                        </button>
+                        <button class="roc-tab-btn" data-src="assets/roc_analysis/mobilenetv2_roc.png" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text-secondary); padding: 8px 16px; border-radius: 8px; font-family: var(--font-hud); font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                            MobileNetV2
+                        </button>
+                        <button class="roc-tab-btn" data-src="assets/roc_analysis/custom_cnn_roc.png" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text-secondary); padding: 8px 16px; border-radius: 8px; font-family: var(--font-hud); font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                            Custom CNN
+                        </button>
+                    </div>
+                    <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #00ff9d; background: rgba(0, 255, 157, 0.1); border: 1px solid rgba(0, 255, 157, 0.25); padding: 4px 10px; border-radius: 6px;">
+                        300 DPI Publication Vector
+                    </span>
+                </div>
+
+                <!-- Display Image Container -->
+                <div style="background: #040711; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); text-align: center;">
+                    <img id="roc-display-img" src="assets/roc_analysis/mobilenetv2_vs_efficientnetb0_roc.png" alt="Multiclass ROC Curves" style="width: 100%; max-height: 720px; object-fit: contain; display: block; margin: 0 auto;">
+                </div>
+            </div>
+
+            <!-- Quantitative AUC Metrics Table -->
+            <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1.5rem; backdrop-filter: blur(16px); margin-bottom: 2rem; overflow-x: auto;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.8rem;">
+                    <div>
+                        <h3 style="font-size: 1.15rem; color: #ffffff; font-weight: 700; margin: 0;">Quantitative Performance Telemetry</h3>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0.2rem 0 0;">One-vs-Rest AUC metrics computed on continuous softmax probability distributions</p>
+                    </div>
+                    <a href="results/roc_analysis/roc_auc_metrics.csv" download="roc_auc_metrics.csv" class="btn-nav" style="font-size: 0.8rem; padding: 6px 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        <span>Download Metrics (CSV)</span>
+                    </a>
+                </div>
+
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1); color: var(--cyan); font-family: var(--font-hud); letter-spacing: 0.05em;">
+                            <th style="padding: 10px 12px;">MODEL</th>
+                            <th style="padding: 10px 12px;">CATEGORY</th>
+                            <th style="padding: 10px 12px;">$N_{pos}$ / $N_{neg}$</th>
+                            <th style="padding: 10px 12px;">ROC-AUC</th>
+                            <th style="padding: 10px 12px;">95% CONFIDENCE INTERVAL</th>
+                            <th style="padding: 10px 12px;">POWER STATUS</th>
+                        </tr>
+                    </thead>
+                    <tbody style="color: var(--text-secondary); font-family: var(--font-sans);">
+                        <!-- EfficientNetB0 -->
+                        <tr style="background: rgba(0, 243, 255, 0.03); border-bottom: 1px solid rgba(255,255,255,0.04);">
+                            <td rowspan="4" style="padding: 12px; font-weight: 700; color: #ffffff; vertical-align: top; border-right: 1px solid rgba(255,255,255,0.06);">
+                                EfficientNetB0<br><span style="font-size: 0.75rem; color: #00ff9d; font-family: var(--font-mono);">Macro: 0.8894 | Wtd: 0.9058</span>
+                            </td>
+                            <td style="padding: 10px 12px; color: #ffffff;">Normal</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">322 / 49</td>
+                            <td style="padding: 10px 12px; font-weight: 700; color: #00ff9d; font-family: var(--font-mono);">0.9152</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">[0.8848 - 0.9456]</td>
+                            <td style="padding: 10px 12px;"><span style="color: #94a3b8;">Standard ($N=322$)</span></td>
+                        </tr>
+                        <tr style="background: rgba(0, 243, 255, 0.03); border-bottom: 1px solid rgba(255,255,255,0.04);">
+                            <td style="padding: 10px 12px; color: #ffffff;">Variation from normal</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">27 / 344</td>
+                            <td style="padding: 10px 12px; font-weight: 700; color: #f59e0b; font-family: var(--font-mono);">0.7610</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">[0.6533 - 0.8687]</td>
+                            <td style="padding: 10px 12px;"><span style="color: #94a3b8;">Standard ($N=27$)</span></td>
+                        </tr>
+                        <tr style="background: rgba(0, 243, 255, 0.03); border-bottom: 1px solid rgba(255,255,255,0.04);">
+                            <td style="padding: 10px 12px; color: #ffffff;">Precancerous OPMD</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">19 / 352</td>
+                            <td style="padding: 10px 12px; font-weight: 700; color: #00ff9d; font-family: var(--font-mono);">0.9486</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">[0.8790 - 1.0000]</td>
+                            <td style="padding: 10px 12px;"><span style="color: #00ff9d;">Best OPMD Detector</span></td>
+                        </tr>
+                        <tr style="background: rgba(0, 243, 255, 0.03); border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <td style="padding: 10px 12px; color: #ffffff;">Oral Carcinoma (OSCC)</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">3 / 368</td>
+                            <td style="padding: 10px 12px; font-weight: 700; color: #f43f5e; font-family: var(--font-mono);">0.9330 *</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">[0.7360 - 1.0000]</td>
+                            <td style="padding: 10px 12px;"><span style="color: #f43f5e; font-weight: 700;">⚠️ Low Power (N=3)</span></td>
+                        </tr>
+
+                        <!-- MobileNetV2 -->
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                            <td rowspan="4" style="padding: 12px; font-weight: 700; color: #ffffff; vertical-align: top; border-right: 1px solid rgba(255,255,255,0.06);">
+                                MobileNetV2<br><span style="font-size: 0.75rem; color: var(--cyan); font-family: var(--font-mono);">Macro: 0.8950 | Wtd: 0.8917</span>
+                            </td>
+                            <td style="padding: 10px 12px; color: #ffffff;">Normal</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">322 / 49</td>
+                            <td style="padding: 10px 12px; font-weight: 700; color: #00ff9d; font-family: var(--font-mono);">0.8976</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">[0.8630 - 0.9322]</td>
+                            <td style="padding: 10px 12px;"><span style="color: #94a3b8;">Standard ($N=322$)</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                            <td style="padding: 10px 12px; color: #ffffff;">Variation from normal</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">27 / 344</td>
+                            <td style="padding: 10px 12px; font-weight: 700; color: #f59e0b; font-family: var(--font-mono);">0.7884</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">[0.6844 - 0.8924]</td>
+                            <td style="padding: 10px 12px;"><span style="color: #94a3b8;">Standard ($N=27$)</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                            <td style="padding: 10px 12px; color: #ffffff;">Precancerous OPMD</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">19 / 352</td>
+                            <td style="padding: 10px 12px; font-weight: 700; color: #00ff9d; font-family: var(--font-mono);">0.9266</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">[0.8448 - 1.0000]</td>
+                            <td style="padding: 10px 12px;"><span style="color: #94a3b8;">Standard ($N=19$)</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <td style="padding: 10px 12px; color: #ffffff;">Oral Carcinoma (OSCC)</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">3 / 368</td>
+                            <td style="padding: 10px 12px; font-weight: 700; color: #f43f5e; font-family: var(--font-mono);">0.9674 *</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">[0.8262 - 1.0000]</td>
+                            <td style="padding: 10px 12px;"><span style="color: #f43f5e; font-weight: 700;">⚠️ Low Power (N=3)</span></td>
+                        </tr>
+
+                        <!-- Custom CNN -->
+                        <tr>
+                            <td rowspan="4" style="padding: 12px; font-weight: 700; color: #ffffff; vertical-align: top; border-right: 1px solid rgba(255,255,255,0.06);">
+                                Custom Oral CNN<br><span style="font-size: 0.75rem; color: #94a3b8; font-family: var(--font-mono);">Macro: 0.8426 | Wtd: 0.8256</span>
+                            </td>
+                            <td style="padding: 10px 12px; color: #ffffff;">Normal</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">322 / 49</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">0.8283</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">[0.7791 - 0.8775]</td>
+                            <td style="padding: 10px 12px;"><span style="color: #94a3b8;">Standard ($N=322$)</span></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 12px; color: #ffffff;">Variation from normal</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">27 / 344</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">0.7852</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">[0.6807 - 0.8897]</td>
+                            <td style="padding: 10px 12px;"><span style="color: #94a3b8;">Standard ($N=27$)</span></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 12px; color: #ffffff;">Precancerous OPMD</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">19 / 352</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">0.8201</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">[0.7030 - 0.9373]</td>
+                            <td style="padding: 10px 12px;"><span style="color: #94a3b8;">Standard ($N=19$)</span></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 12px; color: #ffffff;">Oral Carcinoma (OSCC)</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">3 / 368</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">0.9366 *</td>
+                            <td style="padding: 10px 12px; font-family: var(--font-mono);">[0.7445 - 1.0000]</td>
+                            <td style="padding: 10px 12px;"><span style="color: #f43f5e; font-weight: 700;">⚠️ Low Power (N=3)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Prominent Research Integrity Callout on OSCC N=3 Limitation -->
+            <div style="background: rgba(244, 63, 94, 0.08); border: 1px solid rgba(244, 63, 94, 0.35); border-radius: 12px; padding: 1.2rem 1.5rem; color: #fca5a5; font-size: 0.84rem; line-height: 1.5;">
+                <div style="font-weight: 700; color: #fda4af; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 1.1rem;">⚠️</span>
+                    <span>RESEARCH INTEGRITY DIRECTIVE: STATISTICAL POWER CONSTRAINT ON ORAL CANCER (OSCC)</span>
+                </div>
+                Due to strict patient-stratified isolation designed to eliminate cross-partition data leakage, the held-out test partition retains <strong>only 3 positive OSCC cases</strong> ($N_{pos} = 3, N_{neg} = 368$).
+                Under this sample support, True Positive Rate transitions occur in discrete steps of <strong>33.33%</strong>, and the 95% confidence intervals span <strong>[0.7360 - 1.0000]</strong>. While both transfer backbones report high nominal AUCs ($>0.93$), this estimate carries substantial variance and must <strong>never</strong> be interpreted as definitive clinical proof of near-perfect malignant classification without larger multicenter biopsy cohorts.
+            </div>
+        </section>
     </main>
 
     <!-- Interactive Clinical Detail Modal -->
