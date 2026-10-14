@@ -305,6 +305,7 @@
     // --------------------------------------------------------------------------
     const caseSelect = document.getElementById('case-select');
     const imageUpload = document.getElementById('image-upload');
+    const cameraUpload = document.getElementById('camera-upload');
     const clinicalImg = document.getElementById('clinical-img');
     const overlayCanvas = document.getElementById('overlay-canvas');
     const hudName = document.getElementById('hud-name');
@@ -342,8 +343,31 @@
     let currentAnalysisResult = null;
     let currentFile = null;
 
-    // Connect XAI Modality Mode Buttons
+    // Connect XAI Modality Mode Buttons & Comparison Cards
     const xaiModeButtons = document.querySelectorAll('#xai-mode-buttons button');
+    const cardCompOrig = document.getElementById('card-comp-original');
+    const cardCompPred = document.getElementById('card-comp-pred');
+    const cardCompGcam = document.getElementById('card-comp-gradcam');
+    const cardCompGcampp = document.getElementById('card-comp-gradcampp');
+    const cardCompLime = document.getElementById('card-comp-lime');
+
+    function updateActiveComparisonCard(mode) {
+        const cardMap = {
+            'original': cardCompOrig,
+            'gradcam': cardCompGcam,
+            'gradcampp': cardCompGcampp,
+            'lime': cardCompLime
+        };
+        Object.entries(cardMap).forEach(([m, card]) => {
+            if (!card) return;
+            if (m === mode) {
+                card.classList.add('active-comparison-card');
+            } else {
+                card.classList.remove('active-comparison-card');
+            }
+        });
+    }
+
     function setXAIMode(mode) {
         currentMode = mode;
         xaiModeButtons.forEach(b => {
@@ -353,6 +377,7 @@
                 b.classList.remove('active');
             }
         });
+        updateActiveComparisonCard(mode);
         renderActiveOverlay();
     }
 
@@ -362,16 +387,42 @@
         });
     });
 
-    // Comparison Card Click Handlers
-    const cardCompOrig = document.getElementById('card-comp-original');
-    const cardCompGcam = document.getElementById('card-comp-gradcam');
-    const cardCompGcampp = document.getElementById('card-comp-gradcampp');
-    const cardCompLime = document.getElementById('card-comp-lime');
-
-    if (cardCompOrig) cardCompOrig.addEventListener('click', () => setXAIMode('original'));
-    if (cardCompGcam) cardCompGcam.addEventListener('click', () => setXAIMode('gradcam'));
-    if (cardCompGcampp) cardCompGcampp.addEventListener('click', () => setXAIMode('gradcampp'));
-    if (cardCompLime) cardCompLime.addEventListener('click', () => setXAIMode('lime'));
+    // Comparison Card Click Handlers with Viewport Navigation
+    if (cardCompOrig) {
+        cardCompOrig.addEventListener('click', () => {
+            setXAIMode('original');
+            document.getElementById('viewport-wrapper')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    }
+    if (cardCompPred) {
+        cardCompPred.addEventListener('click', () => {
+            const predCard = document.querySelector('.result-card');
+            if (predCard) {
+                predCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                predCard.style.transition = 'box-shadow 0.3s ease';
+                predCard.style.boxShadow = '0 0 35px rgba(0, 243, 255, 0.6)';
+                setTimeout(() => { predCard.style.boxShadow = ''; }, 1200);
+            }
+        });
+    }
+    if (cardCompGcam) {
+        cardCompGcam.addEventListener('click', () => {
+            setXAIMode('gradcam');
+            document.getElementById('viewport-wrapper')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    }
+    if (cardCompGcampp) {
+        cardCompGcampp.addEventListener('click', () => {
+            setXAIMode('gradcampp');
+            document.getElementById('viewport-wrapper')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    }
+    if (cardCompLime) {
+        cardCompLime.addEventListener('click', () => {
+            setXAIMode('lime');
+            document.getElementById('viewport-wrapper')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    }
 
 
     // Colormap Selector Buttons
@@ -516,15 +567,15 @@
         leukoplakia: {
             predicted_class: 'OPMD (Oral Potentially Malignant Disorder)',
             predicted_class_index: 2,
-            confidence: 98.7,
-            risk_tier: 'MODERATE RISK',
+            confidence: 96.3,
+            risk_tier: 'MODERATE OPMD RISK',
             risk_class: 'risk-moderate',
-            img_src: 'assets/optimized/oral_lesion_macro.jpg',
-            filename: 'ORAL_LEUKOPLAKIA_MACRO.JPG',
-            probabilities: { 'Normal': 0.2, 'Variation from normal': 0.8, 'OPMD': 98.7, 'Oral Cancer': 0.3 },
+            img_src: 'assets/presets/opmd.jpg',
+            filename: 'OPMD_BUCCAL_LEUKOPLAKIA.JPG',
+            probabilities: { 'Normal': 1.2, 'Variation from normal': 1.8, 'OPMD': 96.3, 'Oral Cancer': 0.7 },
             audit: [
                 'Live Neural Evaluation (EfficientNetB0 Convolutional Backbone).',
-                'Class probability for OPMD: 98.7% (verified 4-class clinical distribution).',
+                'Class probability for OPMD: 96.3% (verified 4-class clinical distribution).',
                 'Grad-CAM (1st-order) and Grad-CAM++ (3rd-order) computed across convolutional feature maps.',
                 'Gradients concentrate on hyperkeratotic mucosal plaque margins characteristic of premalignant leukoplakia.',
                 'Clinical recommendation: Incisional biopsy, dysplasia staging, and active oncological surveillance.'
@@ -534,10 +585,10 @@
             predicted_class: 'Oral Squamous Cell Carcinoma (OSCC)',
             predicted_class_index: 3,
             confidence: 99.1,
-            risk_tier: 'HIGH RISK',
+            risk_tier: 'CRITICAL OSCC RISK',
             risk_class: 'risk-high',
-            img_src: 'assets/optimized/cancer_biopsy.jpg',
-            filename: 'OSCC_CARCINOMA_BIOPSY.JPG',
+            img_src: 'assets/presets/cancer.jpg',
+            filename: 'ORAL_SQUAMOUS_CELL_CARCINOMA.JPG',
             probabilities: { 'Normal': 0.1, 'Variation from normal': 0.2, 'OPMD': 0.6, 'Oral Cancer': 99.1 },
             audit: [
                 'Live Neural Evaluation (EfficientNetB0 Convolutional Backbone).',
@@ -549,12 +600,12 @@
         variation: {
             predicted_class: 'Variation from normal (Benign)',
             predicted_class_index: 1,
-            confidence: 94.6,
-            risk_tier: 'LOW RISK',
+            confidence: 96.1,
+            risk_tier: 'LOW VARIATION RISK',
             risk_class: 'risk-low',
-            img_src: 'assets/optimized/oral_lesion_exam.jpg',
+            img_src: 'assets/presets/variation.jpg',
             filename: 'BENIGN_MUCOSAL_VARIATION.JPG',
-            probabilities: { 'Normal': 4.2, 'Variation from normal': 94.6, 'OPMD': 1.0, 'Oral Cancer': 0.2 },
+            probabilities: { 'Normal': 2.8, 'Variation from normal': 96.1, 'OPMD': 0.9, 'Oral Cancer': 0.2 },
             audit: [
                 'Live Neural Evaluation (EfficientNetB0 Convolutional Backbone).',
                 'Attribution shows diffuse mucosal texture variation typical of physiological benign mucosal changes.',
@@ -565,12 +616,12 @@
         healthy: {
             predicted_class: 'Normal Healthy Oral Mucosa',
             predicted_class_index: 0,
-            confidence: 99.4,
-            risk_tier: 'OPTIMAL / BENIGN',
+            confidence: 95.1,
+            risk_tier: 'LOW NORMAL RISK',
             risk_class: 'risk-low',
-            img_src: 'assets/optimized/oral_lesion_exam.jpg',
+            img_src: 'assets/presets/normal.jpg',
             filename: 'HEALTHY_ORAL_MUCOSA.JPG',
-            probabilities: { 'Normal': 99.4, 'Variation from normal': 0.5, 'OPMD': 0.1, 'Oral Cancer': 0.0 },
+            probabilities: { 'Normal': 95.1, 'Variation from normal': 4.2, 'OPMD': 0.6, 'Oral Cancer': 0.1 },
             audit: [
                 'Live Neural Evaluation (EfficientNetB0 Convolutional Backbone).',
                 'Attribution demonstrates healthy, uniform epithelial mucosal architecture with no lesions.',
@@ -791,13 +842,26 @@
         });
     }
 
-    // Custom File Upload Listener
+    // Custom File & Camera Upload Listeners
+    function handleUploadFile(file) {
+        if (file) {
+            currentFile = file;
+            triggerAnalysis();
+        }
+    }
+
     if (imageUpload) {
         imageUpload.addEventListener('change', (e) => {
-            const file = e.target.files[0];
-            if (file) {
-                currentFile = file;
-                triggerAnalysis();
+            if (e.target.files && e.target.files[0]) {
+                handleUploadFile(e.target.files[0]);
+            }
+        });
+    }
+
+    if (cameraUpload) {
+        cameraUpload.addEventListener('change', (e) => {
+            if (e.target.files && e.target.files[0]) {
+                handleUploadFile(e.target.files[0]);
             }
         });
     }
@@ -871,6 +935,62 @@
             });
         });
     }
+
+    // Mobile Navigation Drawer Controller
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navBackdrop = document.getElementById('nav-backdrop');
+
+    function closeMobileMenu() {
+        if (navToggle) {
+            navToggle.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+        }
+        if (navMenu) navMenu.classList.remove('active');
+        if (navBackdrop) navBackdrop.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function toggleMobileMenu() {
+        const isOpen = navMenu && navMenu.classList.contains('active');
+        if (isOpen) {
+            closeMobileMenu();
+        } else {
+            if (navToggle) {
+                navToggle.classList.add('open');
+                navToggle.setAttribute('aria-expanded', 'true');
+            }
+            if (navMenu) navMenu.classList.add('active');
+            if (navBackdrop) navBackdrop.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    if (navToggle) {
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+    }
+
+    if (navBackdrop) {
+        navBackdrop.addEventListener('click', closeMobileMenu);
+    }
+
+    // Auto-close menu when clicking any navigation link
+    const mobileNavLinks = document.querySelectorAll('.nav-menu .nav-link, .nav-menu .btn-nav-mobile');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            closeMobileMenu();
+        });
+    });
+
+    // Close on Escape key
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeMobileMenu();
+        }
+    });
 
     // Initial Workstation Load
     setTimeout(() => {

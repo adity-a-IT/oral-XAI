@@ -43,15 +43,16 @@ print("[Server Init] Initializing OralXAI Real Neural Inference Engine...", flus
 engine = OralXAIInferenceEngine.get_instance(model_path=DEFAULT_MODEL_PATH)
 print(f"[Server Init] Active model: {engine.model_name} from {engine.model_path}", flush=True)
 
-# Preset image mappings for testing all 4 diagnostic classes
+# Preset image mappings for testing all 4 diagnostic classes (Verified Dataset Cohort)
 PRESET_MAP = {
-    "leukoplakia": BASE_DIR / "assets/optimized/oral_lesion_macro.jpg",
-    "opmd": BASE_DIR / "assets/optimized/oral_lesion_macro.jpg",
-    "carcinoma": BASE_DIR / "assets/optimized/cancer_biopsy.jpg",
-    "oscc": BASE_DIR / "assets/optimized/cancer_biopsy.jpg",
-    "healthy": BASE_DIR / "assets/optimized/oral_lesion_exam.jpg",
-    "normal": BASE_DIR / "assets/optimized/oral_lesion_exam.jpg",
-    "variation": BASE_DIR / "assets/optimized/oral_lesion_exam.jpg",
+    "leukoplakia": BASE_DIR / "assets/presets/opmd.jpg",
+    "opmd": BASE_DIR / "assets/presets/opmd.jpg",
+    "carcinoma": BASE_DIR / "assets/presets/cancer.jpg",
+    "oscc": BASE_DIR / "assets/presets/cancer.jpg",
+    "cancer": BASE_DIR / "assets/presets/cancer.jpg",
+    "variation": BASE_DIR / "assets/presets/variation.jpg",
+    "healthy": BASE_DIR / "assets/presets/normal.jpg",
+    "normal": BASE_DIR / "assets/presets/normal.jpg",
 }
 
 

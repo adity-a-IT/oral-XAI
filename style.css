@@ -221,6 +221,77 @@ body {
     transform: translateY(-1px);
 }
 
+.btn-nav-mobile {
+    display: none;
+}
+
+/* Mobile Hamburger Toggle */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-glass);
+    border-radius: 10px;
+    padding: 10px 8px;
+    cursor: pointer;
+    z-index: 260;
+    transition: all 0.25s ease;
+}
+
+.nav-toggle:hover, .nav-toggle:focus {
+    background: rgba(0, 243, 255, 0.12);
+    border-color: var(--cyan);
+}
+
+.nav-toggle-bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: center;
+}
+
+.nav-toggle.open .nav-toggle-bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+    background: var(--cyan);
+}
+
+.nav-toggle.open .nav-toggle-bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.nav-toggle.open .nav-toggle-bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+    background: var(--cyan);
+}
+
+/* Mobile Menu Backdrop */
+.nav-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(4, 7, 16, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 180;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.nav-backdrop.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 /* ==========================================================================
    Hero Section (Alethia Typography + 3D Stage)
    ========================================================================== */
@@ -927,25 +998,54 @@ body {
     border-color: var(--cyan);
 }
 
+.upload-btn-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
 .btn-file-upload {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    gap: 8px;
+    flex: 1 1 50%;
+    min-height: 44px;
     background: rgba(255, 255, 255, 0.03);
-    border: 1px dashed rgba(255, 255, 255, 0.15);
+    border: 1px dashed rgba(255, 255, 255, 0.18);
     color: var(--text-secondary);
-    padding: 10px 16px;
+    padding: 10px 14px;
     border-radius: 10px;
     font-size: 0.85rem;
+    font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
+    user-select: none;
+    touch-action: manipulation;
 }
 
-.btn-file-upload:hover {
-    background: rgba(0, 243, 255, 0.06);
+.btn-file-upload:hover, .btn-file-upload:focus {
+    background: rgba(0, 243, 255, 0.08);
     border-color: var(--cyan);
     color: var(--cyan);
+    transform: translateY(-1px);
+}
+
+.btn-camera-upload {
+    background: rgba(0, 255, 157, 0.06);
+    border: 1px solid rgba(0, 255, 157, 0.28);
+    color: #e2e8f0;
+}
+
+.btn-camera-upload svg {
+    color: var(--emerald);
+}
+
+.btn-camera-upload:hover, .btn-camera-upload:focus {
+    background: rgba(0, 255, 157, 0.14);
+    border-color: var(--emerald);
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 255, 157, 0.25);
 }
 
 /* Image Viewport Canvas & Laser Bar */
@@ -1226,6 +1326,156 @@ body {
 }
 
 /* ==========================================================================
+   Multi-Modal Attribution Comparison Pipeline
+   ========================================================================== */
+.comparison-container {
+    margin-top: 2rem;
+    background: rgba(14, 20, 34, 0.72);
+    border: 1px solid var(--border-cyan);
+    border-radius: 16px;
+    padding: 1.5rem;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.comparison-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.comparison-subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--cyan);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+}
+
+.comparison-title {
+    margin: 0.2rem 0 0;
+    font-size: 1.15rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.comparison-tag {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1rem;
+}
+
+.comparison-card {
+    position: relative;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.comparison-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--cyan) !important;
+    box-shadow: 0 8px 24px rgba(0, 243, 255, 0.25);
+}
+
+.comparison-card.active-comparison-card {
+    border-color: var(--cyan) !important;
+    box-shadow: 0 0 25px rgba(0, 243, 255, 0.45), inset 0 0 15px rgba(0, 243, 255, 0.15) !important;
+    transform: translateY(-2px);
+}
+
+.comparison-card.active-comparison-card::after {
+    content: "ACTIVE";
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(0, 243, 255, 0.25);
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    font-size: 0.62rem;
+    font-weight: 800;
+    font-family: var(--font-mono);
+    padding: 2px 6px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    pointer-events: none;
+    box-shadow: 0 0 8px rgba(0, 243, 255, 0.5);
+}
+
+/* ==========================================================================
+   Quantitative AUC Telemetry Table & Scroll Prompt
+   ========================================================================== */
+.roc-table-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    padding: 1.5rem;
+    backdrop-filter: blur(16px);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.table-scroll-hint {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-family: var(--font-mono);
+    color: var(--cyan);
+    background: rgba(0, 243, 255, 0.08);
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    border-radius: 8px;
+    padding: 6px 12px;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    animation: pulseHint 2s infinite ease-in-out;
+}
+
+@keyframes pulseHint {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; border-color: var(--cyan); }
+}
+
+.table-responsive-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 243, 255, 0.3) rgba(255, 255, 255, 0.04);
+}
+
+.table-responsive-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+
+.table-responsive-wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 3px;
+}
+
+.table-responsive-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(0, 243, 255, 0.3);
+    border-radius: 3px;
+}
+
+.telemetry-table {
+    min-width: 620px;
+}
+
+/* ==========================================================================
    Bento Grid Section (Alethia Bento Aesthetic)
    ========================================================================== */
 .bento-section {
@@ -1435,28 +1685,520 @@ body {
 }
 
 /* ==========================================================================
-   Responsive Adaptations
+   Comprehensive Mobile & Tablet Responsive System
    ========================================================================== */
-@media (max-width: 1100px) {
-    .hero-title { font-size: 3rem; }
-    .card-doctor { margin-left: -400px; width: 260px; height: 180px; }
-    .card-biopsy { margin-left: 140px; width: 260px; height: 180px; }
-    .card-xai { margin-left: -380px; width: 260px; height: 180px; }
-    .card-patient { margin-left: 130px; width: 260px; height: 180px; }
-    .card-hero-lesion { width: 360px; height: 250px; margin-left: -180px; }
-    .diagnostic-grid { grid-template-columns: 1fr; }
-    .bento-grid { grid-template-columns: repeat(2, 1fr); }
+
+/* Tablet & Smaller Laptops (<= 1024px) */
+@media (max-width: 1024px) {
+    .site-header {
+        padding: 1rem 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 3.2rem;
+    }
+
+    .sphere-viewport {
+        height: 520px;
+        perspective: 1100px;
+    }
+
+    .sphere-scene {
+        transform: scale(0.85);
+    }
+
+    .diagnostic-grid {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+    }
+
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    .benchmarks-section {
+        padding: 3rem 1.5rem;
+    }
 }
 
-@media (max-width: 768px) {
-    .site-header { padding: 1rem; }
-    .nav-menu { display: none; }
-    .hero-title { font-size: 2.2rem; }
-    .stage-container { height: 480px; }
-    .card-doctor, .card-biopsy, .card-xai, .card-patient, .card-exam {
-        transform: scale(0.65) !important;
+/* Tablets & Mobile Landscape (<= 860px) */
+@media (max-width: 860px) {
+    .site-header {
+        padding: 0.8rem 1rem;
     }
-    .bento-grid { grid-template-columns: 1fr; }
-    .telemetry-bar { flex-direction: column; gap: 1rem; border-radius: 20px; }
-    .t-sep { display: none; }
+
+    .nav-container {
+        padding: 8px 16px;
+    }
+
+    /* Hide desktop nav action button and menu */
+    .nav-actions {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    /* Mobile Drawer Navigation Panel */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: min(85vw, 320px);
+        height: 100vh;
+        height: 100dvh;
+        background: rgba(8, 13, 26, 0.96);
+        backdrop-filter: blur(28px);
+        -webkit-backdrop-filter: blur(28px);
+        border-left: 1px solid var(--border-cyan);
+        box-shadow: -15px 0 50px rgba(0, 0, 0, 0.85), var(--glow-cyan);
+        flex-direction: column;
+        align-items: stretch;
+        padding: calc(4.5rem + env(safe-area-inset-top, 0px)) 1.5rem 2rem 1.5rem;
+        gap: 0.8rem;
+        transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 250;
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu .nav-link {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #e2e8f0;
+        padding: 12px 14px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        transition: all 0.2s ease;
+    }
+
+    .nav-menu .nav-link:hover,
+    .nav-menu .nav-link.active {
+        background: rgba(0, 243, 255, 0.12);
+        border-color: var(--cyan);
+        color: var(--cyan);
+        transform: translateX(4px);
+    }
+
+    .btn-nav-mobile {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: #070a12;
+        background: #ffffff;
+        padding: 13px 20px;
+        border-radius: var(--radius-pill);
+        text-decoration: none;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        transition: all 0.2s ease;
+    }
+
+    .btn-nav-mobile:hover {
+        background: var(--cyan);
+        box-shadow: 0 0 25px rgba(0, 243, 255, 0.6);
+    }
+}
+
+/* Mobile Devices (<= 768px) */
+@media (max-width: 768px) {
+    /* Layout & Spacing */
+    .hero-section {
+        padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1.2rem 2.5rem 1.2rem;
+        min-height: auto;
+    }
+
+    .hero-content {
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-pill-badge {
+        font-size: 0.7rem;
+        padding: 5px 12px;
+        letter-spacing: 0.06em;
+        margin-bottom: 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.35rem;
+        line-height: 1.12;
+        letter-spacing: -0.025em;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.55;
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+        gap: 0.75rem;
+    }
+
+    .btn-pill-primary, .btn-pill-secondary {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* 3D Sphere on Mobile */
+    .sphere-viewport {
+        height: 420px;
+        perspective: 800px;
+        margin-top: 0.5rem;
+    }
+
+    .sphere-scene {
+        height: 380px;
+        transform: scale(0.68);
+        touch-action: none;
+    }
+
+    .sphere-hud-controls {
+        max-width: 95%;
+        padding: 6px 10px;
+        gap: 6px;
+    }
+
+    .dock-btn {
+        padding: 5px 10px;
+        font-size: 0.72rem;
+    }
+
+    .sphere-drag-hint {
+        font-size: 0.7rem;
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 2px;
+    }
+
+    /* Telemetry Bar: Compact 2x2 Mobile Grid */
+    .telemetry-bar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.9rem;
+        padding: 1.2rem;
+        border-radius: 16px;
+        margin-top: 1.8rem;
+    }
+
+    .t-sep {
+        display: none;
+    }
+
+    .telemetry-col {
+        text-align: center;
+    }
+
+    .t-label {
+        font-size: 0.68rem;
+        margin-bottom: 2px;
+    }
+
+    .t-val {
+        font-size: 0.9rem;
+    }
+
+    /* Diagnostic Workstation */
+    .diagnostic-section {
+        margin: 3.5rem auto 2rem;
+        padding: 0 1rem;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.85rem;
+        letter-spacing: -0.02em;
+    }
+
+    .section-desc {
+        font-size: 0.92rem;
+    }
+
+    .panel-box {
+        padding: 1.25rem 1rem;
+        border-radius: 16px;
+    }
+
+    .panel-title {
+        font-size: 0.88rem;
+    }
+
+    .viewport-canvas-wrapper {
+        height: 270px;
+        border-radius: 12px;
+        margin-bottom: 1.2rem;
+    }
+
+    .hud-overlay-tag {
+        font-size: 0.64rem;
+        padding: 2px 6px;
+        max-width: 48%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .hud-overlay-tag.top-left { top: 8px; left: 8px; }
+    .hud-overlay-tag.bottom-right { bottom: 8px; right: 8px; }
+
+    /* Modality buttons & colormaps */
+    .xai-slider-box {
+        padding: 12px;
+    }
+
+    .btn-cmap {
+        min-height: 38px;
+        padding: 8px 12px;
+        font-size: 0.78rem;
+    }
+
+    .slider-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .custom-range {
+        width: 100%;
+        height: 8px;
+    }
+
+    .custom-range::-webkit-slider-thumb {
+        width: 22px;
+        height: 22px;
+    }
+
+    /* Prediction Card */
+    .result-card {
+        padding: 1.1rem;
+    }
+
+    .result-class {
+        font-size: 1.25rem;
+        word-break: break-word;
+    }
+
+    .risk-badge {
+        font-size: 0.72rem;
+        padding: 3px 8px;
+    }
+
+    /* Comparison Grid: 2 Columns on Mobile */
+    .comparison-container {
+        padding: 1.1rem 0.9rem;
+    }
+
+    .comparison-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .comparison-card#card-comp-pred {
+        grid-column: span 2;
+    }
+
+    /* Bento Grid */
+    .bento-section {
+        margin: 4rem auto 2rem;
+        padding: 0 1rem;
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .bento-card {
+        padding: 1.5rem 1.2rem;
+    }
+
+    /* ROC Curve Benchmarks */
+    .benchmarks-section {
+        padding: 3rem 1rem;
+    }
+
+    .benchmarks-section .section-title {
+        font-size: 1.75rem;
+    }
+
+    #roc-tab-group {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        flex-wrap: nowrap !important;
+        padding-bottom: 6px;
+    }
+
+    #roc-tab-group::-webkit-scrollbar {
+        display: none;
+    }
+
+    .roc-tab-btn {
+        flex-shrink: 0;
+        white-space: nowrap;
+        font-size: 0.82rem !important;
+        padding: 7px 12px !important;
+    }
+
+    .table-scroll-hint {
+        display: flex;
+    }
+
+    .roc-table-card {
+        padding: 1.1rem 0.9rem;
+    }
+
+    /* Clinical Detail Modal */
+    .modal-box {
+        width: 94%;
+        max-height: 88vh;
+        max-height: 88dvh;
+        overflow-y: auto;
+        border-radius: 16px;
+    }
+
+    .modal-head {
+        padding: 1rem 1.2rem;
+    }
+
+    .modal-content-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1.2rem;
+    }
+
+    .modal-photo {
+        height: 180px;
+        width: 100%;
+    }
+
+    .modal-close-btn {
+        padding: 8px;
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Footer */
+    .site-footer {
+        padding: 2.5rem 1rem calc(2rem + env(safe-area-inset-bottom, 0px)) 1rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.2rem;
+    }
+}
+
+/* Small Smart Phones (<= 480px) */
+@media (max-width: 480px) {
+    .brand-name {
+        font-size: 1.05rem;
+    }
+
+    .brand-tag {
+        font-size: 0.65rem;
+        padding: 1px 5px;
+    }
+
+    .hero-title {
+        font-size: 1.95rem;
+    }
+
+    .sphere-viewport {
+        height: 340px;
+        perspective: 600px;
+    }
+
+    .sphere-scene {
+        height: 310px;
+        transform: scale(0.52);
+    }
+
+    .sphere-drag-hint {
+        display: none;
+    }
+
+    .upload-btn-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .btn-file-upload {
+        width: 100%;
+        flex: 1 1 auto;
+        font-size: 0.82rem;
+    }
+
+    .viewport-canvas-wrapper {
+        height: 240px;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .comparison-card#card-comp-pred {
+        grid-column: span 1;
+    }
+
+    .telemetry-bar {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+        padding: 0.9rem;
+    }
+
+    .btn-export-report {
+        font-size: 0.82rem;
+        padding: 10px 14px;
+    }
+}
+
+/* Ultra-Compact Phones (<= 360px) */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .sphere-scene {
+        transform: scale(0.46);
+    }
+
+    .sphere-viewport {
+        height: 300px;
+    }
+
+    .section-title {
+        font-size: 1.55rem;
+    }
+
+    .panel-box {
+        padding: 1rem 0.8rem;
+    }
 }

@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="theme-color" content="#060913">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>oral-XAI :: Explainable AI Oral Lesion & Oncology Intelligence</title>
     <meta name="description" content="Know your oral malignancy—precisely. End-to-end oral oncology intelligence powered by deep neural networks, transparent Grad-CAM saliency, and clinical validation.">
     <!-- Fonts -->
@@ -36,18 +39,26 @@
                 <span class="brand-tag">v2.4</span>
             </a>
 
-            <div class="nav-menu">
+            <div class="nav-menu" id="nav-menu">
                 <a href="#hero" class="nav-link active">Platform</a>
                 <a href="#diagnostic-suite" class="nav-link">Diagnostic Suite</a>
                 <a href="#architecture" class="nav-link">Neural XAI</a>
                 <a href="#benchmarks" class="nav-link">Clinical Benchmarks</a>
+                <a href="#diagnostic-suite" class="btn-nav-mobile">Launch Diagnostic Suite ↗</a>
             </div>
 
             <div class="nav-actions">
                 <a href="#diagnostic-suite" class="btn-nav">Launch Diagnostic Suite ↗</a>
             </div>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
         </nav>
     </header>
+    <div class="nav-backdrop" id="nav-backdrop"></div>
 
     <!-- MAIN HERO SECTION (Alethia Earth Layout & 3D Cards Animation) -->
     <main>
@@ -174,10 +185,20 @@
                     </div>
 
                     <div class="control-row">
-                        <label class="btn-file-upload">
-                            <span>📁 Or Upload Custom Clinical Photo</span>
-                            <input type="file" id="image-upload" accept="image/*" style="display:none;">
-                        </label>
+                        <div class="upload-btn-group">
+                            <label class="btn-file-upload btn-upload-file">
+                                <span>📁 Upload Photo</span>
+                                <input type="file" id="image-upload" accept="image/*" style="display:none;">
+                            </label>
+                            <label class="btn-file-upload btn-camera-upload">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                                    <circle cx="12" cy="13" r="4"></circle>
+                                </svg>
+                                <span>📸 Use Camera</span>
+                                <input type="file" id="camera-upload" accept="image/*" capture="environment" style="display:none;">
+                            </label>
+                        </div>
                     </div>
 
                     <!-- Image Display with Live Laser Scanner -->
@@ -318,15 +339,15 @@
             </div>
 
             <!-- Sequential Multi-Modal Attribution Comparison Pipeline -->
-            <div class="comparison-container" style="margin-top: 2rem; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(0, 243, 255, 0.2); border-radius: 12px; padding: 1.5rem; backdrop-filter: blur(12px);">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+            <div class="comparison-container">
+                <div class="comparison-header">
                     <div>
-                        <span style="font-family: 'Geist Mono', monospace; font-size: 0.75rem; color: #00f3ff; text-transform: uppercase; letter-spacing: 0.1em;">Evidence Attribution Pipeline</span>
-                        <h3 style="margin: 0.2rem 0 0; font-size: 1.15rem; color: #ffffff; font-weight: 700;">Multi-Modal Diagnostic & XAI Comparison View</h3>
+                        <span class="comparison-subtitle">Evidence Attribution Pipeline</span>
+                        <h3 class="comparison-title">Multi-Modal Diagnostic & XAI Comparison View</h3>
                     </div>
-                    <span style="font-size: 0.8rem; color: #94a3b8; background: rgba(255, 255, 255, 0.05); padding: 4px 10px; border-radius: 6px;">Model attention / attribution visualization</span>
+                    <span class="comparison-tag">Model attention / attribution visualization</span>
                 </div>
-                <div class="comparison-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div class="comparison-grid">
                     <!-- Step 1: Original Image -->
                     <div class="comparison-card" id="card-comp-original" style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden; cursor: pointer; transition: transform 0.2s, border-color 0.2s;">
                         <div style="padding: 0.5rem 0.8rem; font-family: 'Rajdhani', sans-serif; font-size: 0.85rem; font-weight: 700; color: #cbd5e1; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between;">
@@ -463,7 +484,12 @@
             </div>
 
             <!-- Quantitative AUC Metrics Table -->
-            <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1.5rem; backdrop-filter: blur(16px); margin-bottom: 2rem; overflow-x: auto;">
+            <div class="roc-table-card">
+                <div class="table-scroll-hint">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    <span>Swipe horizontally to view full metrics table</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.8rem;">
                     <div>
                         <h3 style="font-size: 1.15rem; color: #ffffff; font-weight: 700; margin: 0;">Quantitative Performance Telemetry</h3>
@@ -475,7 +501,8 @@
                     </a>
                 </div>
 
-                <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left;">
+                <div class="table-responsive-wrapper">
+                <table class="telemetry-table" style="width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left;">
                     <thead>
                         <tr style="border-bottom: 1px solid rgba(255,255,255,0.1); color: var(--cyan); font-family: var(--font-hud); letter-spacing: 0.05em;">
                             <th style="padding: 10px 12px;">MODEL</th>
@@ -587,6 +614,7 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
 
             <!-- Prominent Research Integrity Callout on OSCC N=3 Limitation -->
