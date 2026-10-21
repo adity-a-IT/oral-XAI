@@ -1,5 +1,5 @@
 // oral-XAI Service Worker :: Production Offline Cache & PWA WebAPK Support
-const CACHE_NAME = 'oral-xai-pwa-v2';
+const CACHE_NAME = 'oral-xai-pwa-v3';
 
 const PRECACHE_ASSETS = [
     './',
@@ -7,6 +7,10 @@ const PRECACHE_ASSETS = [
     './style.css',
     './main.js',
     './manifest.json',
+    './favicon.png',
+    './icon-192.png',
+    './icon-512.png',
+    './apple-touch-icon.png',
     './assets/icons/icon-192.png',
     './assets/icons/icon-512.png',
     './assets/icons/icon-maskable-192.png',
