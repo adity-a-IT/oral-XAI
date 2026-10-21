@@ -43,6 +43,24 @@ print("[Server Init] Initializing OralXAI Real Neural Inference Engine...", flus
 engine = OralXAIInferenceEngine.get_instance(model_path=DEFAULT_MODEL_PATH)
 print(f"[Server Init] Active model: {engine.model_name} from {engine.model_path}", flush=True)
 
+
+@app.after_request
+def add_cors_headers(response):
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+    return response
+
+
+@app.before_request
+def handle_preflight():
+    if request.method == "OPTIONS":
+        res = app.make_default_options_response()
+        res.headers["Access-Control-Allow-Origin"] = "*"
+        res.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+        res.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+        return res
+
 # Preset image mappings for testing all 4 diagnostic classes (Verified Dataset Cohort)
 PRESET_MAP = {
     "leukoplakia": BASE_DIR / "assets/presets/opmd.jpg",

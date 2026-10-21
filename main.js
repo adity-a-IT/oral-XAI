@@ -572,7 +572,7 @@
             risk_class: 'risk-moderate',
             img_src: 'assets/presets/opmd.jpg',
             filename: 'OPMD_BUCCAL_LEUKOPLAKIA.JPG',
-            probabilities: { 'Normal': 1.2, 'Variation from normal': 1.8, 'OPMD': 96.3, 'Oral Cancer': 0.7 },
+            probabilities: { 'Normal': 0.012, 'Variation from normal': 0.018, 'OPMD': 0.963, 'Oral Cancer': 0.007 },
             audit: [
                 'Live Neural Evaluation (EfficientNetB0 Convolutional Backbone).',
                 'Class probability for OPMD: 96.3% (verified 4-class clinical distribution).',
@@ -589,7 +589,7 @@
             risk_class: 'risk-high',
             img_src: 'assets/presets/cancer.jpg',
             filename: 'ORAL_SQUAMOUS_CELL_CARCINOMA.JPG',
-            probabilities: { 'Normal': 0.1, 'Variation from normal': 0.2, 'OPMD': 0.6, 'Oral Cancer': 99.1 },
+            probabilities: { 'Normal': 0.001, 'Variation from normal': 0.002, 'OPMD': 0.006, 'Oral Cancer': 0.991 },
             audit: [
                 'Live Neural Evaluation (EfficientNetB0 Convolutional Backbone).',
                 'Class probability for Oral Squamous Cell Carcinoma: 99.1%.',
@@ -605,7 +605,7 @@
             risk_class: 'risk-low',
             img_src: 'assets/presets/variation.jpg',
             filename: 'BENIGN_MUCOSAL_VARIATION.JPG',
-            probabilities: { 'Normal': 2.8, 'Variation from normal': 96.1, 'OPMD': 0.9, 'Oral Cancer': 0.2 },
+            probabilities: { 'Normal': 0.028, 'Variation from normal': 0.961, 'OPMD': 0.009, 'Oral Cancer': 0.002 },
             audit: [
                 'Live Neural Evaluation (EfficientNetB0 Convolutional Backbone).',
                 'Attribution shows diffuse mucosal texture variation typical of physiological benign mucosal changes.',
@@ -621,7 +621,7 @@
             risk_class: 'risk-low',
             img_src: 'assets/presets/normal.jpg',
             filename: 'HEALTHY_ORAL_MUCOSA.JPG',
-            probabilities: { 'Normal': 95.1, 'Variation from normal': 4.2, 'OPMD': 0.6, 'Oral Cancer': 0.1 },
+            probabilities: { 'Normal': 0.951, 'Variation from normal': 0.042, 'OPMD': 0.006, 'Oral Cancer': 0.001 },
             audit: [
                 'Live Neural Evaluation (EfficientNetB0 Convolutional Backbone).',
                 'Attribution demonstrates healthy, uniform epithelial mucosal architecture with no lesions.',
@@ -736,10 +736,10 @@
                     risk_class: presetInfo.risk_class,
                     probabilities: presetInfo.probabilities,
                     raw_probabilities: [
-                        presetInfo.probabilities['Normal'] / 100,
-                        presetInfo.probabilities['Variation from normal'] / 100,
-                        presetInfo.probabilities['OPMD'] / 100,
-                        presetInfo.probabilities['Oral Cancer'] / 100
+                        presetInfo.probabilities['Normal'],
+                        presetInfo.probabilities['Variation from normal'],
+                        presetInfo.probabilities['OPMD'],
+                        presetInfo.probabilities['Oral Cancer']
                     ],
                     probability_sum: 1.0,
                     overlays: {
@@ -781,10 +781,77 @@
         });
     }
 
+    // Explicit handler for custom uploaded files when the Python AI server is not running
+    function handleOfflineCustomUpload(file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const dataUrl = e.target.result;
+            if (clinicalImg) clinicalImg.src = dataUrl;
+            if (hudName) hudName.textContent = file.name.toUpperCase();
+            if (hudRes) hudRes.textContent = 'IMAGE UPLOADED • PYTHON AI SERVER REQUIRED';
+
+            if (predClassText) predClassText.textContent = 'AI Server Not Connected';
+            if (predConfText) predConfText.textContent = '--';
+            if (confBar) confBar.style.width = '0%';
+            if (riskBadge) {
+                riskBadge.textContent = 'SERVER DISCONNECTED';
+                riskBadge.className = 'risk-badge risk-moderate';
+            }
+
+            if (probOsccVal) probOsccVal.textContent = '0.0%';
+            if (probOpmdVal) probOpmdVal.textContent = '0.0%';
+            if (probVarVal) probVarVal.textContent = '0.0%';
+            if (probNormalVal) probNormalVal.textContent = '0.0%';
+
+            if (barOscc) barOscc.style.width = '0%';
+            if (barOpmd) barOpmd.style.width = '0%';
+            if (barVar) barVar.style.width = '0%';
+            if (barNormal) barNormal.style.width = '0%';
+
+            if (statusTag) {
+                statusTag.textContent = '⚠️ SERVER OFFLINE • RUN RUN.BAT FOR AI INFERENCE';
+                statusTag.style.color = '#f59e0b';
+            }
+
+            const compOrig = document.getElementById('comp-img-original');
+            const compPredClass = document.getElementById('comp-pred-class');
+            const compPredConf = document.getElementById('comp-pred-conf');
+            const compPredBadge = document.getElementById('comp-pred-badge');
+            if (compOrig) compOrig.src = dataUrl;
+            if (compPredClass) compPredClass.textContent = 'AI Server Offline';
+            if (compPredConf) compPredConf.textContent = '--';
+            if (compPredBadge) {
+                compPredBadge.textContent = 'SERVER REQUIRED';
+                compPredBadge.className = 'risk-badge risk-moderate';
+            }
+
+            if (auditText) {
+                auditText.innerHTML = `
+                    <div style="background: rgba(244, 63, 94, 0.12); border: 1px solid rgba(244, 63, 94, 0.35); border-radius: 8px; padding: 14px; margin-bottom: 8px;">
+                        <strong style="color: #f43f5e; font-size: 0.95rem;">⚠️ Python AI Diagnostic Server is Not Running</strong>
+                        <p style="margin-top: 8px; font-size: 0.86rem; line-height: 1.5; color: #f8fafc;">
+                            Aapne custom image (<strong>${file.name}</strong>) upload ki hai, lekin real AI prediction aur Grad-CAM/LIME heatmaps run karne ke liye local Python neural backend ka chalna zaroori hai.
+                        </p>
+                        <div style="margin-top: 10px; font-size: 0.82rem; background: rgba(0,0,0,0.5); padding: 10px; border-radius: 6px; font-family: monospace; color: #00f3ff; line-height: 1.6;">
+                            <strong>Real AI Model Se Check Karne Ka Tarika:</strong><br>
+                            1. Terminal me <strong>run.bat</strong> chalayein (ya <code>.\\.venv\\Scripts\\python.exe server.py</code>)<br>
+                            2. Terminal window ko band mat kijiye (server running rahega)<br>
+                            3. Browser me <strong>http://localhost:5000</strong> open kijiye aur photo upload kijiye!
+                        </div>
+                    </div>
+                `;
+            }
+        };
+        reader.readAsDataURL(file);
+    }
+
     // Execute Real Server Analysis with Seamless GitHub Pages Demo Fallback
     async function triggerAnalysis(includeLime = true) {
         const presetVal = caseSelect ? caseSelect.value : 'leukoplakia';
-        if (statusTag) statusTag.textContent = 'NEURAL INFERENCE COMPUTING...';
+        if (statusTag) {
+            statusTag.textContent = 'NEURAL INFERENCE COMPUTING...';
+            statusTag.style.color = '';
+        }
 
         try {
             const formData = new FormData();
@@ -799,10 +866,29 @@
                 formData.append('preset', presetVal);
             }
 
-            const res = await fetch('/api/analyze', {
-                method: 'POST',
-                body: formData
-            });
+            // Dual-try: try current origin endpoint first, or http://localhost:5000 if hosted on another local port (e.g. Live Server)
+            let res = null;
+            try {
+                res = await fetch('/api/analyze', {
+                    method: 'POST',
+                    body: formData
+                });
+                if (!res.ok && (res.status === 404 || res.status === 405) && window.location.origin !== 'http://localhost:5000') {
+                    res = await fetch('http://localhost:5000/api/analyze', {
+                        method: 'POST',
+                        body: formData
+                    });
+                }
+            } catch (netErr) {
+                if (window.location.origin !== 'http://localhost:5000') {
+                    res = await fetch('http://localhost:5000/api/analyze', {
+                        method: 'POST',
+                        body: formData
+                    });
+                } else {
+                    throw netErr;
+                }
+            }
 
             if (!res.ok) {
                 throw new Error(`Server returned HTTP ${res.status}`);
@@ -811,24 +897,30 @@
             const data = await res.json();
             updateWorkstationUI(data);
         } catch (err) {
-            // Automatic fallback for GitHub Pages & static hosting environments
-            try {
-                const clientData = await runClientSideAnalysis(
-                    presetVal,
-                    currentFile,
-                    currentColormap,
-                    currentOpacity,
-                    (checkLime && checkLime.checked && includeLime)
-                );
-                updateWorkstationUI(clientData);
-                if (statusTag) {
-                    statusTag.textContent = 'LIVE DEMO • EFFICIENTNETB0 INFERENCE';
-                }
-            } catch (fallbackErr) {
-                console.error('[oral-XAI] Fallback Error:', fallbackErr);
-                if (statusTag) statusTag.textContent = 'INFERENCE ERROR';
-                if (auditText) {
-                    auditText.innerHTML = `⚠️ <span style="color: #f43f5e;">Analysis Error: ${err.message}</span>`;
+            console.warn('[oral-XAI] Backend AI server unreachable:', err);
+            if (currentFile) {
+                // If custom image uploaded but server offline, alert the user explicitly
+                handleOfflineCustomUpload(currentFile);
+            } else {
+                // Preset demo fallback
+                try {
+                    const clientData = await runClientSideAnalysis(
+                        presetVal,
+                        null,
+                        currentColormap,
+                        currentOpacity,
+                        (checkLime && checkLime.checked && includeLime)
+                    );
+                    updateWorkstationUI(clientData);
+                    if (statusTag) {
+                        statusTag.textContent = 'DEMO PRESET (OFFLINE) • RUN RUN.BAT FOR AI INFERENCE';
+                    }
+                } catch (fallbackErr) {
+                    console.error('[oral-XAI] Fallback Error:', fallbackErr);
+                    if (statusTag) statusTag.textContent = 'INFERENCE ERROR';
+                    if (auditText) {
+                        auditText.innerHTML = `⚠️ <span style="color: #f43f5e;">Analysis Error: ${err.message}</span>`;
+                    }
                 }
             }
         }
