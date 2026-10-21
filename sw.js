@@ -1,5 +1,5 @@
-// oral-XAI Service Worker :: Offline Cache & PWA Support
-const CACHE_NAME = 'oral-xai-pwa-v1';
+// oral-XAI Service Worker :: Production Offline Cache & PWA WebAPK Support
+const CACHE_NAME = 'oral-xai-pwa-v2';
 
 const PRECACHE_ASSETS = [
     './',
@@ -9,6 +9,8 @@ const PRECACHE_ASSETS = [
     './manifest.json',
     './assets/icons/icon-192.png',
     './assets/icons/icon-512.png',
+    './assets/icons/icon-maskable-192.png',
+    './assets/icons/icon-maskable-512.png',
     './assets/icons/apple-touch-icon.png',
     './assets/presets/opmd.jpg',
     './assets/presets/cancer.jpg',
@@ -16,18 +18,25 @@ const PRECACHE_ASSETS = [
     './assets/presets/variation.jpg'
 ];
 
-// Install: Cache initial assets
+// Install: Cache critical assets individually with Promise.allSettled so no single asset causes failure
 self.addEventListener('install', (event) => {
+    self.skipWaiting();
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
-            return cache.addAll(PRECACHE_ASSETS).catch((err) => {
-                console.warn('[SW] Precache partial fallback:', err);
-            });
-        }).then(() => self.skipWaiting())
+            return Promise.allSettled(
+                PRECACHE_ASSETS.map((asset) => {
+                    return fetch(asset).then((res) => {
+                        if (res.ok) return cache.put(asset, res);
+                    }).catch((e) => {
+                        console.warn('[SW] Precache skipped:', asset, e);
+                    });
+                })
+            );
+        })
     );
 });
 
-// Activate: Clean up old caches
+// Activate: Purge old cache stores immediately
 self.addEventListener('activate', (event) => {
     event.waitUntil(
         caches.keys().then((keys) => {
@@ -42,38 +51,51 @@ self.addEventListener('activate', (event) => {
     );
 });
 
-// Fetch: Network-first for dynamic content, Cache-first for shell assets
+// Fetch: Stale-While-Revalidate with strict non-undefined Response fallback
 self.addEventListener('fetch', (event) => {
     const req = event.request;
 
-    // Never cache non-GET requests (e.g. POST /api/analyze)
+    // Only intercept GET requests
     if (req.method !== 'GET') {
         return;
     }
 
-    // Ignore cross-origin non-essential requests
-    const url = new URL(req.url);
-    if (url.origin !== self.location.origin && !url.hostname.includes('fonts.googleapis.com') && !url.hostname.includes('fonts.gstatic.com')) {
+    // Skip Chrome extension requests or analytics
+    if (!req.url.startsWith('http')) {
         return;
     }
 
     event.respondWith(
-        fetch(req).then((networkRes) => {
-            // Cache valid responses
-            if (networkRes && networkRes.status === 200) {
-                const resClone = networkRes.clone();
-                caches.open(CACHE_NAME).then((cache) => {
-                    cache.put(req, resClone);
-                });
+        caches.match(req).then((cachedResponse) => {
+            if (cachedResponse) {
+                // Fetch updated version in background
+                fetch(req).then((networkRes) => {
+                    if (networkRes && networkRes.status === 200) {
+                        const copy = networkRes.clone();
+                        caches.open(CACHE_NAME).then((cache) => cache.put(req, copy));
+                    }
+                }).catch(() => {});
+                return cachedResponse;
             }
-            return networkRes;
-        }).catch(() => {
-            // Network failed: Serve from cache
-            return caches.match(req).then((cachedRes) => {
-                if (cachedRes) return cachedRes;
-                if (req.headers.get('accept') && req.headers.get('accept').includes('text/html')) {
-                    return caches.match('./index.html');
+
+            return fetch(req).then((networkRes) => {
+                if (networkRes && networkRes.status === 200) {
+                    const copy = networkRes.clone();
+                    caches.open(CACHE_NAME).then((cache) => cache.put(req, copy));
                 }
+                return networkRes;
+            }).catch(() => {
+                // Offline fallback: for navigations, return cached index.html
+                if (req.mode === 'navigate' || (req.headers.get('accept') && req.headers.get('accept').includes('text/html'))) {
+                    return caches.match('./index.html').then((indexCached) => {
+                        return indexCached || caches.match('./');
+                    });
+                }
+                // Never return undefined to event.respondWith
+                return new Response('Network error occurred', {
+                    status: 408,
+                    headers: { 'Content-Type': 'text/plain' }
+                });
             });
         })
     );
