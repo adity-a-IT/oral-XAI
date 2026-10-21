@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <meta name="theme-color" content="#060913">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="oral-XAI">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
     <title>oral-XAI :: Explainable AI Oral Lesion & Oncology Intelligence</title>
     <meta name="description" content="Know your oral malignancy—precisely. End-to-end oral oncology intelligence powered by deep neural networks, transparent Grad-CAM saliency, and clinical validation.">
     <!-- Fonts -->
@@ -44,10 +49,20 @@
                 <a href="#diagnostic-suite" class="nav-link">Diagnostic Suite</a>
                 <a href="#architecture" class="nav-link">Neural XAI</a>
                 <a href="#benchmarks" class="nav-link">Clinical Benchmarks</a>
+                <button id="btn-pwa-install-mobile" class="btn-pwa-install-mobile" style="display: none;">
+                    📱 Install App on Device
+                </button>
                 <a href="#diagnostic-suite" class="btn-nav-mobile">Launch Diagnostic Suite ↗</a>
             </div>
 
             <div class="nav-actions">
+                <button id="btn-pwa-install" class="btn-pwa-install" style="display: none;">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    </svg>
+                    Install App
+                </button>
                 <a href="#diagnostic-suite" class="btn-nav">Launch Diagnostic Suite ↗</a>
             </div>
 
@@ -671,6 +686,21 @@
             </div>
         </div>
     </footer>
+
+    <!-- PWA Bottom Floating Mobile Banner -->
+    <div id="pwa-install-banner" class="pwa-banner" style="display: none;">
+        <div class="pwa-banner-content">
+            <img src="assets/icons/icon-192.png" alt="oral-XAI App" class="pwa-banner-icon">
+            <div class="pwa-banner-text">
+                <strong>Install oral-XAI App</strong>
+                <span>Instant diagnosis & camera scanning on your phone</span>
+            </div>
+        </div>
+        <div class="pwa-banner-btns">
+            <button id="btn-pwa-banner-install" class="btn-pill-primary" style="padding: 7px 15px; font-size: 0.8rem;">Install</button>
+            <button id="btn-pwa-banner-close" class="btn-close-banner" aria-label="Dismiss">&times;</button>
+        </div>
+    </div>
 
     <!-- App Scripts -->
     <script src="main.js"></script>

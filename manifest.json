@@ -1,0 +1,47 @@
+{
+  "name": "oral-XAI :: Oral Oncology Intelligence",
+  "short_name": "oral-XAI",
+  "description": "Clinical-grade AI oral lesion classifier and dual-stream explainability suite (Grad-CAM & LIME).",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#060913",
+  "theme_color": "#060913",
+  "categories": ["medical", "health", "education"],
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Scan Oral Lesion",
+      "short_name": "New Scan",
+      "description": "Upload an intraoral scan for AI analysis",
+      "url": "./index.html#diagnostic-suite",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

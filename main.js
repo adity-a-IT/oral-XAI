@@ -1191,6 +1191,80 @@
         }
     });
 
+    // --------------------------------------------------------------------------
+    // Progressive Web App (PWA) Registration & Mobile Install Engine
+    // --------------------------------------------------------------------------
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js')
+                .then((reg) => {
+                    console.log('[oral-XAI PWA] Service Worker registered with scope:', reg.scope);
+                })
+                .catch((err) => {
+                    console.warn('[oral-XAI PWA] Service Worker registration failed:', err);
+                });
+        });
+    }
+
+    let deferredPrompt = null;
+    const btnPwa = document.getElementById('btn-pwa-install');
+    const btnPwaMobile = document.getElementById('btn-pwa-install-mobile');
+    const pwaBanner = document.getElementById('pwa-install-banner');
+    const btnBannerInstall = document.getElementById('btn-pwa-banner-install');
+    const btnBannerClose = document.getElementById('btn-pwa-banner-close');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+
+        if (btnPwa) btnPwa.style.display = 'inline-flex';
+        if (btnPwaMobile) btnPwaMobile.style.display = 'flex';
+
+        if (!sessionStorage.getItem('pwa_banner_dismissed') && pwaBanner) {
+            pwaBanner.style.display = 'flex';
+        }
+    });
+
+    function triggerPwaInstall() {
+        if (!deferredPrompt) {
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            if (isIOS) {
+                alert('To install oral-XAI on iPhone/iPad: Tap the Share button at the bottom and select "Add to Home Screen".');
+            } else {
+                alert('To install, open this page in Chrome or Edge on your mobile phone and tap "Add to Home screen".');
+            }
+            return;
+        }
+
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+                console.log('[oral-XAI PWA] User accepted the installation prompt');
+            }
+            deferredPrompt = null;
+            if (btnPwa) btnPwa.style.display = 'none';
+            if (btnPwaMobile) btnPwaMobile.style.display = 'none';
+            if (pwaBanner) pwaBanner.style.display = 'none';
+        });
+    }
+
+    if (btnPwa) btnPwa.addEventListener('click', triggerPwaInstall);
+    if (btnPwaMobile) btnPwaMobile.addEventListener('click', triggerPwaInstall);
+    if (btnBannerInstall) btnBannerInstall.addEventListener('click', triggerPwaInstall);
+    if (btnBannerClose) {
+        btnBannerClose.addEventListener('click', () => {
+            if (pwaBanner) pwaBanner.style.display = 'none';
+            sessionStorage.setItem('pwa_banner_dismissed', 'true');
+        });
+    }
+
+    window.addEventListener('appinstalled', () => {
+        console.log('[oral-XAI PWA] oral-XAI installed successfully on device!');
+        if (btnPwa) btnPwa.style.display = 'none';
+        if (btnPwaMobile) btnPwaMobile.style.display = 'none';
+        if (pwaBanner) pwaBanner.style.display = 'none';
+    });
+
     // Initial Workstation Load
     setTimeout(() => {
         triggerAnalysis();
